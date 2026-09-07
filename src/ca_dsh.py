@@ -122,7 +122,7 @@ def parse_estimate(path: Path) -> list[dict]:
               # the one above; disclosed on california.html rather than left silent.
     # Four more prose phrasings, found by an independent audit that specifically hunted for
     # extraction-COVERAGE gaps (as opposed to wrong-value bugs): all 9 raw PDFs already sitting
-    # in dashboard_data/raw/ca/ contain 8 more genuine, unambiguous, dated readings that none of
+    # in data/raw/ca/ contain 8 more genuine, unambiguous, dated readings that none of
     # the patterns above matched -- confirmed directly against the source text, not guessed.
     # Each addition below was corpus-tested for false positives before being added (see this
     # commit's message); the "IST"/"waitlist" context guards are load-bearing, not decorative --

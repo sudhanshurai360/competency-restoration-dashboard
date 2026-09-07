@@ -27,7 +27,7 @@ assumed to be uniform:
 | Oregon | 15 court-monitor / neutral-expert reports (privately authored by Dr. Pinals, OHA only hosts them) | Fair use (court/litigation-related material) — the weaker of Oregon's two document types, since these aren't state-authored | `or/README.md` |
 | Oregon | 3 Attorney General legal pleadings (`PLD-*.pdf`), state-employee-authored | Public agency record (state-authored) + fair use (litigation filings) — the stronger of Oregon's two document types | `or/README.md` |
 | Colorado | Federal court Special Master reports (via RECAP) | Fair use (court filings) — not a public-domain claim | `co/README.md` |
-| Colorado | State legislative (JBC) budget memos | Fair use only — the weakest footing of the five sources, said plainly | `co/README.md` |
+| Colorado | State legislative (JBC) budget memos | Fair use only, with no litigation-filing precedent behind it either — the weakest footing of the seven document types in this table, said plainly | `co/README.md` |
 | Texas | State agency (HHSC) reports | HHSC's own conditional license (non-commercial, unaltered, attributed) — NOT public domain | `tx/README.md` |
 | California | State agency (DSH) budget documents | Public domain — per case law and the absence of any restriction on the documents themselves, not a confirmed DSH policy adoption | `ca/README.md` |
 

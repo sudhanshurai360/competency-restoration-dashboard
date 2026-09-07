@@ -35,10 +35,13 @@ leaned on here as if it were on point.)
 ## 2. Colorado Joint Budget Committee documents — PDFs WITHHELD PENDING CONFIRMATION
 
 **`jbc_memo.pdf`, `fy2024-25_humbrf2.5.pdf`, and `fy2025-26_humbrf1.5.pdf` are NOT bundled in this
-folder right now.** This is the one document type in this archive resting on fair use alone with no
-public-domain or agency-license backdrop behind it (see "Rights" below) — rather than publish the
-PDFs on that basis alone, we're holding them back until JBC staff have had a chance to confirm no
-objection to non-commercial reproduction (a real, findable contact — see "Where these came from").
+folder right now.** Several document types across this archive rest on fair use alone (the Special
+Master reports above are one), but JBC memos are the *weakest* of them, specifically: unlike a
+court filing, they have no established "everyone redistributes these for research" precedent
+(CourtListener/RECAP/Justia's routine practice) to point to, and no public-domain or agency-license
+backdrop either (see "Rights" below). Rather than publish the PDFs on fair use alone with nothing
+else behind it, we're holding them back until JBC staff have had a chance to confirm no objection
+to non-commercial reproduction (a real, findable contact — see "Where these came from").
 **What's still here despite the withheld PDFs**: the extracted data itself
 (`data/derived/colorado_jbc.csv`, `co_jbc_snapshots.parquet`) and every citation to these documents
 on the dashboard remain fully included — factual figures extracted from a public document are a

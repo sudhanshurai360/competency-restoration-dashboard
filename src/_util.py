@@ -1,4 +1,4 @@
-"""Competency Restoration Observatory — shared primitives for the extractors.
+"""Competency Restoration Dashboard Data — shared primitives for the extractors.
 
 Only GENUINELY-identical helpers belong here. The per-state `MON` month-maps and
 `_num`/`_period` parsers LOOK duplicated but are NOT interchangeable — each state's

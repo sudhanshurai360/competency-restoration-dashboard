@@ -17,8 +17,8 @@ the report's own prose citation -- resolved in `build()` by preferring the unfoo
 genuine conflict. This is the BEST decree-compliance data of any state (explicit Tier-vs-deadline
 -> comparable to WA).
 
-Files: dashboard_data/raw/co/sm_*.pdf. 3 files are the original 2018-21 Clearinghouse S3 vintage;
-11 more (2023-2026) were sourced directly from CourtListener's RECAP storage CDN (free, not
+Files: data/raw/co/sm_*.pdf. 3 files are the original 2018-21 Clearinghouse S3 vintage;
+8 more (2023-2026) were sourced directly from CourtListener's RECAP storage CDN (free, not
 paywalled, just not linked from the docket's own web page). 2 files in this glob are not actually
 special-master quarterly reports (the Consent Decree filing itself, a 2019 status letter) and 1
 has a broken/cid-encoded font pdfplumber can't read -- all three produce 0 rows and print a

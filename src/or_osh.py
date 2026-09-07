@@ -1,12 +1,11 @@
 """OR extractor — Oregon State Hospital aid-and-assist (IST) waitlist, from the Mink-Bowman
-court-monitor / neutral-expert (Pinals) reports. Dashboard tree.
+court-monitor / neutral-expert (Pinals) reports.
 
-DUPLICATED (2026-08-28) from code/pipeline/or_osh.py, not imported from it — the paper and
-dashboard trees are kept deliberately independent (see dashboard/code/config.py's docstring). All
-parsing logic below is identical to the paper's copy. Unlike WA, this extractor already globs
-C.RAW/"or"/*.pdf directly — no frozen-vs-open-ended month window to duplicate; pointing this
-tree's own config.py at dashboard_data/raw/or/ is the only thing that changes its behavior.
-Re-sync by hand if the paper-side parser changes (do not import across trees at runtime).
+This project also maintains a separate, frozen academic-paper analysis of Washington/Oregon data
+(the sibling Zenodo deposit at concept DOI 10.5281/zenodo.21436450) with its own independent copy
+of this parsing logic, deliberately not shared/imported at runtime between the two. This extractor
+globs `C.RAW/"or"/*.pdf` directly — no frozen-vs-open-ended month window to worry about; pointing
+this copy's own `config.py` at `data/raw/or/` is the only thing that changes its behavior.
 
 Oregon = the 2nd clean FEDERAL 7-day-decree state (Disability Rights Oregon v. Mink,
 3:02-cv-00339 D.Or.): OSH must admit aid-and-assist defendants within 7 DAYS. Directly
@@ -34,7 +33,7 @@ NOTE: PLD-*.pdf are compliance ACTION PLANS (benchmark target dates, no measured
 -> skipped. Long-trend "Figure" dashboards are chart IMAGES, but every number we use here
 is also present as TEXT in Tables 1/3/4 + the narrative, so nothing is lost to OCR.
 
-Files: dashboard_data/raw/or/*.pdf (oregon.gov/oha/OSH/reports/). Decree threshold = 7 days.
+Files: data/raw/or/*.pdf (oregon.gov/oha/OSH/reports/). Decree threshold = 7 days.
 
 QUALITATIVE TRAJECTORY (directionally stable, re-derive exact figures from the parquet before
 quoting any number): an early crisis period gave way to a period of much better compliance,
@@ -43,7 +42,7 @@ sanction — i.e. this is a genuine CONTRAST/BACKSLIDING case, not a one-way imp
 the way Washington is. The redesign brief's own requirement (§2, OR): preserve this volatility on
 the dashboard chart — do not let any default view smooth it into a clean trend line.
 
-Re-run:  python or_osh.py   (cwd = dashboard/code/)
+Re-run:  python src/or_osh.py   (cwd = archive root)
 """
 from __future__ import annotations
 import re

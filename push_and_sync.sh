@@ -2,9 +2,9 @@
 # push_and_sync.sh — push to GitHub (if a remote is configured yet), then sync the working tree
 # to a local backup mirror.
 #
-# This repo doesn't have a GitHub remote configured yet as of this script's creation (2026-09-07)
-# -- the push step is skipped gracefully until one exists, rather than failing. Once a remote is
-# added (`git remote add origin ...`), this script starts pushing automatically, no edit needed.
+# A GitHub remote was added shortly after this script's creation (2026-09-07); the push-step
+# skip below is deliberately kept anyway (rather than assuming a remote always exists) so this
+# script degrades gracefully if ever run in a fresh clone or fork with no remote configured yet.
 #
 # Requires COMPETENCY_DASHBOARD_MIRROR_DIR set in the environment (e.g. in your shell profile) to
 # the mirror's local path -- deliberately not hardcoded here, so this script can be committed to a

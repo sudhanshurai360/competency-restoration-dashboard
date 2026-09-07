@@ -11,14 +11,20 @@ exhibit copy of the same underlying report — see below).
 Every file's exact source URL, byte size, and SHA-256 hash is recorded in `SOURCES.csv` at the
 archive root (filter `state == or`) — **all 15 court-monitor and neutral-expert reports are now
 individually hash-verified**, not just pattern-guessed. This wasn't true in an earlier version of
-this archive: 7 of the 15 were initially marked `inferred` against a single assumed URL pattern
-(`oregon.gov/oha/OSH/reports/{filename}`) that turned out to be wrong for several of them — the
-1st through 5th Neutral Expert reports actually live under a *different* path
-(`oregon.gov/oha/OSH/Documents/{filename}`, note capital "D"), and the 2nd and 8th reports use
-different filenames on OHA's own site than the ones used locally in this archive (e.g. the 8th
-uses hyphens where this archive's filename uses underscores). A direct link-check (2026-09-07)
-caught the resulting 404s; every one of those 7, plus the March 2026 Court Monitor report, was
-re-verified byte-for-byte against OHA's actual current hosting before being marked `confirmed`.
+this archive: **exactly 7 of the 15** were initially marked `inferred` against a single assumed
+URL pattern (`oregon.gov/oha/OSH/reports/{filename}`) that turned out to be wrong for all 7 of
+them, file-by-file:
+- **1st and 2nd** Neutral Expert reports: both a different path (`oregon.gov/oha/OSH/Documents/`,
+  note capital "D", not `reports/`) *and* a different filename than used locally (the 1st has no
+  "1st" in its real filename at all; the 2nd has an inserted docket-number segment).
+- **3rd, 4th, 5th** Neutral Expert reports: the same different path (`.../Documents/`), but the
+  same filename as used locally.
+- **8th** Neutral Expert report and the **March 2026 Court Monitor report**: the same path as
+  originally assumed (`.../reports/`), but a different filename (e.g. the 8th uses hyphens where
+  this archive's local filename uses underscores).
+
+A direct link-check (2026-09-07) caught the resulting 404s on all 7; each was re-verified
+byte-for-byte against OHA's actual current hosting before being marked `confirmed`.
 One file (`2025.09.05-Oregon-Mink-Bowman-Court-Monitor-Report.pdf`) is separately verified as
 content-identical to a copy later filed as a court exhibit and retrieved via CourtListener/RECAP
 (storage.courtlistener.com/recap/gov.uscourts.ord.6119/...), same report, same substance, an added

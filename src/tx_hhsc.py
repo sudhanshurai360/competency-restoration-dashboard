@@ -1,4 +1,4 @@
-"""TX HHSC forensic-waitlist extractor (Competency Restoration Observatory — second state).
+"""TX HHSC forensic-waitlist extractor (Competency Restoration Dashboard Data).
 
 Source A: HHSC "Reporting of Waiting Lists for Mental Health Services" (Rider 45/50),
 filed ~May 1 & Nov 1. Each report's Tables 5 (Non-Max) & 6 (Max Security Forensic

@@ -1,11 +1,12 @@
 """Competency Restoration Dashboard Data — re-execution gate.
 
-Seeded from `checks_multistate.RECOVERED_FRAGMENTS.md` (verbatim-recovered anchors, HIGH
-confidence, two independent corpus corroborations for the TX/CO-JBC/OR/CA block) plus the CO
-Special-Master §2 "superseded" point-value anchors (with the fragment's own documented correction:
-2020-02, not the wrong 2020-01, per the transcript's own later fix) — plus new structural/value
-anchors for WA, ported from code/pipeline/checks.py's own WA anchor (same source PDF, same
-expected value: this tree's independently-run wa_trueblood.py should reproduce it exactly).
+These anchor values were originally assembled in this project's private working tree (not part of
+this public repo) from hand-verified source-PDF cross-checks — a two-independent-corpus
+corroboration for the TX/CO-JBC/OR/CA block, the CO Special-Master §2 "superseded" point-value
+anchors (corrected from an initial 2020-01 mis-date to the right 2020-02), and a WA structural/
+value anchor cross-checked against the sibling academic-paper analysis's own independent WA
+extraction. Each anchor below should reproduce exactly from this repo's own `src/wa_trueblood.py`
+(etc.) run against `data/raw/`, regardless of that private history.
 
 One anchor from the recovered fragment was a KNOWN, DISCLOSED gap for a while: CA's 2022-12
 datapoint. It turned out not to be a cadence gap at all — the value (1,473) was sitting verbatim

@@ -1,12 +1,11 @@
-"""WA Trueblood monthly-report extractor — dashboard tree.
+"""WA Trueblood monthly-report extractor.
 
-DUPLICATED (2026-08-28) from code/pipeline/wa_trueblood.py, not imported from it — the paper and
-dashboard trees are kept deliberately independent (see dashboard/code/config.py's docstring). All
-parsing logic below (column-anchoring by the compliance-% cell, the "Court Orders Completed"
-column detection, table classification, dedup rule) is identical to the paper's copy; only the
-month-range function and the __main__ block differ, because this tree's job is different: an
-OPEN-ENDED living panel over dashboard_data/raw/wa/, not a frozen, gated, paper-scoped window.
-Re-sync by hand if the paper-side parser changes (do not import across trees at runtime).
+This project also maintains a separate, frozen academic-paper analysis of Washington/Oregon data
+(the sibling Zenodo deposit at concept DOI 10.5281/zenodo.21436450) with its own independent copy
+of this parsing logic (column-anchoring by the compliance-% cell, the "Court Orders Completed"
+column detection, table classification, dedup rule) — deliberately not shared/imported at
+runtime between the two, so neither can break the other. This copy's job is different from that
+one: an OPEN-ENDED living panel over data/raw/wa/, not a frozen, gated, paper-scoped window.
 
 Proves the load-bearing assumption: a clean longitudinal competency-services time-series can be
 parsed from WA DSHS's monthly court-monitor PDFs (2018+ format). Each monthly report carries a
@@ -86,7 +85,7 @@ def download_report(year: int, month: int, force=False, verbose=True) -> Path | 
     for url in C.wa_report_urls(year, month):
         # 1) urllib with a real CA bundle — the primary, portable path
         try:
-            req = U.Request(url, headers={"User-Agent": "Mozilla/5.0 (Competency Restoration Observatory research)"})
+            req = U.Request(url, headers={"User-Agent": "Mozilla/5.0 (Competency Restoration Dashboard Data research; +https://github.com/sudhanshurai360/competency-restoration-dashboard)"})
             data = U.urlopen(req, timeout=60, context=ctx).read()
             if data[:4] == b"%PDF":
                 out.write_bytes(data); return out
@@ -278,7 +277,7 @@ def parse_report(path: Path) -> list[dict]:
 def build_panel(periods: list[tuple[int, int]], offline: bool = False) -> pd.DataFrame:
     """Build the panel from monthly reports.
 
-    offline=True uses ONLY the PDFs already in dashboard_data/raw/wa/ and never touches the
+    offline=True uses ONLY the PDFs already in data/raw/wa/ and never touches the
     network — the dashboard build should stay reproducible from what's already on disk, same
     discipline as the paper gate, even though this panel's own window is open-ended.
     """
@@ -310,7 +309,7 @@ def _months(start, end):
 def dashboard_months():
     """Open-ended living axis: 2018-11 through next year. Unlike the paper's frozen
     canonical_months(), this is meant to grow the moment a new report lands in
-    dashboard_data/raw/wa/ — there's no gate pinning this tree to a closed window."""
+    data/raw/wa/ — there's no gate pinning this tree to a closed window."""
     from datetime import date
     today = date.today()
     return _months((2018, 11), (today.year + 1, 6))

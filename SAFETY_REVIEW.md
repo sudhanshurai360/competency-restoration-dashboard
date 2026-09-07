@@ -1,8 +1,13 @@
 # Pre-publication safety review — source documents
 
-**Scope:** all 138 source PDFs redistributed in `data/raw/` — 91 Washington + 18 Oregon (reviewed
-2026-07-12, for this project's earlier two-state release) + 14 Colorado + 6 Texas + 9 California
-(reviewed 2026-09-07, for this 5-state release). See `SOURCES.csv` for the full per-file list.
+**Scope:** all 138 source PDFs this project has provenance for (91 Washington + 18 Oregon, reviewed
+2026-07-12 for this project's earlier two-state release, + 14 Colorado + 6 Texas + 9 California,
+reviewed 2026-09-07 for this 5-state release) — of which **135 are actually bundled** as PDF files
+in `data/raw/`. The other 3 (Colorado's JBC budget memos) are withheld from the bundle pending a
+separate confirmation request, unrelated to this safety review — see `data/raw/co/README.md`; they
+still passed this same PII/sealing review, and are included in the counts below since the review
+covered them before the later withholding decision was made. See `SOURCES.csv` for the full
+per-file list, including the 3 withheld ones.
 
 **Question:** is every bundled document safe to redistribute in a permanent public archive — i.e.,
 an aggregate public court/agency/legislative report, containing **no individual PII**, and **not
@@ -85,7 +90,11 @@ SHA-256 — it is).
 
 All 29 Colorado, Texas, and California source documents are cleared for public redistribution on
 the same PII/sealing basis as the earlier Washington/Oregon review: no individual PII found, no
-document itself sealed or restricted from distribution. (Separately, and not a safety-review
+document itself sealed or restricted from distribution. (This verdict is about individual PII
+specifically -- a later, separate review pass found one Colorado document names a private
+third-party contractor in an unadjudicated allegation, a different risk category; see "Two items
+outside this review's original PII/sealing scope" near the end of this file for that disclosure.)
+(Separately, and not a safety-review
 question: **whether we have the right to redistribute these documents at all** — i.e., the
 copyright/public-records question — is addressed per state in `data/raw/NOTICE` and each state's
 own `data/raw/<state>/README.md`; that determination differs meaningfully by state and should be
@@ -127,6 +136,8 @@ Disclosed here plainly:
 
 ## Combined verdict
 
-All 138 bundled source documents (91 WA + 18 OR + 14 CO + 6 TX + 9 CA) are cleared for public
-redistribution on PII/sealing grounds, with the two items above disclosed rather than silently
-carried forward.
+All 138 reviewed source documents (91 WA + 18 OR + 14 CO + 6 TX + 9 CA) are cleared on PII/sealing
+grounds. 135 of those are actually bundled in `data/raw/` as of this version (11 of Colorado's 14
+— its 3 JBC memos are withheld for the separate, unrelated reason described above, not a PII
+concern); the two items above are disclosed rather than silently carried forward regardless of
+bundling status.
