@@ -20,7 +20,7 @@ download URLs.
 | Washington | *Trueblood v. DSHS*, No. 2:14-cv-01178 (W.D. Wash.) — federal settlement/injunction, 7-day admission standard | https://www.dshs.wa.gov/bha/court-monitor-reports |
 | Oregon | *Oregon Advocacy Center v. Mink* / *Bowman*, No. 3:02-cv-00339 (D. Or.) — federal injunction, 7-day admission standard | https://www.oregon.gov/oha/osh/pages/mink-bowman.aspx |
 | Colorado | *Center for Legal Advocacy v. Barnes*, No. 1:11-cv-02285-NYW (D. Colo.) — federal consent decree, tiered 7-/28-day deadlines, Special Master-monitored | https://www.courtlistener.com/docket/4176801/center-for-legal-advocacy-v-barnes/ (court filings); https://leg.colorado.gov/agencies/joint-budget-committee (budget memos) |
-| Texas | No binding admission deadline until a July 2026 federal ruling (now under appeal) | https://www.hhs.texas.gov/about/records-statistics/data-statistics |
+| Texas | No binding admission deadline until a July 2026 federal ruling (phase-in underway, on appeal) | https://www.hhs.texas.gov/about/records-statistics/data-statistics |
 | California | *Stiavetti v. Clendenin* — state-court mandate, 28-day placement standard (final, since March 2025) | https://www.dsh.ca.gov/About_Us/ |
 
 ## Washington — *Trueblood v. DSHS* (No. 2:14-cv-01178, W.D. Wash.)
@@ -28,7 +28,7 @@ Federal settlement/injunction with a 7-day admission standard for restoration an
 evaluation, and a looser 14-day standard for jail-based evaluation only, monitored monthly. This is
 the dense, load-bearing series.
 - **Publisher:** WA DSHS, Office of Forensic Mental Health Services.
-- **Documents:** monthly *Trueblood* court-monitor compliance reports (`data/raw/washington/`).
+- **Documents:** monthly *Trueblood* court-monitor compliance reports (`data/raw/wa/`).
 
 ## Oregon — *Oregon Advocacy Center v. Mink* / *Bowman* (No. 3:02-cv-00339, D. Or.)
 Federal injunction requiring admission of aid-and-assist defendants to the Oregon State Hospital
@@ -37,7 +37,7 @@ accrue under the order.
 - **Publisher:** Oregon Health Authority / Oregon State Hospital; the court's neutral expert /
   monitor; the Oregon Attorney General (legal pleadings).
 - **Documents:** neutral-expert (Pinals) & court-monitor reports, status filings, and AG pleadings
-  (`data/raw/oregon/`).
+  (`data/raw/or/`).
 
 ## Colorado — *Center for Legal Advocacy v. Barnes* (No. 1:11-cv-02285-NYW, D. Colo.)
 Federal consent decree with two tiers of restoration wait-day deadlines (Tier-1, acute, 7 days;
@@ -47,15 +47,15 @@ budget briefings.
 - **Publisher:** the Special Master (federal court filings, via RECAP); Colorado Joint Budget
   Committee staff (state legislature).
 - **Documents:** quarterly Special Master reports (`sm_*.pdf`) and JBC budget memos
-  (`data/raw/colorado/`).
+  (`data/raw/co/`).
 
 ## Texas — no binding deadline until mid-2026
 Texas Health and Human Services Commission (HHSC) publishes semiannual statewide mental-health
 waiting-list reports (both a "non-maximum-security" and a "maximum-security" queue) under a
 legislative reporting mandate, but had no binding admission deadline of its own until a July 2026
-federal ruling ordered one — now under appeal.
+federal ruling ordered one -- now being phased in while on appeal.
 - **Publisher:** Texas HHSC.
-- **Documents:** semiannual mental-health waiting-list reports (`data/raw/texas/`).
+- **Documents:** semiannual mental-health waiting-list reports (`data/raw/tx/`).
 
 ## California — *Stiavetti v. Clendenin* (state court)
 A California *state*-court mandate — not a federal decree, unlike the other four states — setting a
@@ -65,7 +65,7 @@ fiscal-year-end table plus occasional budget-narrative prose mentions, not a ded
 monitor report.
 - **Publisher:** California Department of State Hospitals (DSH), via Governor's Budget / May
   Revision "Estimate" documents.
-- **Documents:** semiannual budget "Estimate" PDFs (`data/raw/california/`).
+- **Documents:** semiannual budget "Estimate" PDFs (`data/raw/ca/`).
 
 ---
 

@@ -23,6 +23,18 @@ These are public records produced by a federal court monitor under a Washington 
 (DSHS's) publication, not our own work. We did not author them, and redistributing them here does
 not transfer or claim any ownership or copyright in them.
 
+**Said precisely**: Washington has no public-domain-by-default statute for state agency
+publications (unlike California — see `data/raw/ca/README.md` — Washington agencies can and do
+assert copyright; the state's Public Records Act, RCW 42.56, is a disclosure/inspection right, not
+a copyright license, and that distinction matters here). DSHS's own site is silent on copyright for
+these specific reports — no notice appears on the documents themselves, and DSHS has never
+restricted their reuse — so redistribution here rests on the same basis as Oregon's and Colorado's
+court-filed documents: **fair use** (non-commercial, public-interest reproduction of factual
+compliance data DSHS already publishes openly, no market this could substitute for), not a
+public-domain claim. Practical risk is low — DSHS openly publishes these exact reports itself — but
+that is a different thing from a cleared legal right, and this document doesn't overstate the
+difference.
+
 - We redistribute them **unchanged**, solely so the extraction pipeline in this archive is
   independently reproducible from its exact inputs (run `python src/verify.py` from the archive
   root).

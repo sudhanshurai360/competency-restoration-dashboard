@@ -19,20 +19,33 @@ the archive root's general `dsh.ca.gov/About_Us/` page is linked instead.
 
 ## Rights — public domain
 
-Unlike some other states in this archive, California's own stated policy for executive-branch
-content is a public-domain default:
+**Said precisely, not glossed over**: DSH's own site footer (dsh.ca.gov, where these 9 documents
+are actually hosted) displays only a bare, unelaborated "Copyright © State of California" notice —
+no separate Conditions of Use page exists on dsh.ca.gov itself, and no license terms or restriction
+accompany that notice. The portal-level ca.gov Conditions of Use states California executive-branch
+content is public domain by default —
 
 > "information presented on this website, unless otherwise indicated, is considered in the public
 > domain. It may be distributed or copied as permitted by law."
-> — ca.gov Conditions of Use (the baseline policy for California executive-branch sites,
-> including dsh.ca.gov and ebudget.ca.gov, where these documents are published)
+> — ca.gov Conditions of Use
 
-This is reinforced by a published, precedential California Court of Appeal decision — *County of
-Santa Clara v. California First Amendment Coalition*, 170 Cal.App.4th 1301 (2009) — holding there
-is no statutory basis for a California public agency to invoke copyright to restrict redistribution
-of public records absent specific statutory authority, which does not exist for budget "Estimate"
-documents like these. No copyright notice or usage restriction appears anywhere on any of the 9
-files themselves.
+— and that language is independently confirmed live on several other executive-branch sites (e.g.
+gov.ca.gov, oag.ca.gov, dhcs.ca.gov), but it could not be independently confirmed as published on,
+or adopted by, dsh.ca.gov specifically. Rather than assume DSH has adopted a policy it doesn't
+itself display, the actual basis for treating these documents as public domain rests on a published,
+precedential California Court of Appeal decision — *County of Santa Clara v. Superior Court
+(California First Amendment Coalition)*, 170 Cal.App.4th 1301 (2009) — holding a California public
+agency has no statutory authority to invoke copyright to restrict redistribution of a public record
+absent specific statutory authorization. (That case concerned a GIS basemap, not budget documents
+specifically — extending its reasoning here is a straightforward analogical step, not a strained
+one, since nothing in the case's reasoning is basemap-specific and a budget "Estimate" document is
+squarely a Public Records Act-covered record like the basemap was, but it's worth being explicit
+that the case itself didn't address this document type.) That statutory-authority gap is confirmed
+current: AB 2880 (2016), which would have given agencies exactly the copyright-assertion power
+*Santa Clara* forecloses, had that language stripped by the Senate before passage. So: a bare,
+unelaborated footer notice, without more, does not create an enforceable restriction on these
+documents — particularly since no restriction, license, or copyright notice of any kind appears on
+the 9 files themselves (confirmed by direct inspection of each).
 
 - We redistribute them **unchanged**, solely so the extraction pipeline in this archive
   (`../../../src/ca_dsh.py`) is independently reproducible from its exact inputs (run

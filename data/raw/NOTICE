@@ -23,19 +23,24 @@ assumed to be uniform:
 
 | State | Document type | Basis for redistribution | Detail |
 |---|---|---|---|
-| Washington | State agency (DSHS) court-monitor reports | Public record, agency-hosted | `washington/README.md` |
-| Oregon | State agency / court monitor / AG legal filings | Public record + fair use (court filings) | `oregon/README.md` |
-| Colorado | Federal court Special Master reports (via RECAP) | Fair use (court filings) — not a public-domain claim | `colorado/README.md` |
-| Colorado | State legislative (JBC) budget memos | Fair use only — the weakest footing of the five sources, said plainly | `colorado/README.md` |
-| Texas | State agency (HHSC) reports | HHSC's own conditional license (non-commercial, unaltered, attributed) — NOT public domain | `texas/README.md` |
-| California | State agency (DSH) budget documents | Public domain, per CA's own stated policy and case law | `california/README.md` |
+| Washington | State agency (DSHS) court-monitor reports | Fair use — DSHS asserts no copyright notice on these, but WA has no public-domain-by-default policy either; not a public-domain claim | `wa/README.md` |
+| Oregon | 15 court-monitor / neutral-expert reports (privately authored by Dr. Pinals, OHA only hosts them) | Fair use (court/litigation-related material) — the weaker of Oregon's two document types, since these aren't state-authored | `or/README.md` |
+| Oregon | 3 Attorney General legal pleadings (`PLD-*.pdf`), state-employee-authored | Public agency record (state-authored) + fair use (litigation filings) — the stronger of Oregon's two document types | `or/README.md` |
+| Colorado | Federal court Special Master reports (via RECAP) | Fair use (court filings) — not a public-domain claim | `co/README.md` |
+| Colorado | State legislative (JBC) budget memos | Fair use only — the weakest footing of the five sources, said plainly | `co/README.md` |
+| Texas | State agency (HHSC) reports | HHSC's own conditional license (non-commercial, unaltered, attributed) — NOT public domain | `tx/README.md` |
+| California | State agency (DSH) budget documents | Public domain, per CA's own stated policy and case law | `ca/README.md` |
 
 **In short: California is public domain; Texas is conditionally licensed by its own publisher's
-stated terms; Washington and the Oregon/Colorado agency-hosted documents are public agency
-records; the Oregon and Colorado court filings rest on fair use, backed by the same basis
-CourtListener/RECAP/Justia already rely on to redistribute filings at scale; and Colorado's JBC
-budget memos rest on fair use alone, without a public-domain or agency-license safety net behind
-it.** None of this is a formal legal opinion — it's a documented, good-faith, per-document
+stated terms; Washington's DSHS reports and Oregon's 3 AG-filed pleadings rest on fair use with a
+public-agency-record backdrop (no copyright notice found, agency itself openly publishes them, but
+no affirmative public-domain policy either); Oregon's 15 court-monitor/neutral-expert reports and
+Colorado's Special Master reports rest on fair use alone, backed by the same basis
+CourtListener/RECAP/Justia already rely on to redistribute filings at scale (these are privately-
+or court-authored, not state agency work product, so they don't get the agency-record backdrop the
+other documents have); and Colorado's JBC budget memos rest on fair use alone too, without even a
+court-filing backdrop behind it — the weakest footing of the seven document types in this archive,
+said plainly.** None of this is a formal legal opinion — it's a documented, good-faith, per-document
 determination, exactly like the pre-publication safety review below.
 
 ## Provenance and safety review
