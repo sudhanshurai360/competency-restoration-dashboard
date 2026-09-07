@@ -17,12 +17,15 @@ publication, since it can move quickly.
 ## Where these came from
 
 Every file's exact source URL, byte size, and SHA-256 hash is recorded in `SOURCES.csv` at the
-archive root (filter `state == tx`). Four files were retrieved and hash-verified via Wayback
-Machine snapshots of `hhs.texas.gov/sites/default/files/documents/{filename}` (HHSC later moved or
-removed the live files — the same link-rot pattern affecting several other states' reports in this
-archive). Two files (the May 2024 and May 2025 reports — both superseded by the following
-November report for every period they'd otherwise cover) have a same-pattern URL that was not
-separately hash-verified; marked `inferred` in `SOURCES.csv`.
+archive root (filter `state == tx`) — **all 6 files are individually hash-verified via Wayback
+Machine snapshots**, not the live `hhs.texas.gov` URLs directly: HHSC's own site sits behind bot
+protection that returns 403 to automated requests (confirmed directly, 2026-09-07, including with
+a browser user-agent), so a direct link-check would have wrongly flagged these as dead. The May
+2024 and May 2025 reports (both superseded by the following November report for every period
+they'd otherwise cover) were the last two still marked `inferred` against a same-pattern guess; a
+2026-09-07 link-check found they needed the Wayback `id_` raw-file form specifically (the plain
+snapshot URL serves an HTML wrapper, not the PDF itself) — both are now hash-verified and marked
+`confirmed`.
 
 ## Rights — we do not own these documents, and Texas's is a conditional license, not public domain
 
@@ -65,8 +68,8 @@ archive-root `NOTICE` and `SAFETY_REVIEW.md`. **Official figures remain those of
 ## Full file list
 
 - `mhs-waiting-lists-may-2023.pdf` — [source](https://web.archive.org/web/20230619145235/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-may-2023.pdf)
-- `mhs-waiting-lists-may-2024.pdf` — [source](https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-may-2024.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
-- `mhs-waiting-lists-may-2025.pdf` — [source](https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-may-2025.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
+- `mhs-waiting-lists-may-2024.pdf` — [source](https://web.archive.org/web/20240610110140id_/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-may-2024.pdf)
+- `mhs-waiting-lists-may-2025.pdf` — [source](https://web.archive.org/web/20250516220842id_/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-may-2025.pdf)
 - `mhs-waiting-lists-nov-2023.pdf` — [source](https://web.archive.org/web/20231202153236/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-nov-2023.pdf)
 - `mhs-waiting-lists-nov-2024.pdf` — [source](https://web.archive.org/web/20250208071757/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-nov-2024.pdf)
 - `mhs-waiting-lists-nov-2025.pdf` — [source](https://web.archive.org/web/20251222022155/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-nov-2025.pdf)
