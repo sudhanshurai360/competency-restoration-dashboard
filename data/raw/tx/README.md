@@ -61,3 +61,12 @@ Accordingly, and to satisfy those terms explicitly:
 Not covered by this archive's own `LICENSE` (MIT) or `LICENSE-DATA` (CC-BY-4.0) — see the
 archive-root `NOTICE` and `SAFETY_REVIEW.md`. **Official figures remain those of HHSC.** Contact
 `me@sudhanshurai.org` for corrections or removal requests from a rights holder.
+
+## Full file list
+
+- `mhs-waiting-lists-may-2023.pdf` — [source](https://web.archive.org/web/20230619145235/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-may-2023.pdf)
+- `mhs-waiting-lists-may-2024.pdf` — [source](https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-may-2024.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
+- `mhs-waiting-lists-may-2025.pdf` — [source](https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-may-2025.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
+- `mhs-waiting-lists-nov-2023.pdf` — [source](https://web.archive.org/web/20231202153236/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-nov-2023.pdf)
+- `mhs-waiting-lists-nov-2024.pdf` — [source](https://web.archive.org/web/20250208071757/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-nov-2024.pdf)
+- `mhs-waiting-lists-nov-2025.pdf` — [source](https://web.archive.org/web/20251222022155/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-nov-2025.pdf)

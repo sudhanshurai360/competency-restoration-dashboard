@@ -55,3 +55,15 @@ the 9 files themselves (confirmed by direct inspection of each).
   documents — see the archive-root `NOTICE` and `SAFETY_REVIEW.md`.
 - **Official figures remain those of the California Department of State Hospitals.** Contact
   `me@sudhanshurai.org` for corrections or removal requests.
+
+## Full file list
+
+- `gov2023-24.pdf` — [source](https://web.archive.org/web/20230331050810/https://www.dsh.ca.gov/About_Us/docs/2023-24_Governors_Budget_Estimate.pdf)
+- `gov2024-25.pdf` — [source](https://web.archive.org/web/20240125025600/https://www.dsh.ca.gov/About_Us/docs/2024-25_Governors_Budget_Estimate.pdf)
+- `gov2025-26.pdf` — [source](https://web.archive.org/web/20250124222254/https://www.dsh.ca.gov/About_Us/docs/DSH_2025-26_Governor's_Budget_Estimate_Binder.pdf)
+- `gov2026-27.pdf` — [source](https://www.dsh.ca.gov/About_Us/) *(general landing/docket page, not a direct per-file link)*
+- `may2022-23.pdf` — [source](https://web.archive.org/web/20220702014849/https://www.dsh.ca.gov/About_Us/docs/DSH_2022-23_May_Revision_Estimate.pdf)
+- `may2023-24.pdf` — [source](https://web.archive.org/web/20230527071743/https://www.dsh.ca.gov/About_Us/docs/DSH_2023-24_May_Revision_Estimate.pdf)
+- `may2024-25.pdf` — [source](https://web.archive.org/web/20240524031635/https://www.dsh.ca.gov/About_Us/docs/DSH%202024-25_May_Revision_Estimate.pdf)
+- `may2025-26.pdf` — [source](https://web.archive.org/web/20250520221112/https://www.dsh.ca.gov/About_Us/docs/DSH_2025-26_May_Revision_Estimate.pdf)
+- `may2026-27.pdf` — [source](https://www.dsh.ca.gov/About_Us/docs/DSH_2026-27_May_Revision_Estimate.pdf)

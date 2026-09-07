@@ -90,3 +90,22 @@ worth doing before treating this basis as final — see this project's own outre
   archive-root `NOTICE` and `SAFETY_REVIEW.md`.
 - **Official figures remain those of the Special Master and the Colorado Joint Budget Committee.**
   Contact `me@sudhanshurai.org` for corrections or removal requests from a rights holder.
+
+## Full file list
+
+11 files are bundled in this folder (Special Master reports); the 3 JBC files are withheld pending confirmation (see above) — linked here for citation purposes only, not bundled as PDFs.
+
+- `fy2024-25_humbrf2.5.pdf` — [source](https://web.archive.org/web/20250224084723/http://leg.colorado.gov/sites/default/files/fy2024-25_humbrf2.5.pdf) — **withheld, not bundled**
+- `fy2025-26_humbrf1.5.pdf` — [source](https://web.archive.org/web/20250407090012/http://leg.colorado.gov/sites/default/files/fy2025-26_humbrf1.5.pdf) — **withheld, not bundled**
+- `jbc_memo.pdf` — [source](https://leg.colorado.gov/agencies/joint-budget-committee) *(general landing/docket page, not a direct per-file link)* — **withheld, not bundled**
+- `sm_109305.pdf` — [source](https://www.courtlistener.com/docket/4176801/center-for-legal-advocacy-v-barnes/) *(general landing/docket page, not a direct per-file link)*
+- `sm_109327.pdf` — [source](https://www.courtlistener.com/docket/4176801/center-for-legal-advocacy-v-barnes/) *(general landing/docket page, not a direct per-file link)*
+- `sm_109331.pdf` — [source](https://storage.courtlistener.com/recap/gov.uscourts.cod.128117/gov.uscourts.cod.128117.197.0.pdf)
+- `sm_2023-11-28.pdf` — [source](https://storage.courtlistener.com/recap/gov.uscourts.cod.128117/gov.uscourts.cod.128117.280.0.pdf)
+- `sm_2024-02-28.pdf` — [source](https://storage.courtlistener.com/recap/gov.uscourts.cod.128117/gov.uscourts.cod.128117.284.0.pdf)
+- `sm_2024-05-28.pdf` — [source](https://storage.courtlistener.com/recap/gov.uscourts.cod.128117/gov.uscourts.cod.128117.290.0.pdf)
+- `sm_2024-08-28.pdf` — [source](https://storage.courtlistener.com/recap/gov.uscourts.cod.128117/gov.uscourts.cod.128117.296.0.pdf)
+- `sm_2024-11-28.pdf` — [source](https://www.courtlistener.com/docket/4176801/center-for-legal-advocacy-v-barnes/) *(general landing/docket page, not a direct per-file link)*
+- `sm_2025-02-28.pdf` — [source](https://storage.courtlistener.com/recap/gov.uscourts.cod.128117/gov.uscourts.cod.128117.306.0.pdf)
+- `sm_2025-05-28.pdf` — [source](https://storage.courtlistener.com/recap/gov.uscourts.cod.128117/gov.uscourts.cod.128117.310.0.pdf)
+- `sm_2026-05-28.pdf` — [source](https://storage.courtlistener.com/recap/gov.uscourts.cod.128117/gov.uscourts.cod.128117.341.0_1.pdf)

@@ -55,3 +55,24 @@ them here does not transfer or claim any ownership or copyright in them.
 - **Official figures remain those of the court monitor, neutral expert, and Oregon Health
   Authority.** If anything here conflicts with the original, the original governs — contact
   `me@sudhanshurai.org` for corrections or removal requests from a rights holder.
+
+## Full file list
+
+- `2025.09.05-Oregon-Mink-Bowman-Court-Monitor-Report.pdf` — [source](https://www.oregon.gov/oha/OSH/reports/2025.09.05-Oregon-Mink-Bowman-Court-Monitor-Report.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
+- `2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf` — [source](https://www.oregon.gov/oha/OSH/reports/2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
+- `2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf` — [source](https://www.oregon.gov/oha/OSH/reports/2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
+- `Oregon_Mink-Bowman_10th_Neutral_Expert_Pinals_Report.pdf` — [source](https://www.oregon.gov/oha/OSH/reports/Oregon_Mink-Bowman_10th_Neutral_Expert_Pinals_Report.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
+- `Oregon_Mink-Bowman_11th_Neutral_Expert_Pinals_Report.pdf` — [source](https://www.oregon.gov/oha/OSH/reports/Oregon_Mink-Bowman_11th_Neutral_Expert_Pinals_Report.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
+- `Oregon_Mink-Bowman_11th_Neutral_Expert_Pinals_Report_supplement.pdf` — [source](https://www.oregon.gov/oha/OSH/reports/Oregon_Mink-Bowman_11th_Neutral_Expert_Pinals_Report_supplement.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
+- `Oregon_Mink-Bowman_1st_Neutral_Expert_Pinals_Report.pdf` — [source](https://www.oregon.gov/oha/OSH/reports/Oregon_Mink-Bowman_1st_Neutral_Expert_Pinals_Report.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
+- `Oregon_Mink-Bowman_2nd_Neutral_Expert_Pinals_Report.pdf` — [source](https://www.oregon.gov/oha/OSH/reports/Oregon_Mink-Bowman_2nd_Neutral_Expert_Pinals_Report.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
+- `Oregon_Mink-Bowman_3rd_Neutral_Expert_Pinals_Report.pdf` — [source](https://www.oregon.gov/oha/OSH/reports/Oregon_Mink-Bowman_3rd_Neutral_Expert_Pinals_Report.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
+- `Oregon_Mink-Bowman_4th_Neutral_Expert_Pinals_Report.pdf` — [source](https://www.oregon.gov/oha/OSH/reports/Oregon_Mink-Bowman_4th_Neutral_Expert_Pinals_Report.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
+- `Oregon_Mink-Bowman_5th_Neutral_Expert_Pinals_Report.pdf` — [source](https://www.oregon.gov/oha/OSH/reports/Oregon_Mink-Bowman_5th_Neutral_Expert_Pinals_Report.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
+- `Oregon_Mink-Bowman_6th_Neutral_Expert_Pinals_Report.pdf` — [source](https://www.oregon.gov/oha/OSH/reports/Oregon_Mink-Bowman_6th_Neutral_Expert_Pinals_Report.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
+- `Oregon_Mink-Bowman_7th_Neutral_Expert_Pinals_Report.pdf` — [source](https://www.oregon.gov/oha/OSH/reports/Oregon_Mink-Bowman_7th_Neutral_Expert_Pinals_Report.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
+- `Oregon_Mink-Bowman_8th_Neutral_Expert_Pinals_Report.pdf` — [source](https://www.oregon.gov/oha/OSH/reports/Oregon_Mink-Bowman_8th_Neutral_Expert_Pinals_Report.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
+- `Oregon_Mink-Bowman_9th_Neutral_Expert_Pinals_Report.pdf` — [source](https://www.oregon.gov/oha/OSH/reports/Oregon_Mink-Bowman_9th_Neutral_Expert_Pinals_Report.pdf) *(inferred URL pattern, not individually hash-verified against this exact link)*
+- `PLD-2022.10.03.pdf` — [source](https://www.oregon.gov/oha/osh/pages/mink-bowman.aspx) *(general landing/docket page, not a direct per-file link)*
+- `PLD-2022.11.03.pdf` — [source](https://www.oregon.gov/oha/osh/pages/mink-bowman.aspx) *(general landing/docket page, not a direct per-file link)*
+- `PLD-2024.03.03.pdf` — [source](https://www.oregon.gov/oha/osh/pages/mink-bowman.aspx) *(general landing/docket page, not a direct per-file link)*
