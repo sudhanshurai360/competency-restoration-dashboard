@@ -77,8 +77,10 @@ previously mention.
 
 Because this is genuinely the weakest-footing document type in this whole archive, and because JBC
 memos name a real, findable staff contact (`jbc_memo.pdf` itself lists the author and a phone
-number), a direct check-in with JBC staff confirming no objection to non-commercial reproduction is
-worth doing before treating this basis as final — see this project's own outreach notes for status.
+number), an email was sent to JBC's general staff office (jbc.ga@coleg.gov) on 2026-09-07 asking
+for confirmation of no objection to non-commercial reproduction. This README will be updated —
+and the 3 PDFs added back — once a response is received, or after a reasonable follow-up window
+has passed with no objection raised elsewhere.
 
 ## Both categories
 

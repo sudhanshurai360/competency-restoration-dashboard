@@ -8,14 +8,23 @@ Services (DSHS).
 ## Where these came from
 
 Every file's exact source URL, byte size, and SHA-256 hash is recorded in `SOURCES.csv` at the
-archive root (filter `state == wa`). In short: DSHS hosts these at a stable, predictable path —
+archive root (filter `state == wa`). DSHS hosts these at a stable, predictable path — but under
+**two different subdomains**, not one: 85 files (through the 2025-12 report) resolve at
 
 ```
 https://www.dshs.wa.gov/sites/default/files/BHSIA/FMHS/Trueblood/{year}Trueblood/Trueblood-Report-{year}-{month}.pdf
 ```
 
-— and every file in this folder was downloaded from exactly that pattern and hash-verified
-against the copy actually used by the extraction pipeline (`../../../src/wa_trueblood.py`).
+while the 6 most recent (2026-01 through 2026-06) migrated to a different DSHS subdomain —
+
+```
+https://manuals.dshs.wa.gov/sites/default/files/BHSIA/FMHS/Trueblood/{year}Trueblood/Trueblood-Report-{year}-{month}.pdf
+```
+
+— confirmed exactly in `SOURCES.csv`'s own per-file URLs, not glossed over as "one pattern." Every
+file in this folder was downloaded from its own listed URL and hash-verified against the copy
+actually used by the extraction pipeline (`../../../src/wa_trueblood.py`) — the fair-use rationale
+below applies identically regardless of which DSHS subdomain hosts a given file.
 
 ## Rights — we do not own these documents
 

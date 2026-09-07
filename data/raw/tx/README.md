@@ -5,8 +5,11 @@ by the Texas Health and Human Services Commission (HHSC) pursuant to a legislati
 mandate (General Appropriations Act rider). Texas had no binding competency-restoration admission
 deadline until July 2026, when Senior U.S. District Judge David Alan Ezra (W.D. Tex., Austin
 Division), following a full bench trial, ruled Texas's practice unconstitutional and ordered a
-21-day admission standard [case caption/docket — confirm exact citation before treating this as
-final]. The order gives HHSC a four-year phase-in with jointly-developed interim benchmarks, so
+21-day admission standard. (The case name and docket number are not yet confirmed in this
+document — pull the formal caption from PACER/CourtListener before citing this ruling elsewhere as
+a legal authority; that gap doesn't affect anything else stated here, which is drawn from public
+news coverage and HHSC's own reports.) The order gives HHSC a four-year phase-in with
+jointly-developed interim benchmarks, so
 21 days is not yet the operative standard on the ground. Texas sought a stay of the entire ruling
 pending appeal; the court denied that stay in late August 2026, so the underlying injunction and
 benchmark-setting process are currently proceeding, not paused. Texas has appealed to the Fifth
@@ -58,8 +61,9 @@ Accordingly, and to satisfy those terms explicitly:
   and no paywall — see the top-level `README.md`).
 - **Not an endorsement**: this project is not affiliated with, and not endorsed by, HHSC or the
   State of Texas.
-- Per-file retrieval date is recorded in `SOURCES.csv` (Wayback snapshot timestamps embedded in
-  each confirmed URL).
+- **Date copied**: a human-readable retrieval date for each file is given directly in the "Full
+  file list" section below, not just embedded in a Wayback timestamp a reader would have to know
+  to parse.
 
 Not covered by this archive's own `LICENSE` (MIT) or `LICENSE-DATA` (CC-BY-4.0) — see the
 archive-root `NOTICE` and `SAFETY_REVIEW.md`. **Official figures remain those of HHSC.** Contact
@@ -67,9 +71,9 @@ archive-root `NOTICE` and `SAFETY_REVIEW.md`. **Official figures remain those of
 
 ## Full file list
 
-- `mhs-waiting-lists-may-2023.pdf` — [source](https://web.archive.org/web/20230619145235/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-may-2023.pdf)
-- `mhs-waiting-lists-may-2024.pdf` — [source](https://web.archive.org/web/20240610110140id_/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-may-2024.pdf)
-- `mhs-waiting-lists-may-2025.pdf` — [source](https://web.archive.org/web/20250516220842id_/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-may-2025.pdf)
-- `mhs-waiting-lists-nov-2023.pdf` — [source](https://web.archive.org/web/20231202153236/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-nov-2023.pdf)
-- `mhs-waiting-lists-nov-2024.pdf` — [source](https://web.archive.org/web/20250208071757/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-nov-2024.pdf)
-- `mhs-waiting-lists-nov-2025.pdf` — [source](https://web.archive.org/web/20251222022155/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-nov-2025.pdf)
+- `mhs-waiting-lists-may-2023.pdf` — [source](https://web.archive.org/web/20230619145235/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-may-2023.pdf) — retrieved via Wayback Machine snapshot dated 2023-06-19
+- `mhs-waiting-lists-may-2024.pdf` — [source](https://web.archive.org/web/20240610110140id_/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-may-2024.pdf) — retrieved via Wayback Machine snapshot dated 2024-06-10
+- `mhs-waiting-lists-may-2025.pdf` — [source](https://web.archive.org/web/20250516220842id_/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-may-2025.pdf) — retrieved via Wayback Machine snapshot dated 2025-05-16
+- `mhs-waiting-lists-nov-2023.pdf` — [source](https://web.archive.org/web/20231202153236/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-nov-2023.pdf) — retrieved via Wayback Machine snapshot dated 2023-12-02
+- `mhs-waiting-lists-nov-2024.pdf` — [source](https://web.archive.org/web/20250208071757/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-nov-2024.pdf) — retrieved via Wayback Machine snapshot dated 2025-02-08
+- `mhs-waiting-lists-nov-2025.pdf` — [source](https://web.archive.org/web/20251222022155/https://www.hhs.texas.gov/sites/default/files/documents/mhs-waiting-lists-nov-2025.pdf) — retrieved via Wayback Machine snapshot dated 2025-12-22

@@ -29,7 +29,7 @@ assumed to be uniform:
 | Colorado | Federal court Special Master reports (via RECAP) | Fair use (court filings) — not a public-domain claim | `co/README.md` |
 | Colorado | State legislative (JBC) budget memos | Fair use only — the weakest footing of the five sources, said plainly | `co/README.md` |
 | Texas | State agency (HHSC) reports | HHSC's own conditional license (non-commercial, unaltered, attributed) — NOT public domain | `tx/README.md` |
-| California | State agency (DSH) budget documents | Public domain, per CA's own stated policy and case law | `ca/README.md` |
+| California | State agency (DSH) budget documents | Public domain — per case law and the absence of any restriction on the documents themselves, not a confirmed DSH policy adoption | `ca/README.md` |
 
 **In short: California is public domain; Texas is conditionally licensed by its own publisher's
 stated terms; Washington's DSHS reports and Oregon's 3 AG-filed pleadings rest on fair use with a
