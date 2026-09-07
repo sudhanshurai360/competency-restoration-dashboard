@@ -1,0 +1,7 @@
+state,period,metric,value,as_of,source,source_sha,pdf_page
+CO,2023-09,restoration_waitlist_count,431.0,"September 30, 2023",fy2024-25_humbrf2.5.pdf,f40320006e4c,20
+CO,,avg_wait_days_restoration,110.0,105-115 day range,fy2024-25_humbrf2.5.pdf,f40320006e4c,20
+CO,2023-24,decree_fines_capped_$M,12.0,FY2023-24,fy2024-25_humbrf2.5.pdf,f40320006e4c,20
+CO,2022-23,decree_fines_uncapped_est_$M,65.2,FY2022-23,fy2024-25_humbrf2.5.pdf,f40320006e4c,10
+CO,2024-25,decree_fines_capped_$M,12.2,FY2024-25,fy2025-26_humbrf1.5.pdf,c338b6099f5a,45
+CO,2024-01,restoration_waitlist_count,391.0,"January 9, 2024",jbc_memo.pdf,fedb448722c5,4

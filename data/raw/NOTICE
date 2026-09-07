@@ -1,0 +1,50 @@
+NOTICE — third-party source documents
+=====================================
+
+The PDFs under this `data/raw/` directory are PUBLIC RECORDS produced by their respective courts,
+court-appointed monitors/special masters/neutral experts, state legislative staff, and state
+agencies. They are redistributed here UNCHANGED, solely to make this project's pipeline
+independently reproducible from its exact inputs (run `python src/verify.py` from the archive
+root).
+
+THESE DOCUMENTS ARE NOT THE WORK OF THIS PROJECT. We do not own them, we did not author them, and
+redistributing them here does not transfer or claim any ownership or copyright in them. Official
+figures remain those of the respective courts, monitors, and agencies.
+
+This archive's own licenses — `LICENSE` (MIT, our code) and `LICENSE-DATA` (CC-BY-4.0, our
+independently harmonized dataset under `data/derived/`) — do NOT cover anything in this `data/raw/`
+directory.
+
+## The rights basis differs by state — read the relevant state's own README, not just this file
+
+This is not one blanket claim. Each state's source documents come from a different kind of
+publisher with a different rights basis, checked and stated honestly per state rather than
+assumed to be uniform:
+
+| State | Document type | Basis for redistribution | Detail |
+|---|---|---|---|
+| Washington | State agency (DSHS) court-monitor reports | Public record, agency-hosted | `washington/README.md` |
+| Oregon | State agency / court monitor / AG legal filings | Public record + fair use (court filings) | `oregon/README.md` |
+| Colorado | Federal court Special Master reports (via RECAP) | Fair use (court filings) — not a public-domain claim | `colorado/README.md` |
+| Colorado | State legislative (JBC) budget memos | Fair use only — the weakest footing of the five sources, said plainly | `colorado/README.md` |
+| Texas | State agency (HHSC) reports | HHSC's own conditional license (non-commercial, unaltered, attributed) — NOT public domain | `texas/README.md` |
+| California | State agency (DSH) budget documents | Public domain, per CA's own stated policy and case law | `california/README.md` |
+
+**In short: California is public domain; Texas is conditionally licensed by its own publisher's
+stated terms; Washington and the Oregon/Colorado agency-hosted documents are public agency
+records; the Oregon and Colorado court filings rest on fair use, backed by the same basis
+CourtListener/RECAP/Justia already rely on to redistribute filings at scale; and Colorado's JBC
+budget memos rest on fair use alone, without a public-domain or agency-license safety net behind
+it.** None of this is a formal legal opinion — it's a documented, good-faith, per-document
+determination, exactly like the pre-publication safety review below.
+
+## Provenance and safety review
+
+- Per-file provenance (state, source URL where confirmed, SHA-256, and a landing-page fallback
+  where no stable per-file URL was found) is in `SOURCES.csv` at the archive root.
+- A pre-publication PII/sealing review of every document in this archive is recorded in
+  `SAFETY_REVIEW.md` at the archive root — all were found to be aggregate public reports, safe to
+  redistribute, with no individual PII.
+
+Rights holders: to request removal of a document, contact me@sudhanshurai.org. `SOURCES.csv` still
+lets others retrieve it from its original source.

@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this dataset or code, please cite it as below."
+title: "Competency Restoration Dashboard Data: A Reproducible Five-State Panel of Legal-Deadline Compliance for Psychiatric Competency Restoration (Washington, Oregon, Colorado, Texas, California)"
+abstract: >-
+  A harmonized, source-linked dataset of competency-restoration timeliness and waitlist
+  measures for five U.S. states, each operating under a different legal mechanism enforcing
+  (or, for Texas, newly ordering) competency-restoration admission deadlines: Washington
+  (federal consent decree), Oregon (federal injunction), Colorado (federal consent decree,
+  court-appointed Special Master), Texas (no binding deadline until a July 2026 ruling, under
+  appeal), and California (a state-court mandate). A data-and-methods resource; it does not
+  report study findings. Updated periodically as new source reports are published.
+type: dataset
+authors:
+  - family-names: Rai
+    given-names: Sudhanshu
+    orcid: "https://orcid.org/0009-0001-2447-0336"
+license: CC-BY-4.0
+keywords:
+  - competency to stand trial
+  - incompetent to stand trial
+  - competency restoration
+  - Trueblood
+  - Mink Bowman
+  - Center for Legal Advocacy v. Barnes
+  - Stiavetti v. Clendenin
+  - court monitoring
+  - forensic mental health
+  - open data
+  - reproducibility
+url: "https://competencyrestoration.org"
+repository-code: "https://github.com/sudhanshurai360/competency-restoration-dashboard"
+version: "1.0.0"
+date-released: "2026-09-07"
+# doi / identifiers: filled in once Zenodo mints the concept and version DOIs for this record.

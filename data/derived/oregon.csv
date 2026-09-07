@@ -1,0 +1,173 @@
+state,period,metric,value,report,source_sha,pdf_page,table_ref
+OR,2023-11,admits,108.0,Oregon_Mink-Bowman_8th_Neutral_Expert_Pinals_Report.pdf,c6d07b7b8b85,10,
+OR,2024-04,admits,96.0,Oregon_Mink-Bowman_9th_Neutral_Expert_Pinals_Report.pdf,644f4c528285,8,
+OR,2025-04,admits,128.0,Oregon_Mink-Bowman_11th_Neutral_Expert_Pinals_Report.pdf,bc5eb1b045db,16,
+OR,2025-08,admits,107.0,2025.09.05-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,41bc87a152be,7,
+OR,2025-11,admits,69.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,14,
+OR,2025-03,avg_wait_days,25.4,Oregon_Mink-Bowman_11th_Neutral_Expert_Pinals_Report.pdf,bc5eb1b045db,16,
+OR,2025-04,avg_wait_days,20.7,Oregon_Mink-Bowman_11th_Neutral_Expert_Pinals_Report.pdf,bc5eb1b045db,16,
+OR,2025-07,avg_wait_days,9.7,2025.09.05-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,41bc87a152be,7,
+OR,2025-08,avg_wait_days,10.2,2025.09.05-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,41bc87a152be,7,
+OR,2025-11,avg_wait_days,19.1,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,14,
+OR,2022-01,beds_active,706.0,Oregon_Mink-Bowman_1st_Neutral_Expert_Pinals_Report.pdf,97eb8e2eb8ea,7,Table 2
+OR,2022-05,beds_active,706.0,Oregon_Mink-Bowman_2nd_Neutral_Expert_Pinals_Report.pdf,48483a4066dc,10,Table 2
+OR,2022-09,beds_active,706.0,Oregon_Mink-Bowman_3rd_Neutral_Expert_Pinals_Report.pdf,79f1ec42d8b3,9,Table 2
+OR,2022-12,beds_active,699.0,Oregon_Mink-Bowman_4th_Neutral_Expert_Pinals_Report.pdf,ff501816e95b,8,Table 2
+OR,2023-04,beds_active,704.0,Oregon_Mink-Bowman_5th_Neutral_Expert_Pinals_Report.pdf,4e577307a8f5,8,Table 2
+OR,2023-07,beds_active,704.0,Oregon_Mink-Bowman_6th_Neutral_Expert_Pinals_Report.pdf,a2734d9ada88,9,Table 2
+OR,2023-11,beds_active,704.0,Oregon_Mink-Bowman_8th_Neutral_Expert_Pinals_Report.pdf,c6d07b7b8b85,9,Table 2
+OR,2024-04,beds_active,705.0,Oregon_Mink-Bowman_9th_Neutral_Expert_Pinals_Report.pdf,644f4c528285,10,Table 2
+OR,2024-11,beds_active,705.0,Oregon_Mink-Bowman_10th_Neutral_Expert_Pinals_Report.pdf,afd7d720e8e4,11,Table 2
+OR,2025-04,beds_active,705.0,Oregon_Mink-Bowman_11th_Neutral_Expert_Pinals_Report.pdf,bc5eb1b045db,14,Table 3
+OR,2025-08,beds_active,705.0,2025.09.05-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,41bc87a152be,10,Table 2
+OR,2025-11,beds_active,704.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 2
+OR,2022-01,beds_licensed,743.0,Oregon_Mink-Bowman_1st_Neutral_Expert_Pinals_Report.pdf,97eb8e2eb8ea,7,Table 2
+OR,2022-05,beds_licensed,743.0,Oregon_Mink-Bowman_2nd_Neutral_Expert_Pinals_Report.pdf,48483a4066dc,10,Table 2
+OR,2022-09,beds_licensed,743.0,Oregon_Mink-Bowman_3rd_Neutral_Expert_Pinals_Report.pdf,79f1ec42d8b3,9,Table 2
+OR,2022-12,beds_licensed,743.0,Oregon_Mink-Bowman_4th_Neutral_Expert_Pinals_Report.pdf,ff501816e95b,8,Table 2
+OR,2023-04,beds_licensed,743.0,Oregon_Mink-Bowman_5th_Neutral_Expert_Pinals_Report.pdf,4e577307a8f5,8,Table 2
+OR,2023-07,beds_licensed,743.0,Oregon_Mink-Bowman_6th_Neutral_Expert_Pinals_Report.pdf,a2734d9ada88,9,Table 2
+OR,2023-11,beds_licensed,743.0,Oregon_Mink-Bowman_8th_Neutral_Expert_Pinals_Report.pdf,c6d07b7b8b85,9,Table 2
+OR,2024-04,beds_licensed,742.0,Oregon_Mink-Bowman_9th_Neutral_Expert_Pinals_Report.pdf,644f4c528285,10,Table 2
+OR,2024-11,beds_licensed,742.0,Oregon_Mink-Bowman_10th_Neutral_Expert_Pinals_Report.pdf,afd7d720e8e4,11,Table 2
+OR,2025-04,beds_licensed,742.0,Oregon_Mink-Bowman_11th_Neutral_Expert_Pinals_Report.pdf,bc5eb1b045db,14,Table 3
+OR,2025-08,beds_licensed,742.0,2025.09.05-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,41bc87a152be,10,Table 2
+OR,2025-11,beds_licensed,738.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 2
+OR,2022-09,census_aa,410.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2022-12,census_aa,396.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2023-04,census_aa,400.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2023-07,census_aa,389.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2023-11,census_aa,366.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2024-04,census_aa,360.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2024-11,census_aa,375.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2025-04,census_aa,383.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2025-08,census_aa,394.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2025-11,census_aa,396.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2026-03,census_aa,386.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2022-09,census_civil,14.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2022-12,census_civil,13.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2023-04,census_civil,11.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2023-07,census_civil,13.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2023-11,census_civil,17.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2024-04,census_civil,30.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2024-11,census_civil,27.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2025-04,census_civil,28.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2025-08,census_civil,37.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2025-11,census_civil,37.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2026-03,census_civil,35.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2022-09,census_other,1.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2022-12,census_other,0.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2023-04,census_other,1.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2023-07,census_other,1.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2023-11,census_other,1.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2024-04,census_other,0.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2024-11,census_other,8.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2025-04,census_other,3.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2025-08,census_other,3.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2025-11,census_other,5.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2026-03,census_other,0.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2022-09,census_psrb,275.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2022-12,census_psrb,279.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2023-04,census_psrb,279.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2023-07,census_psrb,281.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2023-11,census_psrb,291.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2024-04,census_psrb,288.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2024-11,census_psrb,270.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2025-04,census_psrb,269.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2025-08,census_psrb,262.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2025-11,census_psrb,265.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2026-03,census_psrb,280.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2022-09,census_total,700.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2022-12,census_total,688.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2023-04,census_total,691.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2023-07,census_total,684.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2023-11,census_total,675.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2024-04,census_total,678.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2024-11,census_total,680.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2025-04,census_total,683.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2025-08,census_total,696.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2025-11,census_total,703.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2026-03,census_total,701.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 3
+OR,2025-11,contempt_fines_accrued_musd,1.4,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,2,
+OR,2026-03,contempt_fines_accrued_musd,3.19,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,7,
+OR,2021-12,orders_received,76.0,Oregon_Mink-Bowman_4th_Neutral_Expert_Pinals_Report.pdf,ff501816e95b,8,Table 4
+OR,2022-01,orders_received,76.0,Oregon_Mink-Bowman_4th_Neutral_Expert_Pinals_Report.pdf,ff501816e95b,8,Table 4
+OR,2022-02,orders_received,56.0,Oregon_Mink-Bowman_4th_Neutral_Expert_Pinals_Report.pdf,ff501816e95b,8,Table 4
+OR,2022-03,orders_received,85.0,Oregon_Mink-Bowman_4th_Neutral_Expert_Pinals_Report.pdf,ff501816e95b,8,Table 4
+OR,2022-04,orders_received,79.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,12,Table 4
+OR,2022-05,orders_received,76.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,12,Table 4
+OR,2022-06,orders_received,73.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,12,Table 4
+OR,2022-07,orders_received,72.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,12,Table 4
+OR,2022-08,orders_received,81.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,12,Table 4
+OR,2022-09,orders_received,84.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2022-10,orders_received,95.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2022-11,orders_received,89.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2022-12,orders_received,74.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2023-01,orders_received,107.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2023-02,orders_received,78.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2023-03,orders_received,109.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2023-04,orders_received,103.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2023-05,orders_received,94.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2023-06,orders_received,86.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2023-07,orders_received,73.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2023-08,orders_received,109.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2023-09,orders_received,93.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2023-10,orders_received,97.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2023-11,orders_received,98.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2023-12,orders_received,92.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2024-01,orders_received,83.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2024-02,orders_received,73.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2024-03,orders_received,87.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2024-04,orders_received,99.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2024-05,orders_received,127.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2024-06,orders_received,90.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2024-07,orders_received,128.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2024-08,orders_received,99.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2024-09,orders_received,92.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2024-10,orders_received,102.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2024-11,orders_received,89.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2024-12,orders_received,105.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,13,Table 4
+OR,2025-01,orders_received,89.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 4
+OR,2025-02,orders_received,79.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 4
+OR,2025-03,orders_received,96.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 4
+OR,2025-04,orders_received,101.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,12,Table 4
+OR,2025-05,orders_received,82.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,13,Table 4
+OR,2025-06,orders_received,105.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,13,Table 4
+OR,2025-07,orders_received,111.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,13,Table 4
+OR,2025-08,orders_received,111.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,13,Table 4
+OR,2025-09,orders_received,124.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,13,Table 4
+OR,2025-10,orders_received,100.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,13,Table 4
+OR,2025-11,orders_received,89.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,13,Table 4
+OR,2025-12,orders_received,101.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,13,Table 4
+OR,2026-01,orders_received,86.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,13,Table 4
+OR,2026-02,orders_received,106.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,13,Table 4
+OR,2023-11,pct_within_7day,93.5,Oregon_Mink-Bowman_8th_Neutral_Expert_Pinals_Report.pdf,c6d07b7b8b85,10,
+OR,2024-04,pct_within_7day,90.6,Oregon_Mink-Bowman_9th_Neutral_Expert_Pinals_Report.pdf,644f4c528285,8,
+OR,2025-08,pct_within_7day,7.5,2025.09.05-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,41bc87a152be,7,
+OR,2025-08,waitlist_count,34.0,2025.09.05-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,41bc87a152be,7,
+OR,2022-01,waitlist_stock,93.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,9,Table 1
+OR,2022-05,waitlist_stock,67.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,9,Table 1
+OR,2022-09,waitlist_stock,70.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,9,Table 1
+OR,2022-12,waitlist_stock,104.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,9,Table 1
+OR,2023-04,waitlist_stock,51.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,9,Table 1
+OR,2023-07,waitlist_stock,42.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,9,Table 1
+OR,2023-11,waitlist_stock,24.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,9,Table 1
+OR,2024-04,waitlist_stock,11.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,9,Table 1
+OR,2024-11,waitlist_stock,76.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,9,Table 1
+OR,2025-04,waitlist_stock,79.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,9,Table 1
+OR,2025-08,waitlist_stock,33.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,9,Table 1
+OR,2025-11,waitlist_stock,54.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,9,Table 1
+OR,2026-03,waitlist_stock,60.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,9,Table 1
+OR,2022-01,waitlist_stock_avg_days,22.5,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,10,Table 1
+OR,2022-05,waitlist_stock_avg_days,16.2,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,10,Table 1
+OR,2022-09,waitlist_stock_avg_days,19.8,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,10,Table 1
+OR,2022-12,waitlist_stock_avg_days,20.7,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,10,Table 1
+OR,2023-04,waitlist_stock_avg_days,11.1,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,10,Table 1
+OR,2023-07,waitlist_stock_avg_days,9.3,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,10,Table 1
+OR,2023-11,waitlist_stock_avg_days,3.5,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,10,Table 1
+OR,2024-04,waitlist_stock_avg_days,5.4,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,10,Table 1
+OR,2024-11,waitlist_stock_avg_days,12.6,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,10,Table 1
+OR,2025-04,waitlist_stock_avg_days,14.3,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,10,Table 1
+OR,2025-08,waitlist_stock_avg_days,4.7,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,10,Table 1
+OR,2025-11,waitlist_stock_avg_days,9.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,10,Table 1
+OR,2026-03,waitlist_stock_avg_days,9.2,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,10,Table 1
