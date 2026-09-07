@@ -42,11 +42,14 @@ reproducible, cross-state resource. **This dataset assembles them.**
   documents and asserts anchor values against the source PDFs, plus cross-run consistency checks
   (e.g. a dedicated completeness check on the newest report in each series, since a fresh report
   has no later report to silently fall back on if its own extraction ever failed).
-- **`data/raw/` — the source documents** (138 files: 91 WA + 18 OR + 14 CO + 6 TX + 9 CA),
-  redistributed unchanged so the pipeline is reproducible from its exact inputs. **The right to
-  redistribute these differs meaningfully by state — read `data/raw/NOTICE` and each state's own
-  `data/raw/<state>/README.md` before assuming a uniform basis.** Per-file provenance (source URL,
-  SHA-256) is in `SOURCES.csv`; `SAFETY_REVIEW.md` records the pre-publication PII/sealing review.
+- **`data/raw/` — the source documents** (135 files bundled: 91 WA + 18 OR + 11 CO + 6 TX + 9 CA),
+  redistributed unchanged so the pipeline is reproducible from its exact inputs. 3 further Colorado
+  documents (Joint Budget Committee memos) are withheld from the bundle pending a direct
+  confirmation request to JBC staff — their extracted data is included regardless (see
+  `data/raw/co/README.md`). **The right to redistribute the bundled files differs meaningfully by
+  state — read `data/raw/NOTICE` and each state's own `data/raw/<state>/README.md` before assuming
+  a uniform basis.** Per-file provenance (source URL, SHA-256, for all 138 including the withheld
+  3) is in `SOURCES.csv`; `SAFETY_REVIEW.md` records the pre-publication PII/sealing review.
 
 ## Coverage (heterogeneous by design)
 
@@ -100,7 +103,7 @@ source-document provenance (report filename, page, table reference where applica
 |---|---|---|---|
 | Washington | Federal consent decree, *Trueblood v. DSHS*, W.D. Wash. — 7-day admission standard | 91 | Fair use — no copyright notice found on these DSHS reports, but Washington has no public-domain-by-default policy either |
 | Oregon | Federal injunction, *Mink/Bowman*, D. Or. — 7-day admission standard | 18 | Split: 15 privately-authored (Dr. Pinals) reports rest on fair use alone; 3 state-authored (Oregon DOJ) pleadings rest on public agency record + fair use |
-| Colorado | Federal consent decree, *Center for Legal Advocacy v. Barnes*, D. Colo. — tiered deadlines, Special Master-monitored | 14 | Fair use (both the federal Special Master reports and the state legislative budget memos — see the state README for why these differ from each other) |
+| Colorado | Federal consent decree, *Center for Legal Advocacy v. Barnes*, D. Colo. — tiered deadlines, Special Master-monitored | 11 bundled + 3 withheld | Fair use (Special Master reports); JBC budget memos withheld from the bundle pending confirmation — see the state README |
 | Texas | No binding deadline until a July 2026 federal ruling (phase-in underway, on appeal) | 6 | Conditional license (Texas HHSC's own published terms) |
 | California | State-court mandate, *Stiavetti v. Clendenin* — 28-day placement standard | 9 | Public domain |
 

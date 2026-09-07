@@ -1,6 +1,7 @@
 # Colorado — source documents
 
-**14 files, two distinct sources with different rights bases — read both sections.**
+**11 PDF files bundled + 3 withheld pending confirmation — two distinct sources with different
+rights bases, read both sections.**
 
 ## 1. Special Master reports (`sm_*.pdf`, 11 files)
 
@@ -31,8 +32,22 @@ different fact pattern from this archive's verbatim, unmodified redistribution f
 reproducibility. It supports the general direction of this argument, not a precise match, and isn't
 leaned on here as if it were on point.)
 
-## 2. Colorado Joint Budget Committee documents (`jbc_memo.pdf`, `fy2024-25_humbrf2.5.pdf`,
-`fy2025-26_humbrf1.5.pdf`, 3 files)
+## 2. Colorado Joint Budget Committee documents — PDFs WITHHELD PENDING CONFIRMATION
+
+**`jbc_memo.pdf`, `fy2024-25_humbrf2.5.pdf`, and `fy2025-26_humbrf1.5.pdf` are NOT bundled in this
+folder right now.** This is the one document type in this archive resting on fair use alone with no
+public-domain or agency-license backdrop behind it (see "Rights" below) — rather than publish the
+PDFs on that basis alone, we're holding them back until JBC staff have had a chance to confirm no
+objection to non-commercial reproduction (a real, findable contact — see "Where these came from").
+**What's still here despite the withheld PDFs**: the extracted data itself
+(`data/derived/colorado_jbc.csv`, `co_jbc_snapshots.parquet`) and every citation to these documents
+on the dashboard remain fully included — factual figures extracted from a public document are a
+different, much lower-risk thing to publish than the document itself, regardless of the source
+PDF's own status. `python src/co_jbc.py` will not currently reproduce this dataset from scratch in
+this archive (its 3 source PDFs aren't here) until the PDFs are added back; the already-derived CSV
+output is provided as-is in the meantime. `SOURCES.csv` still carries the full metadata (filename,
+URL, hash) for these 3 files, for citation purposes — that's just information about where the
+originals live, not a redistribution of them.
 
 Staff budget briefings produced by the Colorado General Assembly's Joint Budget Committee (JBC)
 staff, hosted at `leg.colorado.gov`.
@@ -67,9 +82,10 @@ worth doing before treating this basis as final — see this project's own outre
 
 ## Both categories
 
-- Redistributed **unchanged**, solely so the extraction pipeline in this archive
-  (`../../../src/co_special_master.py`, `../../../src/co_jbc.py`) is independently reproducible from its
-  exact inputs (run `python src/verify.py` from the archive root).
+- The 11 bundled Special Master PDFs are redistributed **unchanged**, so the extraction pipeline
+  (`../../../src/co_special_master.py`) is independently reproducible from its exact inputs
+  (`python src/verify.py` from the archive root). The 3 JBC PDFs are withheld per above; their
+  already-derived data is included instead.
 - Not covered by this archive's own `LICENSE` (MIT) or `LICENSE-DATA` (CC-BY-4.0) — see the
   archive-root `NOTICE` and `SAFETY_REVIEW.md`.
 - **Official figures remain those of the Special Master and the Colorado Joint Budget Committee.**

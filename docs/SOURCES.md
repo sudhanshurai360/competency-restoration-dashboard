@@ -4,9 +4,13 @@ This release covers **five states** — Washington, Oregon, Colorado, Texas, and
 operating under a different legal mechanism addressing competency-restoration timeliness. Each
 state's series is rebuilt from that state's own public reports. **Per-file provenance** — exact
 filename, source URL where a stable one is known, and SHA-256 — is in `SOURCES.csv` at the archive
-root (91 WA + 18 OR + 14 CO + 6 TX + 9 CA = 138 documents). The bundled source documents live under
-`data/raw/<state>/`; **the terms of their redistribution differ by state** — read `data/raw/NOTICE`
-and each state's own `data/raw/<state>/README.md`, not just this file.
+root (91 WA + 18 OR + 14 CO + 6 TX + 9 CA = 138 documents, metadata for all 138 regardless of
+bundling status below). 135 of those 138 are bundled as actual PDF files under `data/raw/<state>/`;
+Colorado's 3 Joint Budget Committee documents are withheld from the bundle pending a direct
+confirmation request to JBC staff (see `data/raw/co/README.md`) — their already-extracted data is
+still included in `data/derived/colorado_jbc.csv`. **The terms of redistribution differ by state
+even among the 135 that are bundled** — read `data/raw/NOTICE` and each state's own
+`data/raw/<state>/README.md`, not just this file.
 
 Direct PDF links to these reports are unstable and rot over time — several states' own reports
 moved hosts partway through their series. Provenance is therefore anchored on a stable landing/
