@@ -5,11 +5,16 @@ by the Texas Health and Human Services Commission (HHSC) pursuant to a legislati
 mandate (General Appropriations Act rider). Texas had no binding competency-restoration admission
 deadline until July 2026, when Senior U.S. District Judge David Alan Ezra (W.D. Tex., Austin
 Division), following a full bench trial, ruled Texas's practice unconstitutional and ordered a
-21-day admission standard. (The case name and docket number are not yet confirmed in this
-document — pull the formal caption from PACER/CourtListener before citing this ruling elsewhere as
-a legal authority; that gap doesn't affect anything else stated here, which is drawn from public
-news coverage and HHSC's own reports.) The order gives HHSC a four-year phase-in with
-jointly-developed interim benchmarks, so
+21-day admission standard in *Ward v. [Executive Commissioner of HHSC]*, No. 1:16-cv-00917-DAE
+(W.D. Tex., Austin Div.) — a certified class action filed 2016 by Joseph Ward and others, with
+Disability Rights Texas as an associational plaintiff. (The docket number is confirmed directly
+against a signed court order in this case; the named defendant is deliberately left generic here
+rather than a specific name, since official-capacity suits like this one automatically substitute
+in whoever currently holds the Executive Commissioner role — the caption has read "Young,"
+"Hellerstedt," and other names at different points as that office changed hands, and this
+document could not independently confirm which name is current as of the July/August 2026
+rulings. Verify the current caption yourself before citing this case elsewhere as a legal
+authority.) The order gives HHSC a four-year phase-in with jointly-developed interim benchmarks, so
 21 days is not yet the operative standard on the ground. Texas sought a stay of the entire ruling
 pending appeal; the court denied that stay in late August 2026, so the underlying injunction and
 benchmark-setting process are currently proceeding, not paused. Texas has appealed to the Fifth

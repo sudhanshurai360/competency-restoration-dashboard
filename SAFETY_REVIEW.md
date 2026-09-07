@@ -91,7 +91,42 @@ copyright/public-records question — is addressed per state in `data/raw/NOTICE
 own `data/raw/<state>/README.md`; that determination differs meaningfully by state and should be
 read there, not assumed from this file.)
 
+## Two items outside this review's original PII/sealing scope, disclosed here rather than left silent
+
+A later, independent review (2026-09-07, applying lenses beyond the PII/sealing keyword sweep
+above) found two things worth stating explicitly, neither of which changes the verdict below:
+
+**1. Small-cell counts are not suppressed.** Several derived-dataset rows (e.g. in
+`data/derived/washington.csv`) report facility/month cells as small as 1-2 individuals. No
+suppression is applied. This mirrors the source documents' own disclosure granularity exactly —
+this project is not creating any small cell that isn't already sitting, unsuppressed, in the
+public court-monitor or agency report it was extracted from. Suppressing it here would make the
+dataset diverge from its own cited source for no privacy gain, since anyone can already read the
+same number off the original PDF this project links to. No individual is named in any such row;
+the underlying PII/sealing review above already covers whether that's true.
+
+**2. A named private individual appears in one Colorado document, in an unadjudicated-allegation
+context.** `data/raw/co/sm_2024-05-28.pdf` (a Special Master report in *Center for Legal Advocacy
+v. Barnes*) names Joel Watts, owner of Integrated Insights Therapy (Delta, CO), stating the
+Special Master's own committee had "likely" found he misappropriated program funds. This is not a
+class member or patient (the population this review's keyword sweep was built to check) -- he's a
+third-party contractor named in the Special Master's own account of a funding-oversight matter.
+Disclosed here plainly:
+- The passage is verbatim content from a public federal court filing, already public via RECAP
+  independent of this project (see `data/raw/co/README.md` and `SOURCES.csv` for the verified
+  source URL).
+- The allegation is the Special Master's own characterization ("likely misappropriated"), not an
+  adjudicated finding, and not this project's own assertion -- this project neither amplifies nor
+  independently repeats the allegation in its own prose anywhere; it exists only inside the
+  redistributed source document.
+- Republishing an unmodified public court filing under these circumstances is the fair-report
+  posture, not an edited or curated one -- the document is included as-is, like every other
+  Special Master report in this folder, not singled out or redacted.
+- Per the standing policy in `data/raw/NOTICE` and every state README, `me@sudhanshurai.org` is
+  the contact for any correction or removal request from a rights holder or affected party.
+
 ## Combined verdict
 
 All 138 bundled source documents (91 WA + 18 OR + 14 CO + 6 TX + 9 CA) are cleared for public
-redistribution on PII/sealing grounds.
+redistribution on PII/sealing grounds, with the two items above disclosed rather than silently
+carried forward.
