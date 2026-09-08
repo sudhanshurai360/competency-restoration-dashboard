@@ -1,7 +1,12 @@
 # Competency Restoration Dashboard Data — A Reproducible Five-State Panel
 
-**DOI: pending first Zenodo submission** (this README will be updated with the concept and version
-DOI once minted). Full citation in `CITATION.cff`; per-version changes in `CHANGELOG.md`.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22652057.svg)](https://doi.org/10.5281/zenodo.22652057)
+
+**Cite this dataset** (concept DOI, always the latest version):
+[10.5281/zenodo.22652057](https://doi.org/10.5281/zenodo.22652057). Each release also carries its
+own immutable version DOI, so an exact version can be pinned — current (v1.0.0):
+[10.5281/zenodo.22652058](https://doi.org/10.5281/zenodo.22652058). Use the version DOI when citing
+for reproducibility. Full citation in `CITATION.cff`; per-version changes in `CHANGELOG.md`.
 
 > **This repository is a DATA AND METHODS resource.** It provides a harmonized, source-linked
 > dataset of competency-restoration timeliness and waitlist measures for **five U.S. states** —
