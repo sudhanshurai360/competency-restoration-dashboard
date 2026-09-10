@@ -27,21 +27,21 @@ assumed to be uniform:
 | Oregon | 15 court-monitor / neutral-expert reports (privately authored by Dr. Pinals, OHA only hosts them) | Fair use (court/litigation-related material) — the weaker of Oregon's two document types, since these aren't state-authored | `or/README.md` |
 | Oregon | 3 Attorney General legal pleadings (`PLD-*.pdf`), state-employee-authored | Public agency record (state-authored) + fair use (litigation filings) — the stronger of Oregon's two document types | `or/README.md` |
 | Colorado | Federal court Special Master reports (via RECAP) | Fair use (court filings) — not a public-domain claim | `co/README.md` |
-| Colorado | State legislative (JBC) budget memos | Fair use only, with no litigation-filing precedent behind it either — the weakest footing of the seven document types in this table, said plainly | `co/README.md` |
+| Colorado | State legislative (JBC) budget memos | Explicit written permission from JBC staff (2026-09-10) — the strongest footing of the seven document types in this table, not an inference from fair-use doctrine | `co/README.md` |
 | Texas | State agency (HHSC) reports | HHSC's own conditional license (non-commercial, unaltered, attributed) — NOT public domain | `tx/README.md` |
 | California | State agency (DSH) budget documents | Public domain — per case law and the absence of any restriction on the documents themselves, not a confirmed DSH policy adoption | `ca/README.md` |
 
 **In short: California is public domain; Texas is conditionally licensed by its own publisher's
-stated terms; Washington's DSHS reports and Oregon's 3 AG-filed pleadings rest on fair use with a
-public-agency-record backdrop (no copyright notice found, agency itself openly publishes them, but
-no affirmative public-domain policy either); Oregon's 15 court-monitor/neutral-expert reports and
-Colorado's Special Master reports rest on fair use alone, backed by the same basis
-CourtListener/RECAP/Justia already rely on to redistribute filings at scale (these are privately-
-or court-authored, not state agency work product, so they don't get the agency-record backdrop the
-other documents have); and Colorado's JBC budget memos rest on fair use alone too, without even a
-court-filing backdrop behind it — the weakest footing of the seven document types in this archive,
-said plainly.** None of this is a formal legal opinion — it's a documented, good-faith, per-document
-determination, exactly like the pre-publication safety review below.
+stated terms; Colorado's JBC budget memos have explicit written permission from JBC staff, the
+strongest basis of any document type here; Washington's DSHS reports and Oregon's 3 AG-filed
+pleadings rest on fair use with a public-agency-record backdrop (no copyright notice found, agency
+itself openly publishes them, but no affirmative public-domain policy either); and Oregon's 15
+court-monitor/neutral-expert reports and Colorado's Special Master reports rest on fair use alone,
+backed by the same basis CourtListener/RECAP/Justia already rely on to redistribute filings at
+scale (these are privately- or court-authored, not state agency work product, so they don't get
+the agency-record backdrop the other documents have).** None of this is a formal legal opinion —
+it's a documented, good-faith, per-document determination, exactly like the pre-publication safety
+review below.
 
 ## Provenance and safety review
 

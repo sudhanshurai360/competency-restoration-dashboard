@@ -2,12 +2,12 @@
 
 **Scope:** all 138 source PDFs this project has provenance for (91 Washington + 18 Oregon, reviewed
 2026-07-12 for this project's earlier two-state release, + 14 Colorado + 6 Texas + 9 California,
-reviewed 2026-09-07 for this 5-state release) — of which **135 are actually bundled** as PDF files
-in `data/raw/`. The other 3 (Colorado's JBC budget memos) are withheld from the bundle pending a
-separate confirmation request, unrelated to this safety review — see `data/raw/co/README.md`; they
-still passed this same PII/sealing review, and are included in the counts below since the review
-covered them before the later withholding decision was made. See `SOURCES.csv` for the full
-per-file list, including the 3 withheld ones.
+reviewed 2026-09-07 for this 5-state release) — **all 138 are bundled** as PDF files in
+`data/raw/`. Colorado's 3 JBC budget memos were held back from the initial bundle pending a
+separate confirmation request, unrelated to this safety review (see `data/raw/co/README.md`) —
+they passed this same PII/sealing review before that withholding decision was made, and were added
+to the bundle once JBC staff confirmed no objection (2026-09-10). See `SOURCES.csv` for the full
+per-file list.
 
 **Question:** is every bundled document safe to redistribute in a permanent public archive — i.e.,
 an aggregate public court/agency/legislative report, containing **no individual PII**, and **not
@@ -137,7 +137,7 @@ Disclosed here plainly:
 ## Combined verdict
 
 All 138 reviewed source documents (91 WA + 18 OR + 14 CO + 6 TX + 9 CA) are cleared on PII/sealing
-grounds. 135 of those are actually bundled in `data/raw/` as of this version (11 of Colorado's 14
-— its 3 JBC memos are withheld for the separate, unrelated reason described above, not a PII
-concern); the two items above are disclosed rather than silently carried forward regardless of
-bundling status.
+grounds, and all 138 are actually bundled in `data/raw/` as of this version — Colorado's 3 JBC
+memos were held back from the initial bundle for the separate, unrelated reason described above
+(not a PII concern) and added once JBC staff confirmed no objection (2026-09-10); the two items
+above are disclosed rather than silently carried forward regardless of bundling status.

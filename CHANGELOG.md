@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.0.1 — Colorado JBC documents added, permission confirmed (LOCAL, 2026-09-10)
+
+**Status:** LOCAL ONLY — mechanical edits complete, not yet released or re-deposited to Zenodo.
+
+The 3 Colorado Joint Budget Committee documents held back from v1.0.0 (`jbc_memo.pdf`,
+`fy2024-25_humbrf2.5.pdf`, `fy2025-26_humbrf1.5.pdf`) are now bundled in `data/raw/co/`. JBC staff
+(Jessi Neuberg) confirmed by email on 2026-09-10, in reply to the request sent 2026-09-07: "Yes,
+all of our documents are public documents, so you are free to include them." This is now the
+strongest rights basis of any document type in this archive — explicit written permission, not an
+inference from fair-use doctrine.
+
+138 of 138 provenanced source documents are now bundled (was 135 of 138 in v1.0.0). File integrity
+verified before bundling: all 3 files' SHA-256 hashes match the values already on record in
+`SOURCES.csv` since v1.0.0 (these files were hashed and safety-reviewed then; only their bundling
+status changes now). Updated `README.md`, `data/raw/NOTICE`, `data/raw/co/README.md`,
+`SAFETY_REVIEW.md`, and `docs/SOURCES.md` to reflect the new counts and rights basis; no change to
+`SOURCES.csv` (it already carried correct metadata for these 3 files) or to any derived dataset
+(`colorado_jbc.csv` was already built from data extracted before this bundling change).
+
 ## v1.0.0 — published version (PUBLISHED, 2026-09-08)
 
 **Status:** PUBLISHED. Concept DOI `10.5281/zenodo.22652057`; version DOI

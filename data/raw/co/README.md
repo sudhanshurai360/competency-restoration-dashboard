@@ -1,7 +1,6 @@
 # Colorado — source documents
 
-**11 PDF files bundled + 3 withheld pending confirmation — two distinct sources with different
-rights bases, read both sections.**
+**14 PDF files bundled — two distinct sources with different rights bases, read both sections.**
 
 ## 1. Special Master reports (`sm_*.pdf`, 11 files)
 
@@ -32,25 +31,18 @@ different fact pattern from this archive's verbatim, unmodified redistribution f
 reproducibility. It supports the general direction of this argument, not a precise match, and isn't
 leaned on here as if it were on point.)
 
-## 2. Colorado Joint Budget Committee documents — PDFs WITHHELD PENDING CONFIRMATION
+## 2. Colorado Joint Budget Committee documents — PDFs INCLUDED, PERMISSION CONFIRMED
 
-**`jbc_memo.pdf`, `fy2024-25_humbrf2.5.pdf`, and `fy2025-26_humbrf1.5.pdf` are NOT bundled in this
-folder right now.** Several document types across this archive rest on fair use alone (the Special
-Master reports above are one), but JBC memos are the *weakest* of them, specifically: unlike a
-court filing, they have no established "everyone redistributes these for research" precedent
-(CourtListener/RECAP/Justia's routine practice) to point to, and no public-domain or agency-license
-backdrop either (see "Rights" below). Rather than publish the PDFs on fair use alone with nothing
-else behind it, we're holding them back until JBC staff have had a chance to confirm no objection
-to non-commercial reproduction (a real, findable contact — see "Where these came from").
-**What's still here despite the withheld PDFs**: the extracted data itself
-(`data/derived/colorado_jbc.csv`, `co_jbc_snapshots.parquet`) and every citation to these documents
-on the dashboard remain fully included — factual figures extracted from a public document are a
-different, much lower-risk thing to publish than the document itself, regardless of the source
-PDF's own status. `python src/co_jbc.py` will not currently reproduce this dataset from scratch in
-this archive (its 3 source PDFs aren't here) until the PDFs are added back; the already-derived CSV
-output is provided as-is in the meantime. `SOURCES.csv` still carries the full metadata (filename,
-URL, hash) for these 3 files, for citation purposes — that's just information about where the
-originals live, not a redistribution of them.
+**`jbc_memo.pdf`, `fy2024-25_humbrf2.5.pdf`, and `fy2025-26_humbrf1.5.pdf` are bundled in this
+folder.** These were held back from the initial release while their rights basis was the weakest
+in this archive (see "Rights" below) — no court-filing redistribution precedent, no public-domain
+or agency-license backdrop. Rather than publish on fair use alone with nothing else behind it, JBC
+staff were asked directly (see "Confirmation received," below) before including them.
+**JBC staff confirmed in writing on 2026-09-10** that these are public documents and free to
+include — this is now the *strongest* rights basis of any document type in this archive: direct,
+explicit authorization from the originating office, not an inference from fair-use doctrine.
+`python src/co_jbc.py` reproduces this dataset from scratch in this archive; all 3 source PDFs are
+present.
 
 Staff budget briefings produced by the Colorado General Assembly's Joint Budget Committee (JBC)
 staff, hosted at `leg.colorado.gov`.
@@ -60,37 +52,37 @@ staff, hosted at `leg.colorado.gov`.
 `jbc_memo.pdf` was searched for but never found archived anywhere with confidence — its `SOURCES.csv`
 entry points to the JBC's general publications page instead, not a specific archived copy.
 
-**Rights — weaker footing than the Special Master reports, said plainly**: Colorado's legislative
-branch has a documented history of *asserting* copyright over its own work product (it claimed
-copyright in the Colorado Revised Statutes themselves from 1970 until a deliberate 2016 policy
-reversal waived that claim — for the statutes only, not JBC materials specifically). No
-public-domain dedication or open-redistribution policy was found for JBC publications. We
-redistribute these documents relying on **fair use** alone — factual, functional budget-briefing
-content, redistributed unchanged for non-commercial accountability research, no market for
-reselling them, no endorsement implied — which we believe is a reasonable position, but it is not
-as well-established or battle-tested as the fair-use basis for the federal court filings above.
+**Rights — history of the analysis, kept for the record**: Colorado's legislative branch has a
+documented history of *asserting* copyright over its own work product (it claimed copyright in the
+Colorado Revised Statutes themselves from 1970 until a deliberate 2016 policy reversal waived that
+claim — for the statutes only, not JBC materials specifically). No public-domain dedication or
+open-redistribution policy was found for JBC publications independent of direct confirmation. Prior
+to confirmation, redistribution would have rested on **fair use** alone — factual, functional
+budget-briefing content, redistributed unchanged for non-commercial accountability research, no
+market for reselling them, no endorsement implied — a reasonable position, but not as
+well-established or battle-tested as the fair-use basis for the federal court filings above.
 
-Worth noting, as a favorable (not dispositive) analogy: the reasoning behind the 2016 CRS
-copyright-waiver decision — that the content is the product of state-paid legislative staff and is
-already freely posted on the General Assembly's own site, so there's no private contractor's
-proprietary editorial layer to protect — applies with at least equal force to a JBC staff memo as
-it did to the statutes themselves. That's not a formal legal opinion and doesn't change the
-"fair use only" bottom line above, but it's a real, favorable data point this document didn't
-previously mention.
+Worth noting, as a favorable (not dispositive) analogy that turned out to be moot once direct
+confirmation arrived: the reasoning behind the 2016 CRS copyright-waiver decision — that the
+content is the product of state-paid legislative staff and is already freely posted on the General
+Assembly's own site, so there's no private contractor's proprietary editorial layer to protect —
+applies with at least equal force to a JBC staff memo as it did to the statutes themselves.
 
-Because this is genuinely the weakest-footing document type in this whole archive, and because JBC
-memos name a real, findable staff contact (`jbc_memo.pdf` itself lists the author and a phone
-number), an email was sent to JBC's general staff office (jbc.ga@coleg.gov) on 2026-09-07 asking
-for confirmation of no objection to non-commercial reproduction. This README will be updated —
-and the 3 PDFs added back — once a response is received, or after a reasonable follow-up window
-has passed with no objection raised elsewhere.
+**Confirmation received.** Because this was genuinely the weakest-footing document type in this
+whole archive, and because JBC memos name a real, findable staff contact (`jbc_memo.pdf` itself
+lists the author and a phone number), an email was sent to JBC's general staff office
+(jbc.ga@coleg.gov) on 2026-09-07 asking for confirmation of no objection to non-commercial
+reproduction. **Jessi Neuberg, JBC Staff, replied on 2026-09-10: "Yes, all of our documents are
+public documents, so you are free to include them."** The 3 PDFs are bundled accordingly. Full
+correspondence preserved in the private working tree's `dashboard_data/publish_permission/`
+outreach log (not part of this public repo).
 
 ## Both categories
 
-- The 11 bundled Special Master PDFs are redistributed **unchanged**, so the extraction pipeline
-  (`../../../src/co_special_master.py`) is independently reproducible from its exact inputs
-  (`python src/verify.py` from the archive root). The 3 JBC PDFs are withheld per above; their
-  already-derived data is included instead.
+- All 14 bundled PDFs (11 Special Master reports + 3 JBC documents) are redistributed
+  **unchanged**, so both extraction pipelines (`../../../src/co_special_master.py`,
+  `../../../src/co_jbc.py`) are independently reproducible from their exact inputs
+  (`python src/verify.py` from the archive root).
 - Not covered by this archive's own `LICENSE` (MIT) or `LICENSE-DATA` (CC-BY-4.0) — see the
   archive-root `NOTICE` and `SAFETY_REVIEW.md`.
 - **Official figures remain those of the Special Master and the Colorado Joint Budget Committee.**
@@ -98,11 +90,11 @@ has passed with no objection raised elsewhere.
 
 ## Full file list
 
-11 files are bundled in this folder (Special Master reports); the 3 JBC files are withheld pending confirmation (see above) — linked here for citation purposes only, not bundled as PDFs.
+All 14 files are bundled in this folder (11 Special Master reports + 3 JBC documents).
 
-- `fy2024-25_humbrf2.5.pdf` — [source](https://web.archive.org/web/20250224084723/http://leg.colorado.gov/sites/default/files/fy2024-25_humbrf2.5.pdf) — **withheld, not bundled**
-- `fy2025-26_humbrf1.5.pdf` — [source](https://web.archive.org/web/20250407090012/http://leg.colorado.gov/sites/default/files/fy2025-26_humbrf1.5.pdf) — **withheld, not bundled**
-- `jbc_memo.pdf` — [source](https://leg.colorado.gov/agencies/joint-budget-committee) *(general landing/docket page, not a direct per-file link)* — **withheld, not bundled**
+- `fy2024-25_humbrf2.5.pdf` — [source](https://web.archive.org/web/20250224084723/http://leg.colorado.gov/sites/default/files/fy2024-25_humbrf2.5.pdf)
+- `fy2025-26_humbrf1.5.pdf` — [source](https://web.archive.org/web/20250407090012/http://leg.colorado.gov/sites/default/files/fy2025-26_humbrf1.5.pdf)
+- `jbc_memo.pdf` — [source](https://leg.colorado.gov/agencies/joint-budget-committee) *(general landing/docket page, not a direct per-file link)*
 - `sm_109305.pdf` — [source](https://www.courtlistener.com/docket/4176801/center-for-legal-advocacy-v-barnes/) *(general landing/docket page, not a direct per-file link)*
 - `sm_109327.pdf` — [source](https://www.courtlistener.com/docket/4176801/center-for-legal-advocacy-v-barnes/) *(general landing/docket page, not a direct per-file link)*
 - `sm_109331.pdf` — [source](https://storage.courtlistener.com/recap/gov.uscourts.cod.128117/gov.uscourts.cod.128117.197.0.pdf)
