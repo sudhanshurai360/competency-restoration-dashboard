@@ -1,8 +1,11 @@
 # Changelog
 
-## v1.0.1 — Colorado JBC documents added, permission confirmed (LOCAL, 2026-09-10)
+## v1.0.1 — Colorado JBC documents added, permission confirmed (PUBLISHED, 2026-09-10)
 
-**Status:** LOCAL ONLY — mechanical edits complete, not yet released or re-deposited to Zenodo.
+**Status:** PUBLISHED. Concept DOI `10.5281/zenodo.22652057` (unchanged, always resolves to the
+latest version); version DOI `10.5281/zenodo.22697301`, confirmed live by direct query against
+Zenodo's own API (`version: "1.0.1"`, `publication_date: "2026-09-10"`) after the GitHub release
+(`v1.0.1`) triggered the existing GitHub-Zenodo webhook integration.
 
 The 3 Colorado Joint Budget Committee documents held back from v1.0.0 (`jbc_memo.pdf`,
 `fy2024-25_humbrf2.5.pdf`, `fy2025-26_humbrf1.5.pdf`) are now bundled in `data/raw/co/`. JBC staff
