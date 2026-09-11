@@ -1,0 +1,458 @@
+=== Trueblood-Report-2016-05.pdf (0 rows) ===
+=== Trueblood-Report-2018-11.pdf (0 rows) ===
+=== Trueblood-Report-2018-12.pdf (0 rows) ===
+=== Trueblood-Report-2019-01.pdf (0 rows) ===
+=== Trueblood-Report-2019-02.pdf (14 rows) ===
+  period=2018-01 facility=ESH stage=evaluation setting=inpatient signed=8.0 completed= avg=5.9 median=5.5 pct_deadline=70.0 pct_alt2=70.0 pct_alt3=70.0 page=11 table=Table 2b
+  period=2018-02 facility=ESH stage=evaluation setting=inpatient signed=5.0 completed= avg=8.0 median=8.0 pct_deadline=14.0 pct_alt2=14.0 pct_alt3=14.0 page=11 table=Table 2b
+  period=2018-03 facility=ESH stage=evaluation setting=inpatient signed=13.0 completed= avg=14.9 median=15.0 pct_deadline=6.0 pct_alt2=6.0 pct_alt3=6.0 page=11 table=Table 2b
+  period=2018-01 facility=ESH stage=evaluation setting=jail signed=73.0 completed= avg=12.7 median=13.0 pct_deadline=61.0 pct_alt2=64.0 pct_alt3=64.0 page=10 table=Table 2a
+  period=2018-01 facility=ESH stage=restoration setting=inpatient signed=16.0 completed= avg=5.3 median=6.0 pct_deadline=63.0 pct_alt2=63.0 pct_alt3=63.0 page=12 table=Table 2c
+  period=2018-02 facility=ESH stage=restoration setting=inpatient signed=20.0 completed= avg=9.4 median=9.5 pct_deadline=20.0 pct_alt2=20.0 pct_alt3=20.0 page=12 table=Table 2c
+  period=2018-03 facility=ESH stage=restoration setting=inpatient signed=19.0 completed= avg=14.4 median=15.5 pct_deadline=8.0 pct_alt2=12.0 pct_alt3=12.0 page=12 table=Table 2c
+  period=2018-08 facility=RTF stage=restoration setting=inpatient signed=25.0 completed= avg=34.0 median=33.0 pct_deadline=2.0 pct_alt2=2.0 pct_alt3=2.0 page=9 table=Table 1c
+  period=2018-01 facility=WSH stage=evaluation setting=inpatient signed=16.0 completed= avg=48.4 median=60.5 pct_deadline=5.0 pct_alt2=5.0 pct_alt3=5.0 page=8 table=Table 1b
+  period=2018-02 facility=WSH stage=evaluation setting=inpatient signed=6.0 completed= avg=55.2 median=62.0 pct_deadline=7.0 pct_alt2=7.0 pct_alt3=7.0 page=8 table=Table 1b
+  period=2018-03 facility=WSH stage=evaluation setting=inpatient signed=12.0 completed= avg=44.1 median=61.5 pct_deadline=17.0 pct_alt2=17.0 pct_alt3=17.0 page=8 table=Table 1b
+  period=2018-01 facility=WSH stage=restoration setting=inpatient signed=78.0 completed= avg=52.2 median=44.0 pct_deadline=5.0 pct_alt2=6.0 pct_alt3=6.0 page=9 table=Table 1c
+  period=2018-02 facility=WSH stage=restoration setting=inpatient signed=95.0 completed= avg=47.3 median=34.0 pct_deadline=7.0 pct_alt2=8.0 pct_alt3=8.0 page=9 table=Table 1c
+  period=2018-03 facility=WSH stage=restoration setting=inpatient signed=96.0 completed= avg=45.8 median=27.5 pct_deadline=9.0 pct_alt2=10.0 pct_alt3=10.0 page=9 table=Table 1c
+=== Trueblood-Report-2019-03.pdf (5 rows) ===
+  period=2018-02 facility=ESH stage=evaluation setting=jail signed=65.0 completed= avg=10.9 median=11.0 pct_deadline=59.0 pct_alt2=61.0 pct_alt3=61.0 page=10 table=Table 2a
+  period=2018-03 facility=ESH stage=evaluation setting=jail signed=75.0 completed= avg=11.9 median=12.5 pct_deadline=55.0 pct_alt2=59.0 pct_alt3=59.0 page=10 table=Table 2a
+  period=2018-02 facility=TOTAL stage=evaluation setting=jail signed=300.0 completed= avg=9.3 median=9.0 pct_deadline=72.0 pct_alt2=72.0 pct_alt3=73.0 page=13 table=Table 3a
+  period=2018-02 facility=TOTAL stage=restoration setting=inpatient signed=115.0 completed= avg=41.2 median=25.0 pct_deadline=9.0 pct_alt2=9.0 pct_alt3=9.0 page=15 table=Table 3c
+  period=2018-03 facility=TOTAL stage=restoration setting=inpatient signed=115.0 completed= avg=41.8 median=23.5 pct_deadline=9.0 pct_alt2=10.0 pct_alt3=10.0 page=15 table=Table 3c
+=== Trueblood-Report-2019-04.pdf (1 rows) ===
+  period=2018-03 facility=TOTAL stage=evaluation setting=jail signed=345.0 completed=335.0 avg=9.7 median=9.0 pct_deadline=71.0 pct_alt2=72.0 pct_alt3=72.0 page=13 table=Table 3a
+=== Trueblood-Report-2019-05.pdf (15 rows) ===
+  period=2018-04 facility=ESH stage=evaluation setting=inpatient signed=7.0 completed=12.0 avg=18.8 median=17.5 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=11 table=Table 2b
+  period=2018-05 facility=ESH stage=evaluation setting=inpatient signed=11.0 completed=4.0 avg=14.0 median=15.0 pct_deadline=8.0 pct_alt2=8.0 pct_alt3=8.0 page=11 table=Table 2b
+  period=2018-04 facility=ESH stage=evaluation setting=jail signed=51.0 completed=62.0 avg=14.0 median=13.0 pct_deadline=52.0 pct_alt2=55.0 pct_alt3=56.0 page=10 table=Table 2a
+  period=2018-04 facility=ESH stage=restoration setting=inpatient signed=16.0 completed=19.0 avg=21.2 median=21.0 pct_deadline=4.0 pct_alt2=4.0 pct_alt3=4.0 page=12 table=Table 2c
+  period=2018-04 facility=TOTAL stage=evaluation setting=inpatient signed=17.0 completed=21.0 avg=34.9 median=23.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=14 table=Table 3b
+  period=2018-05 facility=TOTAL stage=evaluation setting=inpatient signed=22.0 completed=15.0 avg=34.1 median=38.0 pct_deadline=5.0 pct_alt2=5.0 pct_alt3=5.0 page=14 table=Table 3b
+  period=2018-04 facility=TOTAL stage=evaluation setting=jail signed=316.0 completed=332.0 avg=10.6 median=10.0 pct_deadline=71.0 pct_alt2=72.0 pct_alt3=72.0 page=13 table=Table 3a
+  period=2018-05 facility=TOTAL stage=evaluation setting=jail signed=367.0 completed=345.0 avg=10.1 median=9.0 pct_deadline=68.0 pct_alt2=70.0 pct_alt3=70.0 page=13 table=Table 3a
+  period=2018-06 facility=TOTAL stage=evaluation setting=jail signed=352.0 completed=336.0 avg=10.5 median=10.0 pct_deadline=65.0 pct_alt2=67.0 pct_alt3=67.0 page=13 table=Table 3a
+  period=2018-07 facility=TOTAL stage=evaluation setting=jail signed=376.0 completed=350.0 avg=10.7 median=11.0 pct_deadline=69.0 pct_alt2=69.0 pct_alt3=70.0 page=13 table=Table 3a
+  period=2018-08 facility=TOTAL stage=evaluation setting=jail signed=390.0 completed=388.0 avg=10.6 median=10.0 pct_deadline=92.0 pct_alt2=93.0 pct_alt3=94.0 page=13 table=Table 3a
+  period=2018-04 facility=TOTAL stage=restoration setting=inpatient signed=138.0 completed=116.0 avg=42.0 median=27.0 pct_deadline=8.0 pct_alt2=9.0 pct_alt3=9.0 page=15 table=Table 3c
+  period=2018-04 facility=WSH stage=evaluation setting=inpatient signed=10.0 completed=9.0 avg=56.3 median=62.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=8 table=Table 1b
+  period=2018-05 facility=WSH stage=evaluation setting=inpatient signed=11.0 completed=11.0 avg=41.4 median=42.0 pct_deadline=4.0 pct_alt2=4.0 pct_alt3=4.0 page=8 table=Table 1b
+  period=2018-04 facility=WSH stage=restoration setting=inpatient signed=122.0 completed=97.0 avg=46.0 median=38.0 pct_deadline=8.0 pct_alt2=10.0 pct_alt3=10.0 page=9 table=Table 1c
+=== Trueblood-Report-2019-06.pdf (9 rows) ===
+  period=2018-05 facility=ESH stage=evaluation setting=jail signed=63.0 completed=57.0 avg=14.0 median=13.0 pct_deadline=45.0 pct_alt2=47.0 pct_alt3=47.0 page=10 table=Table 2a
+  period=2018-05 facility=ESH stage=restoration setting=inpatient signed=20.0 completed=14.0 avg=20.2 median=17.5 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=12 table=Table 2c
+  period=2018-06 facility=ESH stage=restoration setting=inpatient signed=23.0 completed=21.0 avg=20.4 median=22.0 pct_deadline=3.0 pct_alt2=3.0 pct_alt3=3.0 page=12 table=Table 2c
+  period=2018-07 facility=ESH stage=restoration setting=inpatient signed=18.0 completed=18.0 avg=26.4 median=28.0 pct_deadline=9.0 pct_alt2=9.0 pct_alt3=9.0 page=12 table=Table 2c
+  period=2018-08 facility=ESH stage=restoration setting=inpatient signed=25.0 completed=27.0 avg=28.7 median=29.0 pct_deadline=19.0 pct_alt2=19.0 pct_alt3=19.0 page=12 table=Table 2c
+  period=2018-05 facility=TOTAL stage=restoration setting=inpatient signed=116.0 completed=120.0 avg=35.6 median=22.0 pct_deadline=9.0 pct_alt2=9.0 pct_alt3=9.0 page=15 table=Table 3c
+  period=2018-05 facility=WSH stage=restoration setting=inpatient signed=96.0 completed=106.0 avg=37.6 median=25.0 pct_deadline=10.0 pct_alt2=10.0 pct_alt3=10.0 page=9 table=Table 1c
+  period=2018-06 facility=WSH stage=restoration setting=inpatient signed=89.0 completed=102.0 avg=45.2 median=49.0 pct_deadline=7.0 pct_alt2=7.0 pct_alt3=7.0 page=9 table=Table 1c
+  period=2018-07 facility=WSH stage=restoration setting=inpatient signed=100.0 completed=92.0 avg=42.5 median=32.0 pct_deadline=10.0 pct_alt2=10.0 pct_alt3=11.0 page=9 table=Table 1c
+=== Trueblood-Report-2019-07.pdf (11 rows) ===
+  period=2018-06 facility=ESH stage=evaluation setting=inpatient signed=10.0 completed=8.0 avg=24.7 median=23.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=11 table=Table 2b
+  period=2018-07 facility=ESH stage=evaluation setting=inpatient signed=9.0 completed=12.0 avg=16.7 median=16.0 pct_deadline=20.0 pct_alt2=20.0 pct_alt3=20.0 page=11 table=Table 2b
+  period=2018-08 facility=ESH stage=evaluation setting=inpatient signed=9.0 completed=9.0 avg=27.2 median=33.0 pct_deadline=11.0 pct_alt2=11.0 pct_alt3=11.0 page=11 table=Table 2b
+  period=2018-06 facility=ESH stage=evaluation setting=jail signed=68.0 completed=59.0 avg=14.3 median=14.0 pct_deadline=39.0 pct_alt2=45.0 pct_alt3=45.0 page=10 table=Table 2a
+  period=2018-06 facility=TOTAL stage=evaluation setting=inpatient signed=19.0 completed=17.0 avg=30.2 median=31.5 pct_deadline=3.0 pct_alt2=3.0 pct_alt3=3.0 page=14 table=Table 3b
+  period=2018-07 facility=TOTAL stage=evaluation setting=inpatient signed=23.0 completed=18.0 avg=25.1 median=28.5 pct_deadline=8.0 pct_alt2=8.0 pct_alt3=8.0 page=14 table=Table 3b
+  period=2018-08 facility=TOTAL stage=evaluation setting=inpatient signed=17.0 completed=18.0 avg=36.7 median=35.0 pct_deadline=6.0 pct_alt2=6.0 pct_alt3=6.0 page=14 table=Table 3b
+  period=2018-06 facility=TOTAL stage=restoration setting=inpatient signed=112.0 completed=123.0 avg=41.0 median=28.5 pct_deadline=7.0 pct_alt2=7.0 pct_alt3=7.0 page=15 table=Table 3c
+  period=2018-06 facility=WSH stage=evaluation setting=inpatient signed=9.0 completed=9.0 avg=33.7 median=40.0 pct_deadline=5.0 pct_alt2=5.0 pct_alt3=5.0 page=8 table=Table 1b
+  period=2018-07 facility=WSH stage=evaluation setting=inpatient signed=14.0 completed=6.0 avg=41.8 median=42.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=8 table=Table 1b
+  period=2018-08 facility=WSH stage=evaluation setting=inpatient signed=8.0 completed=9.0 avg=46.2 median=48.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=8 table=Table 1b
+=== Trueblood-Report-2019-08.pdf (4 rows) ===
+  period=2018-07 facility=ESH stage=evaluation setting=jail signed=70.0 completed=76.0 avg=12.5 median=13.0 pct_deadline=51.0 pct_alt2=53.0 pct_alt3=54.0 page=11 table=Table 2a
+  period=2018-08 facility=ESH stage=evaluation setting=jail signed=79.0 completed=61.0 avg=11.8 median=12.0 pct_deadline=84.0 pct_alt2=90.0 pct_alt3=90.0 page=11 table=Table 2a
+  period=2018-07 facility=TOTAL stage=restoration setting=inpatient signed=118.0 completed=110.0 avg=39.9 median=28.0 pct_deadline=10.0 pct_alt2=10.0 pct_alt3=10.0 page=16 table=Table 3c
+  period=2018-08 facility=TOTAL stage=restoration setting=inpatient signed=124.0 completed=108.0 avg=42.3 median=30.5 pct_deadline=18.0 pct_alt2=17.0 pct_alt3=18.0 page=16 table=Table 3c
+=== Trueblood-Report-2019-09.pdf (1 rows) ===
+  period=2018-08 facility=WSH stage=restoration setting=inpatient signed=71.0 completed=61.0 avg=54.1 median=56.0 pct_deadline=21.0 pct_alt2=20.0 pct_alt3=21.0 page=10 table=Table 4
+=== Trueblood-Report-2019-10.pdf (10 rows) ===
+  period=2018-09 facility=ESH stage=evaluation setting=inpatient signed=5.0 completed=7.0 avg=21.4 median=23.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=12 table=Table 6
+  period=2018-09 facility=ESH stage=evaluation setting=jail signed=59.0 completed=68.0 avg=15.5 median=14.0 pct_deadline=57.0 pct_alt2=65.0 pct_alt3=65.0 page=11 table=Table 5
+  period=2018-09 facility=ESH stage=restoration setting=inpatient signed=18.0 completed=23.0 avg=19.3 median=21.0 pct_deadline=22.0 pct_alt2=22.0 pct_alt3=22.0 page=13 table=Table 7
+  period=2018-09 facility=RTF stage=restoration setting=inpatient signed=34.0 completed=22.0 avg=29.5 median=31.0 pct_deadline=18.0 pct_alt2=14.0 pct_alt3=18.0 page=10 table=Table 4
+  period=2018-09 facility=TOTAL stage=evaluation setting=inpatient signed=13.0 completed=18.0 avg=39.8 median=42.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=15 table=Table 9
+  period=2018-09 facility=TOTAL stage=evaluation setting=jail signed=297.0 completed=311.0 avg=11.5 median=11.0 pct_deadline=85.0 pct_alt2=88.0 pct_alt3=88.0 page=14 table=Table 8
+  period=2018-09 facility=TOTAL stage=restoration setting=inpatient signed=95.0 completed=100.0 avg=50.7 median=37.0 pct_deadline=13.0 pct_alt2=12.0 pct_alt3=13.0 page=16 table=Table 10
+  period=2018-09 facility=WSH stage=evaluation setting=inpatient signed=8.0 completed=11.0 avg=51.5 median=50.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=9 table=Table 3
+  period=2018-09 facility=WSH stage=evaluation setting=jail signed=238.0 completed=243.0 avg=10.3 median=10.0 pct_deadline=92.0 pct_alt2=94.0 pct_alt3=94.0 page=8 table=Table 2
+  period=2018-09 facility=WSH stage=restoration setting=inpatient signed=43.0 completed=55.0 avg=72.3 median=78.0 pct_deadline=7.0 pct_alt2=7.0 pct_alt3=7.0 page=10 table=Table 4
+=== Trueblood-Report-2019-11.pdf (10 rows) ===
+  period=2018-10 facility=ESH stage=evaluation setting=inpatient signed=8.0 completed=8.0 avg=13.9 median=15.5 pct_deadline=38.0 pct_alt2=38.0 pct_alt3=50.0 page=12 table=Table 6
+  period=2018-10 facility=ESH stage=evaluation setting=jail signed=87.0 completed=81.0 avg=13.0 median=13.0 pct_deadline=70.0 pct_alt2=79.0 pct_alt3=79.0 page=11 table=Table 5
+  period=2018-10 facility=ESH stage=restoration setting=inpatient signed=27.0 completed=23.0 avg=18.3 median=19.0 pct_deadline=13.0 pct_alt2=13.0 pct_alt3=13.0 page=13 table=Table 7
+  period=2018-10 facility=RTF stage=restoration setting=inpatient signed=42.0 completed=31.0 avg=28.2 median=32.0 pct_deadline=13.0 pct_alt2=13.0 pct_alt3=13.0 page=10 table=Table 4
+  period=2018-10 facility=TOTAL stage=evaluation setting=inpatient signed=22.0 completed=21.0 avg=35.0 median=33.0 pct_deadline=14.0 pct_alt2=14.0 pct_alt3=19.0 page=15 table=Table 9
+  period=2018-10 facility=TOTAL stage=evaluation setting=jail signed=392.0 completed=371.0 avg=11.6 median=11.0 pct_deadline=85.0 pct_alt2=90.0 pct_alt3=90.0 page=14 table=Table 8
+  period=2018-10 facility=TOTAL stage=restoration setting=inpatient signed=143.0 completed=131.0 avg=45.5 median=32.0 pct_deadline=15.0 pct_alt2=15.0 pct_alt3=15.0 page=16 table=Table 10
+  period=2018-10 facility=WSH stage=evaluation setting=inpatient signed=14.0 completed=13.0 avg=48.0 median=47.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=9 table=Table 3
+  period=2018-10 facility=WSH stage=evaluation setting=jail signed=305.0 completed=290.0 avg=11.1 median=11.0 pct_deadline=89.0 pct_alt2=93.0 pct_alt3=93.0 page=8 table=Table 2
+  period=2018-10 facility=WSH stage=restoration setting=inpatient signed=74.0 completed=77.0 avg=60.5 median=54.0 pct_deadline=16.0 pct_alt2=16.0 pct_alt3=16.0 page=10 table=Table 4
+=== Trueblood-Report-2019-12.pdf (10 rows) ===
+  period=2018-11 facility=ESH stage=evaluation setting=inpatient signed=13.0 completed=13.0 avg=19.0 median=18.0 pct_deadline=0.0 pct_alt2=15.0 pct_alt3=15.0 page=12 table=Table 6
+  period=2018-11 facility=ESH stage=evaluation setting=jail signed=62.0 completed=60.0 avg=13.6 median=14.0 pct_deadline=60.0 pct_alt2=67.0 pct_alt3=68.0 page=11 table=Table 5
+  period=2018-11 facility=ESH stage=restoration setting=inpatient signed=22.0 completed=23.0 avg=19.0 median=17.0 pct_deadline=0.0 pct_alt2=13.0 pct_alt3=13.0 page=13 table=Table 7
+  period=2018-11 facility=RTF stage=restoration setting=inpatient signed=24.0 completed=25.0 avg=29.6 median=26.0 pct_deadline=0.0 pct_alt2=12.0 pct_alt3=12.0 page=10 table=Table 4
+  period=2018-11 facility=TOTAL stage=evaluation setting=inpatient signed=26.0 completed=25.0 avg=27.8 median=29.0 pct_deadline=0.0 pct_alt2=8.0 pct_alt3=8.0 page=15 table=Table 9
+  period=2018-11 facility=TOTAL stage=evaluation setting=jail signed=312.0 completed=334.0 avg=12.8 median=13.0 pct_deadline=72.0 pct_alt2=76.0 pct_alt3=78.0 page=14 table=Table 8
+  period=2018-11 facility=TOTAL stage=restoration setting=inpatient signed=108.0 completed=118.0 avg=44.1 median=27.5 pct_deadline=0.0 pct_alt2=17.0 pct_alt3=17.0 page=16 table=Table 10
+  period=2018-11 facility=WSH stage=evaluation setting=inpatient signed=13.0 completed=12.0 avg=37.4 median=38.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=9 table=Table 3
+  period=2018-11 facility=WSH stage=evaluation setting=jail signed=250.0 completed=274.0 avg=12.7 median=13.0 pct_deadline=75.0 pct_alt2=78.0 pct_alt3=80.0 page=8 table=Table 2
+  period=2018-11 facility=WSH stage=restoration setting=inpatient signed=62.0 completed=70.0 avg=57.5 median=50.0 pct_deadline=0.0 pct_alt2=20.0 pct_alt3=20.0 page=10 table=Table 4
+=== Trueblood-Report-2020-01.pdf (10 rows) ===
+  period=2018-12 facility=ESH stage=evaluation setting=inpatient signed=16.0 completed=10.0 avg=15.3 median=14.5 pct_deadline=10.0 pct_alt2=10.0 pct_alt3=20.0 page=13 table=Table 6
+  period=2018-12 facility=ESH stage=evaluation setting=jail signed=56.0 completed=79.0 avg=13.8 median=13.0 pct_deadline=70.0 pct_alt2=76.0 pct_alt3=77.0 page=12 table=Table 5
+  period=2018-12 facility=ESH stage=restoration setting=inpatient signed=18.0 completed=19.0 avg=37.1 median=19.0 pct_deadline=37.0 pct_alt2=37.0 pct_alt3=37.0 page=14 table=Table 7
+  period=2018-12 facility=RTF stage=restoration setting=inpatient signed=32.0 completed=33.0 avg=40.9 median=41.0 pct_deadline=27.0 pct_alt2=27.0 pct_alt3=27.0 page=11 table=Table 4b
+  period=2018-12 facility=TOTAL stage=evaluation setting=inpatient signed=27.0 completed=23.0 avg=27.2 median=32.0 pct_deadline=4.0 pct_alt2=4.0 pct_alt3=9.0 page=16 table=Table 9
+  period=2018-12 facility=TOTAL stage=evaluation setting=jail signed=282.0 completed=309.0 avg=11.6 median=11.0 pct_deadline=84.0 pct_alt2=89.0 pct_alt3=90.0 page=15 table=Table 8
+  period=2018-12 facility=TOTAL stage=restoration setting=inpatient signed=124.0 completed=118.0 avg=43.6 median=28.5 pct_deadline=29.0 pct_alt2=31.0 pct_alt3=32.0 page=17 table=Table 10
+  period=2018-12 facility=WSH stage=evaluation setting=inpatient signed=11.0 completed=13.0 avg=36.4 median=36.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=9 table=Table 3
+  period=2018-12 facility=WSH stage=evaluation setting=jail signed=226.0 completed=230.0 avg=10.8 median=11.0 pct_deadline=90.0 pct_alt2=94.0 pct_alt3=95.0 page=8 table=Table 2
+  period=2018-12 facility=WSH stage=restoration setting=inpatient signed=74.0 completed=66.0 avg=46.7 median=28.5 pct_deadline=27.0 pct_alt2=30.0 pct_alt3=33.0 page=10 table=Table 4a
+=== Trueblood-Report-2020-02.pdf (39 rows) ===
+  period=2019-01 facility=ESH stage=evaluation setting=inpatient signed=7.0 completed=11.0 avg=24.2 median=25.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=9.0 page=14 table=Table 6
+  period=2019-02 facility=ESH stage=evaluation setting=inpatient signed=5.0 completed=5.0 avg=17.4 median=16.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=14 table=Table 6
+  period=2019-03 facility=ESH stage=evaluation setting=inpatient signed=15.0 completed=9.0 avg=12.1 median=1.0 pct_deadline=33.0 pct_alt2=33.0 pct_alt3=56.0 page=14 table=Table 6
+  period=2019-04 facility=ESH stage=evaluation setting=inpatient signed=16.0 completed=8.0 avg=22.5 median=25.5 pct_deadline=13.0 pct_alt2=13.0 pct_alt3=13.0 page=14 table=Table 6
+  period=2019-01 facility=ESH stage=evaluation setting=jail signed=67.0 completed=55.0 avg=10.6 median=9.0 pct_deadline=73.0 pct_alt2=75.0 pct_alt3=78.0 page=13 table=Table 5
+  period=2019-02 facility=ESH stage=evaluation setting=jail signed=61.0 completed=57.0 avg=14.3 median=14.0 pct_deadline=60.0 pct_alt2=70.0 pct_alt3=70.0 page=13 table=Table 5
+  period=2019-03 facility=ESH stage=evaluation setting=jail signed=73.0 completed=64.0 avg=15.5 median=14.0 pct_deadline=59.0 pct_alt2=70.0 pct_alt3=72.0 page=13 table=Table 5
+  period=2019-04 facility=ESH stage=evaluation setting=jail signed=69.0 completed=77.0 avg=13.0 median=13.0 pct_deadline=68.0 pct_alt2=71.0 pct_alt3=77.0 page=13 table=Table 5
+  period=2019-01 facility=ESH stage=restoration setting=inpatient signed=23.0 completed=25.0 avg=24.8 median=28.0 pct_deadline=28.0 pct_alt2=24.0 pct_alt3=28.0 page=15 table=Table 7
+  period=2019-02 facility=ESH stage=restoration setting=inpatient signed=32.0 completed=22.0 avg=19.8 median=15.0 pct_deadline=32.0 pct_alt2=32.0 pct_alt3=32.0 page=15 table=Table 7
+  period=2019-03 facility=ESH stage=restoration setting=inpatient signed=23.0 completed=22.0 avg=17.5 median=21.5 pct_deadline=27.0 pct_alt2=27.0 pct_alt3=27.0 page=15 table=Table 7
+  period=2019-04 facility=ESH stage=restoration setting=inpatient signed=29.0 completed=24.0 avg=31.4 median=35.0 pct_deadline=25.0 pct_alt2=25.0 pct_alt3=33.0 page=15 table=Table 7
+  period=2019-01 facility=RTF stage=restoration setting=inpatient signed=27.0 completed=28.0 avg=61.9 median=67.5 pct_deadline=14.0 pct_alt2=11.0 pct_alt3=14.0 page=12 table=Table 4b
+  period=2019-02 facility=RTF stage=restoration setting=inpatient signed=22.0 completed=25.0 avg=56.2 median=63.0 pct_deadline=20.0 pct_alt2=20.0 pct_alt3=20.0 page=12 table=Table 4b
+  period=2019-03 facility=RTF stage=restoration setting=inpatient signed=32.0 completed=34.0 avg=42.0 median=42.0 pct_deadline=21.0 pct_alt2=21.0 pct_alt3=21.0 page=12 table=Table 4b
+  period=2019-04 facility=RTF stage=restoration setting=inpatient signed=39.0 completed=33.0 avg=32.7 median=40.0 pct_deadline=30.0 pct_alt2=27.0 pct_alt3=30.0 page=12 table=Table 4b
+  period=2019-01 facility=TOTAL stage=evaluation setting=inpatient signed=23.0 completed=26.0 avg=29.1 median=29.0 pct_deadline=8.0 pct_alt2=8.0 pct_alt3=12.0 page=17 table=Table 9
+  period=2019-02 facility=TOTAL stage=evaluation setting=inpatient signed=16.0 completed=17.0 avg=33.8 median=38.0 pct_deadline=6.0 pct_alt2=6.0 pct_alt3=6.0 page=17 table=Table 9
+  period=2019-03 facility=TOTAL stage=evaluation setting=inpatient signed=26.0 completed=28.0 avg=22.8 median=20.5 pct_deadline=29.0 pct_alt2=29.0 pct_alt3=36.0 page=17 table=Table 9
+  period=2019-04 facility=TOTAL stage=evaluation setting=inpatient signed=27.0 completed=18.0 avg=23.8 median=21.0 pct_deadline=11.0 pct_alt2=11.0 pct_alt3=11.0 page=17 table=Table 9
+  period=2019-01 facility=TOTAL stage=evaluation setting=jail signed=358.0 completed=317.0 avg=11.1 median=12.0 pct_deadline=81.0 pct_alt2=84.0 pct_alt3=85.0 page=16 table=Table 8
+  period=2019-02 facility=TOTAL stage=evaluation setting=jail signed=294.0 completed=287.0 avg=12.9 median=12.0 pct_deadline=75.0 pct_alt2=80.0 pct_alt3=82.0 page=16 table=Table 8
+  period=2019-03 facility=TOTAL stage=evaluation setting=jail signed=381.0 completed=358.0 avg=12.6 median=12.5 pct_deadline=79.0 pct_alt2=83.0 pct_alt3=85.0 page=16 table=Table 8
+  period=2019-04 facility=TOTAL stage=evaluation setting=jail signed=391.0 completed=424.0 avg=12.0 median=12.0 pct_deadline=80.0 pct_alt2=83.0 pct_alt3=84.0 page=16 table=Table 8
+  period=2019-01 facility=TOTAL stage=restoration setting=inpatient signed=132.0 completed=135.0 avg=48.9 median=40.0 pct_deadline=24.0 pct_alt2=24.0 pct_alt3=25.0 page=18 table=Table 10
+  period=2019-02 facility=TOTAL stage=restoration setting=inpatient signed=139.0 completed=130.0 avg=44.5 median=37.5 pct_deadline=23.0 pct_alt2=25.0 pct_alt3=25.0 page=18 table=Table 10
+  period=2019-03 facility=TOTAL stage=restoration setting=inpatient signed=143.0 completed=166.0 avg=36.5 median=30.5 pct_deadline=20.0 pct_alt2=21.0 pct_alt3=22.0 page=18 table=Table 10
+  period=2019-04 facility=TOTAL stage=restoration setting=inpatient signed=161.0 completed=124.0 avg=33.9 median=35.0 pct_deadline=29.0 pct_alt2=28.0 pct_alt3=31.0 page=18 table=Table 10
+  period=2019-01 facility=WSH stage=evaluation setting=inpatient signed=16.0 completed=15.0 avg=32.7 median=39.0 pct_deadline=13.0 pct_alt2=13.0 pct_alt3=13.0 page=10 table=Table 3
+  period=2019-02 facility=WSH stage=evaluation setting=inpatient signed=11.0 completed=12.0 avg=40.7 median=48.5 pct_deadline=8.0 pct_alt2=8.0 pct_alt3=8.0 page=10 table=Table 3
+  period=2019-03 facility=WSH stage=evaluation setting=inpatient signed=11.0 completed=19.0 avg=27.8 median=27.0 pct_deadline=26.0 pct_alt2=26.0 pct_alt3=26.0 page=10 table=Table 3
+  period=2019-04 facility=WSH stage=evaluation setting=inpatient signed=11.0 completed=10.0 avg=24.8 median=20.0 pct_deadline=10.0 pct_alt2=10.0 pct_alt3=10.0 page=10 table=Table 3
+  period=2019-01 facility=WSH stage=evaluation setting=jail signed=291.0 completed=262.0 avg=11.2 median=12.0 pct_deadline=83.0 pct_alt2=86.0 pct_alt3=86.0 page=9 table=Table 2
+  period=2019-02 facility=WSH stage=evaluation setting=jail signed=233.0 completed=230.0 avg=12.5 median=12.0 pct_deadline=78.0 pct_alt2=83.0 pct_alt3=84.0 page=9 table=Table 2
+  period=2019-03 facility=WSH stage=evaluation setting=jail signed=308.0 completed=294.0 avg=11.9 median=12.0 pct_deadline=83.0 pct_alt2=86.0 pct_alt3=87.0 page=9 table=Table 2
+  period=2019-01 facility=WSH stage=restoration setting=inpatient signed=82.0 completed=82.0 avg=51.7 median=42.0 pct_deadline=27.0 pct_alt2=28.0 pct_alt3=28.0 page=11 table=Table 4a
+  period=2019-02 facility=WSH stage=restoration setting=inpatient signed=85.0 completed=83.0 avg=47.5 median=41.0 pct_deadline=22.0 pct_alt2=25.0 pct_alt3=25.0 page=11 table=Table 4a
+  period=2019-03 facility=WSH stage=restoration setting=inpatient signed=88.0 completed=110.0 avg=38.7 median=31.5 pct_deadline=19.0 pct_alt2=20.0 pct_alt3=22.0 page=11 table=Table 4a
+  period=2019-04 facility=WSH stage=restoration setting=inpatient signed=93.0 completed=67.0 avg=35.3 median=35.0 pct_deadline=30.0 pct_alt2=30.0 pct_alt3=30.0 page=11 table=Table 4a
+=== Trueblood-Report-2020-03.pdf (0 rows) ===
+=== Trueblood-Report-2020-04.pdf (0 rows) ===
+=== Trueblood-Report-2020-05.pdf (1 rows) ===
+  period=2019-04 facility=WSH stage=evaluation setting=jail signed=322.0 completed=346.0 avg=11.7 median=12.0 pct_deadline=83.0 pct_alt2=86.0 pct_alt3=86.0 page=11 table=Table 2
+=== Trueblood-Report-2020-06.pdf (10 rows) ===
+  period=2019-05 facility=ESH stage=evaluation setting=inpatient signed=10.0 completed=17.0 avg=39.3 median=44.0 pct_deadline=6.0 pct_alt2=6.0 pct_alt3=6.0 page=16 table=Table 6
+  period=2019-05 facility=ESH stage=evaluation setting=jail signed=84.0 completed=77.0 avg=12.8 median=13.0 pct_deadline=81.0 pct_alt2=87.0 pct_alt3=87.0 page=15 table=Table 5
+  period=2019-05 facility=ESH stage=restoration setting=inpatient signed=21.0 completed=20.0 avg=39.3 median=47.0 pct_deadline=10.0 pct_alt2=10.0 pct_alt3=15.0 page=17 table=Table 7
+  period=2019-05 facility=RTF stage=restoration setting=inpatient signed=38.0 completed=35.0 avg=40.1 median=46.0 pct_deadline=17.0 pct_alt2=17.0 pct_alt3=20.0 page=14 table=Table 4b
+  period=2019-05 facility=TOTAL stage=evaluation setting=inpatient signed=25.0 completed=22.0 avg=35.5 median=41.0 pct_deadline=9.0 pct_alt2=9.0 pct_alt3=9.0 page=19 table=Table 9
+  period=2019-05 facility=TOTAL stage=evaluation setting=jail signed=411.0 completed=398.0 avg=12.4 median=13.0 pct_deadline=79.0 pct_alt2=84.0 pct_alt3=85.0 page=18 table=Table 8
+  period=2019-05 facility=TOTAL stage=restoration setting=inpatient signed=140.0 completed=140.0 avg=39.5 median=42.0 pct_deadline=19.0 pct_alt2=19.0 pct_alt3=20.0 page=20 table=Table 10
+  period=2019-05 facility=WSH stage=evaluation setting=inpatient signed=15.0 completed=5.0 avg=22.8 median=14.0 pct_deadline=20.0 pct_alt2=20.0 pct_alt3=20.0 page=12 table=Table 3
+  period=2019-05 facility=WSH stage=evaluation setting=jail signed=327.0 completed=321.0 avg=12.2 median=13.0 pct_deadline=79.0 pct_alt2=83.0 pct_alt3=85.0 page=11 table=Table 2
+  period=2019-05 facility=WSH stage=restoration setting=inpatient signed=81.0 completed=85.0 avg=39.2 median=35.0 pct_deadline=21.0 pct_alt2=21.0 pct_alt3=21.0 page=13 table=Table 4a
+=== Trueblood-Report-2020-07.pdf (28 rows) ===
+  period=2019-06 facility=ESH stage=evaluation setting=inpatient signed=9.0 completed=8.0 avg=47.1 median=50.5 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=16 table=Table 6
+  period=2019-07 facility=ESH stage=evaluation setting=inpatient signed=10.0 completed=11.0 avg=40.3 median=41.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=9.0 page=16 table=Table 6
+  period=2019-08 facility=ESH stage=evaluation setting=inpatient signed=9.0 completed=15.0 avg=28.7 median=21.0 pct_deadline=20.0 pct_alt2=20.0 pct_alt3=20.0 page=16 table=Table 6
+  period=2019-06 facility=ESH stage=evaluation setting=jail signed=95.0 completed=95.0 avg=13.2 median=14.0 pct_deadline=68.0 pct_alt2=71.0 pct_alt3=78.0 page=15 table=Table 5
+  period=2019-07 facility=ESH stage=evaluation setting=jail signed=80.0 completed=86.0 avg=16.3 median=15.0 pct_deadline=43.0 pct_alt2=51.0 pct_alt3=58.0 page=15 table=Table 5
+  period=2019-08 facility=ESH stage=evaluation setting=jail signed=83.0 completed=86.0 avg=11.0 median=10.0 pct_deadline=70.0 pct_alt2=71.0 pct_alt3=84.0 page=15 table=Table 5
+  period=2019-06 facility=ESH stage=restoration setting=inpatient signed=26.0 completed=24.0 avg=37.3 median=48.0 pct_deadline=21.0 pct_alt2=21.0 pct_alt3=25.0 page=17 table=Table 7
+  period=2019-07 facility=ESH stage=restoration setting=inpatient signed=28.0 completed=30.0 avg=34.1 median=44.0 pct_deadline=23.0 pct_alt2=23.0 pct_alt3=27.0 page=17 table=Table 7
+  period=2019-08 facility=ESH stage=restoration setting=inpatient signed=21.0 completed=23.0 avg=35.7 median=48.0 pct_deadline=30.0 pct_alt2=30.0 pct_alt3=30.0 page=17 table=Table 7
+  period=2019-06 facility=RTF stage=restoration setting=inpatient signed=31.0 completed=28.0 avg=41.1 median=48.5 pct_deadline=18.0 pct_alt2=18.0 pct_alt3=18.0 page=14 table=Table 4b
+  period=2019-07 facility=RTF stage=restoration setting=inpatient signed=34.0 completed=47.0 avg=43.7 median=48.0 pct_deadline=15.0 pct_alt2=15.0 pct_alt3=17.0 page=14 table=Table 4b
+  period=2019-08 facility=RTF stage=restoration setting=inpatient signed=46.0 completed=35.0 avg=38.3 median=42.0 pct_deadline=29.0 pct_alt2=29.0 pct_alt3=29.0 page=14 table=Table 4b
+  period=2019-06 facility=TOTAL stage=evaluation setting=inpatient signed=20.0 completed=20.0 avg=37.2 median=42.0 pct_deadline=5.0 pct_alt2=5.0 pct_alt3=5.0 page=19 table=Table 9
+  period=2019-07 facility=TOTAL stage=evaluation setting=inpatient signed=14.0 completed=21.0 avg=43.3 median=42.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=5.0 page=19 table=Table 9
+  period=2019-08 facility=TOTAL stage=evaluation setting=inpatient signed=27.0 completed=26.0 avg=36.8 median=46.0 pct_deadline=15.0 pct_alt2=15.0 pct_alt3=15.0 page=19 table=Table 9
+  period=2019-06 facility=TOTAL stage=evaluation setting=jail signed=401.0 completed=375.0 avg=13.0 median=13.0 pct_deadline=73.0 pct_alt2=79.0 pct_alt3=82.0 page=18 table=Table 8
+  period=2019-07 facility=TOTAL stage=evaluation setting=jail signed=468.0 completed=465.0 avg=13.0 median=13.0 pct_deadline=69.0 pct_alt2=74.0 pct_alt3=76.0 page=18 table=Table 8
+  period=2019-08 facility=TOTAL stage=evaluation setting=jail signed=451.0 completed=446.0 avg=11.6 median=12.0 pct_deadline=78.0 pct_alt2=83.0 pct_alt3=88.0 page=18 table=Table 8
+  period=2019-06 facility=TOTAL stage=restoration setting=inpatient signed=139.0 completed=159.0 avg=43.8 median=49.0 pct_deadline=18.0 pct_alt2=19.0 pct_alt3=20.0 page=20 table=Table 10
+  period=2019-07 facility=TOTAL stage=restoration setting=inpatient signed=121.0 completed=142.0 avg=37.7 median=42.0 pct_deadline=23.0 pct_alt2=23.0 pct_alt3=25.0 page=20 table=Table 10
+  period=2019-08 facility=TOTAL stage=restoration setting=inpatient signed=143.0 completed=126.0 avg=39.5 median=45.0 pct_deadline=26.0 pct_alt2=27.0 pct_alt3=28.0 page=20 table=Table 10
+  period=2019-06 facility=WSH stage=evaluation setting=inpatient signed=11.0 completed=12.0 avg=30.6 median=30.0 pct_deadline=8.0 pct_alt2=8.0 pct_alt3=8.0 page=12 table=Table 3
+  period=2019-07 facility=WSH stage=evaluation setting=inpatient signed=4.0 completed=10.0 avg=46.6 median=49.5 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=12 table=Table 3
+  period=2019-08 facility=WSH stage=evaluation setting=inpatient signed=18.0 completed=11.0 avg=47.7 median=54.0 pct_deadline=9.0 pct_alt2=9.0 pct_alt3=9.0 page=12 table=Table 3
+  period=2019-06 facility=WSH stage=evaluation setting=jail signed=306.0 completed=280.0 avg=12.9 median=13.0 pct_deadline=75.0 pct_alt2=81.0 pct_alt3=84.0 page=11 table=Table 2
+  period=2019-06 facility=WSH stage=restoration setting=inpatient signed=82.0 completed=107.0 avg=46.0 median=49.0 pct_deadline=18.0 pct_alt2=19.0 pct_alt3=20.0 page=13 table=Table 4a
+  period=2019-07 facility=WSH stage=restoration setting=inpatient signed=59.0 completed=65.0 avg=35.1 median=29.0 pct_deadline=29.0 pct_alt2=28.0 pct_alt3=29.0 page=13 table=Table 4a
+  period=2019-08 facility=WSH stage=restoration setting=inpatient signed=76.0 completed=68.0 avg=41.4 median=45.5 pct_deadline=24.0 pct_alt2=25.0 pct_alt3=26.0 page=13 table=Table 4a
+=== Trueblood-Report-2020-08.pdf (1 rows) ===
+  period=2019-07 facility=WSH stage=evaluation setting=jail signed=388.0 completed=379.0 avg=12.3 median=13.0 pct_deadline=75.0 pct_alt2=79.0 pct_alt3=80.0 page=12 table=Table 2
+=== Trueblood-Report-2020-09.pdf (1 rows) ===
+  period=2019-08 facility=WSH stage=evaluation setting=jail signed=368.0 completed=360.0 avg=11.7 median=12.0 pct_deadline=81.0 pct_alt2=86.0 pct_alt3=89.0 page=12 table=Table 2
+=== Trueblood-Report-2020-10.pdf (10 rows) ===
+  period=2019-09 facility=ESH stage=evaluation setting=inpatient signed=13.0 completed=9.0 avg=24.7 median=16.0 pct_deadline=11.0 pct_alt2=11.0 pct_alt3=22.0 page=19 table=Table 6
+  period=2019-09 facility=ESH stage=evaluation setting=jail signed=85.0 completed=75.0 avg=11.7 median=12.0 pct_deadline=73.0 pct_alt2=81.0 pct_alt3=85.0 page=18 table=Table 5
+  period=2019-09 facility=ESH stage=restoration setting=inpatient signed=22.0 completed=28.0 avg=36.0 median=47.0 pct_deadline=32.0 pct_alt2=32.0 pct_alt3=32.0 page=20 table=Table 7
+  period=2019-09 facility=RTF stage=restoration setting=inpatient signed=22.0 completed=28.0 avg=47.9 median=56.0 pct_deadline=14.0 pct_alt2=14.0 pct_alt3=14.0 page=16 table=Table 4b
+  period=2019-09 facility=TOTAL stage=evaluation setting=inpatient signed=21.0 completed=22.0 avg=40.8 median=34.0 pct_deadline=14.0 pct_alt2=14.0 pct_alt3=18.0 page=22 table=Table 9
+  period=2019-09 facility=TOTAL stage=evaluation setting=jail signed=379.0 completed=403.0 avg=12.0 median=12.0 pct_deadline=82.0 pct_alt2=86.0 pct_alt3=88.0 page=21 table=Table 8
+  period=2019-09 facility=TOTAL stage=restoration setting=inpatient signed=117.0 completed=134.0 avg=42.7 median=45.0 pct_deadline=22.0 pct_alt2=23.0 pct_alt3=23.0 page=23 table=Table 10
+  period=2019-09 facility=WSH stage=evaluation setting=inpatient signed=8.0 completed=13.0 avg=51.9 median=40.0 pct_deadline=15.0 pct_alt2=15.0 pct_alt3=15.0 page=14 table=Table 3
+  period=2019-09 facility=WSH stage=evaluation setting=jail signed=294.0 completed=328.0 avg=12.0 median=13.0 pct_deadline=84.0 pct_alt2=87.0 pct_alt3=89.0 page=13 table=Table 2
+  period=2019-09 facility=WSH stage=restoration setting=inpatient signed=73.0 completed=78.0 avg=43.3 median=42.0 pct_deadline=21.0 pct_alt2=23.0 pct_alt3=23.0 page=15 table=Table 4a
+=== Trueblood-Report-2020-11.pdf (10 rows) ===
+  period=2019-10 facility=ESH stage=evaluation setting=inpatient signed=6.0 completed=11.0 avg=36.8 median=41.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=9.0 page=19 table=Table 6
+  period=2019-10 facility=ESH stage=evaluation setting=jail signed=95.0 completed=101.0 avg=12.1 median=13.0 pct_deadline=67.0 pct_alt2=77.0 pct_alt3=86.0 page=18 table=Table 5
+  period=2019-10 facility=ESH stage=restoration setting=inpatient signed=28.0 completed=28.0 avg=31.3 median=40.0 pct_deadline=32.0 pct_alt2=32.0 pct_alt3=36.0 page=20 table=Table 7
+  period=2019-10 facility=RTF stage=restoration setting=inpatient signed=43.0 completed=47.0 avg=41.1 median=48.0 pct_deadline=17.0 pct_alt2=19.0 pct_alt3=19.0 page=16 table=Table 4b
+  period=2019-10 facility=TOTAL stage=evaluation setting=inpatient signed=8.0 completed=21.0 avg=43.7 median=47.0 pct_deadline=5.0 pct_alt2=5.0 pct_alt3=10.0 page=22 table=Table 9
+  period=2019-10 facility=TOTAL stage=evaluation setting=jail signed=506.0 completed=475.0 avg=11.6 median=12.0 pct_deadline=81.0 pct_alt2=86.0 pct_alt3=90.0 page=21 table=Table 8
+  period=2019-10 facility=TOTAL stage=restoration setting=inpatient signed=171.0 completed=175.0 avg=34.6 median=41.0 pct_deadline=26.0 pct_alt2=28.0 pct_alt3=29.0 page=23 table=Table 10
+  period=2019-10 facility=WSH stage=evaluation setting=inpatient signed=2.0 completed=10.0 avg=51.2 median=54.5 pct_deadline=10.0 pct_alt2=10.0 pct_alt3=10.0 page=14 table=Table 3
+  period=2019-10 facility=WSH stage=evaluation setting=jail signed=411.0 completed=374.0 avg=11.5 median=12.0 pct_deadline=84.0 pct_alt2=88.0 pct_alt3=91.0 page=13 table=Table 2
+  period=2019-10 facility=WSH stage=restoration setting=inpatient signed=100.0 completed=100.0 avg=32.4 median=29.0 pct_deadline=29.0 pct_alt2=31.0 pct_alt3=31.0 page=15 table=Table 4a
+=== Trueblood-Report-2020-12.pdf (10 rows) ===
+  period=2019-11 facility=ESH stage=evaluation setting=inpatient signed=10.0 completed=8.0 avg=24.5 median=20.5 pct_deadline=13.0 pct_alt2=13.0 pct_alt3=13.0 page=18 table=Table 6
+  period=2019-11 facility=ESH stage=evaluation setting=jail signed=76.0 completed=75.0 avg=14.4 median=13.0 pct_deadline=63.0 pct_alt2=71.0 pct_alt3=76.0 page=17 table=Table 5
+  period=2019-11 facility=ESH stage=restoration setting=inpatient signed=19.0 completed=19.0 avg=33.3 median=42.0 pct_deadline=21.0 pct_alt2=21.0 pct_alt3=26.0 page=19 table=Table 7
+  period=2019-11 facility=RTF stage=restoration setting=inpatient signed=54.0 completed=40.0 avg=28.0 median=32.5 pct_deadline=30.0 pct_alt2=30.0 pct_alt3=30.0 page=15 table=Table 4b
+  period=2019-11 facility=TOTAL stage=evaluation setting=inpatient signed=17.0 completed=15.0 avg=29.5 median=26.0 pct_deadline=7.0 pct_alt2=7.0 pct_alt3=7.0 page=21 table=Table 9
+  period=2019-11 facility=TOTAL stage=evaluation setting=jail signed=382.0 completed=401.0 avg=13.0 median=13.0 pct_deadline=75.0 pct_alt2=82.0 pct_alt3=86.0 page=20 table=Table 8
+  period=2019-11 facility=TOTAL stage=restoration setting=inpatient signed=137.0 completed=127.0 avg=29.5 median=30.0 pct_deadline=26.0 pct_alt2=27.0 pct_alt3=28.0 page=22 table=Table 10
+  period=2019-11 facility=WSH stage=evaluation setting=inpatient signed=7.0 completed=7.0 avg=35.3 median=46.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=13 table=Table 3
+  period=2019-11 facility=WSH stage=evaluation setting=jail signed=306.0 completed=326.0 avg=12.6 median=13.0 pct_deadline=78.0 pct_alt2=85.0 pct_alt3=89.0 page=12 table=Table 2
+  period=2019-11 facility=WSH stage=restoration setting=inpatient signed=64.0 completed=68.0 avg=29.3 median=24.0 pct_deadline=25.0 pct_alt2=26.0 pct_alt3=28.0 page=14 table=Table 4a
+=== Trueblood-Report-2021-01.pdf (11 rows) ===
+  period=2019-12 facility=ESH stage=evaluation setting=inpatient signed=13.0 completed=11.0 avg=21.6 median=21.0 pct_deadline=18.0 pct_alt2=18.0 pct_alt3=36.0 page=18 table=Table 6
+  period=2019-12 facility=ESH stage=evaluation setting=jail signed=68.0 completed=82.0 avg=13.6 median=14.0 pct_deadline=52.0 pct_alt2=60.0 pct_alt3=63.0 page=17 table=Table 5
+  period=2019-12 facility=ESH stage=restoration setting=inpatient signed=34.0 completed=21.0 avg=30.4 median=40.0 pct_deadline=29.0 pct_alt2=29.0 pct_alt3=29.0 page=19 table=Table 7
+  period=2019-12 facility=RTF stage=restoration setting=inpatient signed=37.0 completed=41.0 avg=27.1 median=27.0 pct_deadline=22.0 pct_alt2=22.0 pct_alt3=22.0 page=15 table=Table 4b
+  period=2019-12 facility=TOTAL stage=evaluation setting=inpatient signed=15.0 completed=17.0 avg=27.0 median=30.0 pct_deadline=12.0 pct_alt2=12.0 pct_alt3=24.0 page=21 table=Table 9
+  period=2019-12 facility=TOTAL stage=evaluation setting=jail signed=405.0 completed=426.0 avg=12.8 median=13.0 pct_deadline=66.0 pct_alt2=73.0 pct_alt3=75.0 page=20 table=Table 8
+  period=2019-12 facility=TOTAL stage=restoration setting=inpatient signed=153.0 completed=143.0 avg=30.4 median=34.0 pct_deadline=28.0 pct_alt2=29.0 pct_alt3=30.0 page=22 table=Table 10
+  period=2020-01 facility=TOTAL stage=restoration setting=inpatient signed=127.0 completed=136.0 avg=40.1 median=41.0 pct_deadline=9.0 pct_alt2=10.0 pct_alt3=10.0 page=22 table=Table 10
+  period=2019-12 facility=WSH stage=evaluation setting=inpatient signed=2.0 completed=6.0 avg=36.8 median=30.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=13 table=Table 3
+  period=2019-12 facility=WSH stage=evaluation setting=jail signed=337.0 completed=344.0 avg=12.6 median=13.0 pct_deadline=69.0 pct_alt2=76.0 pct_alt3=77.0 page=12 table=Table 2
+  period=2019-12 facility=WSH stage=restoration setting=inpatient signed=82.0 completed=81.0 avg=32.1 median=36.0 pct_deadline=31.0 pct_alt2=33.0 pct_alt3=35.0 page=14 table=Table 4a
+=== Trueblood-Report-2021-02.pdf (9 rows) ===
+  period=2020-01 facility=ESH stage=evaluation setting=inpatient signed=11.0 completed=9.0 avg=19.2 median=23.0 pct_deadline=11.0 pct_alt2=11.0 pct_alt3=11.0 page=17 table=Table 6
+  period=2020-01 facility=ESH stage=evaluation setting=jail signed=82.0 completed=75.0 avg=13.1 median=13.0 pct_deadline=63.0 pct_alt2=72.0 pct_alt3=79.0 page=16 table=Table 5
+  period=2020-01 facility=ESH stage=restoration setting=inpatient signed=22.0 completed=20.0 avg=37.8 median=40.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=18 table=Table 7
+  period=2020-01 facility=RTF stage=restoration setting=inpatient signed=47.0 completed=48.0 avg=41.2 median=42.5 pct_deadline=4.0 pct_alt2=4.0 pct_alt3=4.0 page=14 table=Table 4b
+  period=2020-01 facility=TOTAL stage=evaluation setting=inpatient signed=19.0 completed=12.0 avg=20.1 median=23.0 pct_deadline=8.0 pct_alt2=8.0 pct_alt3=8.0 page=20 table=Table 9
+  period=2020-01 facility=TOTAL stage=evaluation setting=jail signed=475.0 completed=435.0 avg=12.4 median=13.0 pct_deadline=74.0 pct_alt2=80.0 pct_alt3=84.0 page=19 table=Table 8
+  period=2020-01 facility=WSH stage=evaluation setting=inpatient signed=8.0 completed=3.0 avg=22.7 median=26.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=12 table=Table 3
+  period=2020-01 facility=WSH stage=evaluation setting=jail signed=393.0 completed=360.0 avg=12.2 median=13.0 pct_deadline=76.0 pct_alt2=81.0 pct_alt3=85.0 page=11 table=Table 2
+  period=2020-01 facility=WSH stage=restoration setting=inpatient signed=58.0 completed=68.0 avg=40.0 median=38.5 pct_deadline=15.0 pct_alt2=18.0 pct_alt3=18.0 page=13 table=Table 4a
+=== Trueblood-Report-2021-03.pdf (10 rows) ===
+  period=2020-02 facility=ESH stage=evaluation setting=inpatient signed=4.0 completed=8.0 avg=26.3 median=22.0 pct_deadline=25.0 pct_alt2=25.0 pct_alt3=38.0 page=17 table=Table 6
+  period=2020-02 facility=ESH stage=evaluation setting=jail signed=67.0 completed=66.0 avg=11.4 median=12.5 pct_deadline=68.0 pct_alt2=71.0 pct_alt3=73.0 page=16 table=Table 5
+  period=2020-02 facility=ESH stage=restoration setting=inpatient signed=24.0 completed=21.0 avg=47.0 median=60.0 pct_deadline=19.0 pct_alt2=19.0 pct_alt3=19.0 page=18 table=Table 7
+  period=2020-02 facility=RTF stage=restoration setting=inpatient signed=16.0 completed=33.0 avg=36.7 median=34.0 pct_deadline=6.0 pct_alt2=6.0 pct_alt3=6.0 page=14 table=Table 4b
+  period=2020-02 facility=TOTAL stage=evaluation setting=inpatient signed=13.0 completed=14.0 avg=14.8 median=21.5 pct_deadline=14.0 pct_alt2=14.0 pct_alt3=21.0 page=20 table=Table 9
+  period=2020-02 facility=TOTAL stage=evaluation setting=jail signed=425.0 completed=439.0 avg=12.0 median=13.0 pct_deadline=79.0 pct_alt2=82.0 pct_alt3=84.0 page=19 table=Table 8
+  period=2020-02 facility=TOTAL stage=restoration setting=inpatient signed=101.0 completed=110.0 avg=40.3 median=37.0 pct_deadline=10.0 pct_alt2=11.0 pct_alt3=11.0 page=21 table=Table 10
+  period=2020-02 facility=WSH stage=evaluation setting=inpatient signed=9.0 completed=6.0 avg=19.8 median=21.5 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=12 table=Table 3
+  period=2020-02 facility=WSH stage=evaluation setting=jail signed=358.0 completed=373.0 avg=12.1 median=13.0 pct_deadline=81.0 pct_alt2=84.0 pct_alt3=86.0 page=11 table=Table 2
+  period=2020-02 facility=WSH stage=restoration setting=inpatient signed=61.0 completed=56.0 avg=39.9 median=41.5 pct_deadline=9.0 pct_alt2=11.0 pct_alt3=11.0 page=13 table=Table 4a
+=== Trueblood-Report-2021-04.pdf (10 rows) ===
+  period=2020-03 facility=ESH stage=evaluation setting=inpatient signed=7.0 completed=5.0 avg=56.0 median=56.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=17 table=Table 6
+  period=2020-03 facility=ESH stage=evaluation setting=jail signed=60.0 completed=69.0 avg=12.8 median=13.0 pct_deadline=74.0 pct_alt2=77.0 pct_alt3=80.0 page=16 table=Table 5
+  period=2020-03 facility=ESH stage=restoration setting=inpatient signed=16.0 completed=21.0 avg=47.1 median=48.0 pct_deadline=5.0 pct_alt2=5.0 pct_alt3=5.0 page=18 table=Table 7
+  period=2020-03 facility=RTF stage=restoration setting=inpatient signed=29.0 completed=31.0 avg=36.9 median=33.0 pct_deadline=3.0 pct_alt2=3.0 pct_alt3=3.0 page=14 table=Table 4b
+  period=2020-03 facility=TOTAL stage=evaluation setting=inpatient signed=10.0 completed=11.0 avg=48.8 median=50.0 pct_deadline=9.0 pct_alt2=9.0 pct_alt3=9.0 page=20 table=Table 9
+  period=2020-03 facility=TOTAL stage=evaluation setting=jail signed=307.0 completed=407.0 avg=12.3 median=13.0 pct_deadline=77.0 pct_alt2=81.0 pct_alt3=84.0 page=19 table=Table 8
+  period=2020-03 facility=TOTAL stage=restoration setting=inpatient signed=102.0 completed=111.0 avg=32.8 median=28.0 pct_deadline=8.0 pct_alt2=9.0 pct_alt3=10.0 page=21 table=Table 10
+  period=2020-03 facility=WSH stage=evaluation setting=inpatient signed=3.0 completed=6.0 avg=42.8 median=48.5 pct_deadline=17.0 pct_alt2=17.0 pct_alt3=17.0 page=12 table=Table 3
+  period=2020-03 facility=WSH stage=evaluation setting=jail signed=247.0 completed=338.0 avg=12.3 median=13.0 pct_deadline=78.0 pct_alt2=82.0 pct_alt3=85.0 page=11 table=Table 2
+  period=2020-03 facility=WSH stage=restoration setting=inpatient signed=57.0 completed=59.0 avg=25.6 median=23.0 pct_deadline=12.0 pct_alt2=14.0 pct_alt3=15.0 page=13 table=Table 4a
+=== Trueblood-Report-2021-05.pdf (10 rows) ===
+  period=2020-04 facility=ESH stage=evaluation setting=inpatient signed=2.0 completed=4.0 avg=16.8 median=12.0 pct_deadline=50.0 pct_alt2=50.0 pct_alt3=50.0 page=17 table=Table 6
+  period=2020-04 facility=ESH stage=evaluation setting=jail signed=21.0 completed=34.0 avg=11.3 median=9.5 pct_deadline=85.0 pct_alt2=88.0 pct_alt3=91.0 page=16 table=Table 5
+  period=2020-04 facility=ESH stage=restoration setting=inpatient signed=14.0 completed=22.0 avg=58.6 median=61.0 pct_deadline=9.0 pct_alt2=9.0 pct_alt3=9.0 page=18 table=Table 7
+  period=2020-04 facility=RTF stage=restoration setting=inpatient signed=26.0 completed=25.0 avg=33.2 median=27.0 pct_deadline=8.0 pct_alt2=12.0 pct_alt3=12.0 page=14 table=Table 4b
+  period=2020-04 facility=TOTAL stage=evaluation setting=inpatient signed=6.0 completed=4.0 avg=16.8 median=12.0 pct_deadline=50.0 pct_alt2=50.0 pct_alt3=50.0 page=20 table=Table 9
+  period=2020-04 facility=TOTAL stage=evaluation setting=jail signed=204.0 completed=184.0 avg=13.3 median=13.0 pct_deadline=66.0 pct_alt2=72.0 pct_alt3=73.0 page=19 table=Table 8
+  period=2020-04 facility=TOTAL stage=restoration setting=inpatient signed=81.0 completed=76.0 avg=43.6 median=39.0 pct_deadline=11.0 pct_alt2=12.0 pct_alt3=12.0 page=21 table=Table 10
+  period=2020-04 facility=WSH stage=evaluation setting=inpatient signed=4.0 completed=0.0 avg= median= pct_deadline= pct_alt2= pct_alt3= page=12 table=Table 3
+  period=2020-04 facility=WSH stage=evaluation setting=jail signed=183.0 completed=150.0 avg=13.7 median=13.0 pct_deadline=62.0 pct_alt2=68.0 pct_alt3=69.0 page=11 table=Table 2
+  period=2020-04 facility=WSH stage=restoration setting=inpatient signed=41.0 completed=29.0 avg=41.2 median=34.0 pct_deadline=14.0 pct_alt2=14.0 pct_alt3=14.0 page=13 table=Table 4a
+=== Trueblood-Report-2021-06.pdf (10 rows) ===
+  period=2020-05 facility=ESH stage=evaluation setting=inpatient signed=3.0 completed=3.0 avg=48.3 median=44.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=17 table=Table 6
+  period=2020-05 facility=ESH stage=evaluation setting=jail signed=39.0 completed=31.0 avg=11.0 median=8.0 pct_deadline=90.0 pct_alt2=90.0 pct_alt3=90.0 page=16 table=Table 5
+  period=2020-05 facility=ESH stage=restoration setting=inpatient signed=10.0 completed=18.0 avg=57.2 median=51.5 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=18 table=Table 7
+  period=2020-05 facility=RTF stage=restoration setting=inpatient signed=18.0 completed=21.0 avg=47.4 median=38.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=14 table=Table 4b
+  period=2020-05 facility=TOTAL stage=evaluation setting=inpatient signed=7.0 completed=4.0 avg=36.3 median=30.0 pct_deadline=25.0 pct_alt2=25.0 pct_alt3=25.0 page=20 table=Table 9
+  period=2020-05 facility=TOTAL stage=evaluation setting=jail signed=241.0 completed=231.0 avg=13.8 median=13.0 pct_deadline=68.0 pct_alt2=73.0 pct_alt3=74.0 page=19 table=Table 8
+  period=2020-05 facility=TOTAL stage=restoration setting=inpatient signed=58.0 completed=64.0 avg=56.5 median=43.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=21 table=Table 10
+  period=2020-05 facility=WSH stage=evaluation setting=inpatient signed=4.0 completed=1.0 avg=0.0 median=0.0 pct_deadline=100.0 pct_alt2=100.0 pct_alt3=100.0 page=12 table=Table 3
+  period=2020-05 facility=WSH stage=evaluation setting=jail signed=202.0 completed=200.0 avg=14.3 median=13.0 pct_deadline=65.0 pct_alt2=71.0 pct_alt3=72.0 page=11 table=Table 2
+  period=2020-05 facility=WSH stage=restoration setting=inpatient signed=30.0 completed=25.0 avg=63.6 median=43.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=13 table=Table 4a
+=== Trueblood-Report-2021-07.pdf (18 rows) ===
+  period=2020-06 facility=ESH stage=evaluation setting=inpatient signed=16.0 completed=2.0 avg=108.0 median=108.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=17 table=Table 6
+  period=2020-07 facility=ESH stage=evaluation setting=inpatient signed=13.0 completed=5.0 avg=36.4 median=28.0 pct_deadline=20.0 pct_alt2=20.0 pct_alt3=40.0 page=17 table=Table 6
+  period=2020-06 facility=ESH stage=evaluation setting=jail signed=47.0 completed=32.0 avg=11.2 median=10.5 pct_deadline=72.0 pct_alt2=75.0 pct_alt3=88.0 page=16 table=Table 5
+  period=2020-07 facility=ESH stage=evaluation setting=jail signed=53.0 completed=65.0 avg=12.7 median=10.0 pct_deadline=71.0 pct_alt2=74.0 pct_alt3=88.0 page=16 table=Table 5
+  period=2020-06 facility=ESH stage=restoration setting=inpatient signed=7.0 completed=11.0 avg=53.6 median=57.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=18 table=Table 7
+  period=2020-07 facility=ESH stage=restoration setting=inpatient signed=16.0 completed=4.0 avg=81.3 median=91.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=18 table=Table 7
+  period=2020-06 facility=RTF stage=restoration setting=inpatient signed=26.0 completed=23.0 avg=43.8 median=41.0 pct_deadline=9.0 pct_alt2=9.0 pct_alt3=9.0 page=14 table=Table 4b
+  period=2020-06 facility=TOTAL stage=evaluation setting=inpatient signed=26.0 completed=10.0 avg=65.7 median=55.5 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=20 table=Table 9
+  period=2020-07 facility=TOTAL stage=evaluation setting=inpatient signed=18.0 completed=8.0 avg=39.5 median=31.5 pct_deadline=13.0 pct_alt2=13.0 pct_alt3=25.0 page=20 table=Table 9
+  period=2020-06 facility=TOTAL stage=evaluation setting=jail signed=287.0 completed=276.0 avg=12.2 median=13.0 pct_deadline=82.0 pct_alt2=84.0 pct_alt3=86.0 page=19 table=Table 8
+  period=2020-07 facility=TOTAL stage=evaluation setting=jail signed=349.0 completed=332.0 avg=12.2 median=12.0 pct_deadline=78.0 pct_alt2=80.0 pct_alt3=84.0 page=19 table=Table 8
+  period=2020-06 facility=TOTAL stage=restoration setting=inpatient signed=72.0 completed=75.0 avg=70.4 median=69.0 pct_deadline=4.0 pct_alt2=4.0 pct_alt3=4.0 page=21 table=Table 10
+  period=2020-06 facility=WSH stage=evaluation setting=inpatient signed=10.0 completed=8.0 avg=55.1 median=18.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=12 table=Table 3
+  period=2020-07 facility=WSH stage=evaluation setting=inpatient signed=5.0 completed=3.0 avg=44.7 median=51.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=12 table=Table 3
+  period=2020-06 facility=WSH stage=evaluation setting=jail signed=240.0 completed=244.0 avg=12.3 median=13.0 pct_deadline=83.0 pct_alt2=85.0 pct_alt3=86.0 page=11 table=Table 2
+  period=2020-07 facility=WSH stage=evaluation setting=jail signed=296.0 completed=267.0 avg=12.1 median=12.0 pct_deadline=80.0 pct_alt2=81.0 pct_alt3=83.0 page=11 table=Table 2
+  period=2020-06 facility=WSH stage=restoration setting=inpatient signed=39.0 completed=41.0 avg=89.8 median=87.0 pct_deadline=2.0 pct_alt2=2.0 pct_alt3=2.0 page=13 table=Table 4a
+  period=2020-07 facility=WSH stage=restoration setting=inpatient signed=57.0 completed=43.0 avg=36.9 median=22.0 pct_deadline=7.0 pct_alt2=7.0 pct_alt3=19.0 page=13 table=Table 4a
+=== Trueblood-Report-2021-08.pdf (3 rows) ===
+  period=2020-07 facility=OCRP stage=restoration setting=outpatient signed=0.0 completed=0.0 avg= median= pct_deadline= pct_alt2= pct_alt3= page=15 table=Table 4c
+  period=2020-07 facility=RTF stage=restoration setting=inpatient signed=32.0 completed=35.0 avg=36.8 median=33.0 pct_deadline=3.0 pct_alt2=3.0 pct_alt3=3.0 page=14 table=Table 4b
+  period=2020-07 facility=TOTAL stage=restoration setting=inpatient signed=105.0 completed=82.0 avg=39.0 median=32.0 pct_deadline=5.0 pct_alt2=5.0 pct_alt3=11.0 page=21 table=Table 10
+=== Trueblood-Report-2021-09.pdf (11 rows) ===
+  period=2020-08 facility=ESH stage=evaluation setting=inpatient signed=2.0 completed=11.0 avg=66.2 median=55.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=17 table=Table 6
+  period=2020-08 facility=ESH stage=evaluation setting=jail signed=68.0 completed=47.0 avg=14.4 median=10.0 pct_deadline=70.0 pct_alt2=72.0 pct_alt3=79.0 page=16 table=Table 5
+  period=2020-08 facility=ESH stage=restoration setting=inpatient signed=15.0 completed=13.0 avg=49.2 median=48.0 pct_deadline=15.0 pct_alt2=15.0 pct_alt3=15.0 page=18 table=Table 7
+  period=2020-08 facility=OCRP stage=restoration setting=outpatient signed=2.0 completed=1.0 avg=4.0 median=4.0 pct_deadline=100.0 pct_alt2=100.0 pct_alt3=100.0 page=15 table=Table 4c
+  period=2020-08 facility=RTF stage=restoration setting=inpatient signed=48.0 completed=34.0 avg=23.7 median=21.5 pct_deadline=3.0 pct_alt2=3.0 pct_alt3=3.0 page=14 table=Table 4b
+  period=2020-08 facility=TOTAL stage=evaluation setting=inpatient signed=9.0 completed=22.0 avg=91.1 median=80.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=20 table=Table 9
+  period=2020-08 facility=TOTAL stage=evaluation setting=jail signed=358.0 completed=339.0 avg=11.8 median=12.0 pct_deadline=84.0 pct_alt2=87.0 pct_alt3=90.0 page=19 table=Table 8
+  period=2020-08 facility=TOTAL stage=restoration setting=inpatient signed=115.0 completed=111.0 avg=61.5 median=38.0 pct_deadline=6.0 pct_alt2=6.0 pct_alt3=6.0 page=21 table=Table 10
+  period=2020-08 facility=WSH stage=evaluation setting=inpatient signed=7.0 completed=11.0 avg=116.0 median=132.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=12 table=Table 3
+  period=2020-08 facility=WSH stage=evaluation setting=jail signed=290.0 completed=292.0 avg=11.3 median=12.0 pct_deadline=86.0 pct_alt2=90.0 pct_alt3=92.0 page=11 table=Table 2
+  period=2020-08 facility=WSH stage=restoration setting=inpatient signed=52.0 completed=64.0 avg=84.2 median=85.5 pct_deadline=6.0 pct_alt2=6.0 pct_alt3=6.0 page=13 table=Table 4a
+=== Trueblood-Report-2021-10.pdf (10 rows) ===
+  period=2020-09 facility=ESH stage=evaluation setting=inpatient signed=11.0 completed=15.0 avg=48.2 median=62.0 pct_deadline=13.0 pct_alt2=13.0 pct_alt3=13.0 page=17 table=Table 6
+  period=2020-09 facility=ESH stage=evaluation setting=jail signed=79.0 completed=86.0 avg=12.3 median=9.5 pct_deadline=77.0 pct_alt2=77.0 pct_alt3=85.0 page=16 table=Table 5
+  period=2020-09 facility=ESH stage=restoration setting=inpatient signed=28.0 completed=24.0 avg=62.1 median=62.0 pct_deadline=4.0 pct_alt2=4.0 pct_alt3=4.0 page=18 table=Table 7
+  period=2020-09 facility=RTF stage=restoration setting=inpatient signed=42.0 completed=46.0 avg=23.5 median=20.0 pct_deadline=9.0 pct_alt2=9.0 pct_alt3=9.0 page=14 table=Table 4b
+  period=2020-09 facility=TOTAL stage=evaluation setting=inpatient signed=18.0 completed=22.0 avg=52.6 median=63.5 pct_deadline=9.0 pct_alt2=9.0 pct_alt3=9.0 page=20 table=Table 9
+  period=2020-09 facility=TOTAL stage=evaluation setting=jail signed=388.0 completed=378.0 avg=11.9 median=12.0 pct_deadline=80.0 pct_alt2=82.0 pct_alt3=85.0 page=19 table=Table 8
+  period=2020-09 facility=TOTAL stage=restoration setting=inpatient signed=125.0 completed=128.0 avg=46.9 median=36.5 pct_deadline=7.0 pct_alt2=7.0 pct_alt3=8.0 page=21 table=Table 10
+  period=2020-09 facility=WSH stage=evaluation setting=inpatient signed=7.0 completed=7.0 avg=62.0 median=75.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=12 table=Table 3
+  period=2020-09 facility=WSH stage=evaluation setting=jail signed=309.0 completed=292.0 avg=11.7 median=12.0 pct_deadline=81.0 pct_alt2=84.0 pct_alt3=85.0 page=11 table=Table 2
+  period=2020-09 facility=WSH stage=restoration setting=inpatient signed=55.0 completed=58.0 avg=59.2 median=51.5 pct_deadline=7.0 pct_alt2=7.0 pct_alt3=9.0 page=13 table=Table 4a
+=== Trueblood-Report-2021-11.pdf (12 rows) ===
+  period=2020-10 facility=ESH stage=evaluation setting=inpatient signed=20.0 completed=14.0 avg=40.0 median=14.5 pct_deadline=29.0 pct_alt2=36.0 pct_alt3=50.0 page=17 table=Table 6
+  period=2020-10 facility=ESH stage=evaluation setting=jail signed=74.0 completed=81.0 avg=14.1 median=11.0 pct_deadline=77.0 pct_alt2=78.0 pct_alt3=86.0 page=16 table=Table 5
+  period=2020-10 facility=ESH stage=restoration setting=inpatient signed=19.0 completed=7.0 avg=36.3 median=36.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=18 table=Table 7
+  period=2020-09 facility=OCRP stage=restoration setting=outpatient signed=2.0 completed=3.0 avg=6.3 median=7.0 pct_deadline=100.0 pct_alt2=100.0 pct_alt3=100.0 page=15 table=Table 4c
+  period=2020-10 facility=OCRP stage=restoration setting=outpatient signed=0.0 completed=0.0 avg= median= pct_deadline= pct_alt2= pct_alt3= page=15 table=Table 4c
+  period=2020-10 facility=RTF stage=restoration setting=inpatient signed=50.0 completed=41.0 avg=32.1 median=28.0 pct_deadline=10.0 pct_alt2=10.0 pct_alt3=10.0 page=14 table=Table 4b
+  period=2020-10 facility=TOTAL stage=evaluation setting=inpatient signed=35.0 completed=27.0 avg=47.1 median=36.0 pct_deadline=15.0 pct_alt2=19.0 pct_alt3=26.0 page=20 table=Table 9
+  period=2020-10 facility=TOTAL stage=evaluation setting=jail signed=402.0 completed=412.0 avg=12.9 median=13.0 pct_deadline=81.0 pct_alt2=84.0 pct_alt3=89.0 page=19 table=Table 8
+  period=2020-10 facility=TOTAL stage=restoration setting=inpatient signed=164.0 completed=111.0 avg=38.7 median=31.0 pct_deadline=12.0 pct_alt2=12.0 pct_alt3=13.0 page=21 table=Table 10
+  period=2020-10 facility=WSH stage=evaluation setting=inpatient signed=15.0 completed=13.0 avg=54.8 median=51.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=12 table=Table 3
+  period=2020-10 facility=WSH stage=evaluation setting=jail signed=328.0 completed=331.0 avg=12.6 median=13.0 pct_deadline=82.0 pct_alt2=86.0 pct_alt3=89.0 page=11 table=Table 2
+  period=2020-10 facility=WSH stage=restoration setting=inpatient signed=95.0 completed=63.0 avg=43.3 median=32.0 pct_deadline=14.0 pct_alt2=14.0 pct_alt3=16.0 page=13 table=Table 4a
+=== Trueblood-Report-2021-12.pdf (11 rows) ===
+  period=2020-11 facility=ESH stage=evaluation setting=inpatient signed=12.0 completed=7.0 avg=86.1 median=84.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=17 table=Table 6
+  period=2020-11 facility=ESH stage=evaluation setting=jail signed=68.0 completed=62.0 avg=11.6 median=12.0 pct_deadline=77.0 pct_alt2=79.0 pct_alt3=85.0 page=16 table=Table 5
+  period=2020-11 facility=ESH stage=restoration setting=inpatient signed=21.0 completed=10.0 avg=27.8 median=25.5 pct_deadline=20.0 pct_alt2=20.0 pct_alt3=20.0 page=18 table=Table 7
+  period=2020-11 facility=OCRP stage=restoration setting=outpatient signed=0.0 completed=0.0 avg= median= pct_deadline= pct_alt2= pct_alt3= page=15 table=Table 4c
+  period=2020-11 facility=RTF stage=restoration setting=inpatient signed=23.0 completed=30.0 avg=26.4 median=23.0 pct_deadline=17.0 pct_alt2=17.0 pct_alt3=17.0 page=14 table=Table 4b
+  period=2020-11 facility=TOTAL stage=evaluation setting=inpatient signed=27.0 completed=18.0 avg=51.7 median=37.0 pct_deadline=6.0 pct_alt2=6.0 pct_alt3=6.0 page=20 table=Table 9
+  period=2020-11 facility=TOTAL stage=evaluation setting=jail signed=314.0 completed=319.0 avg=12.1 median=13.0 pct_deadline=78.0 pct_alt2=81.0 pct_alt3=85.0 page=19 table=Table 8
+  period=2020-11 facility=TOTAL stage=restoration setting=inpatient signed=111.0 completed=118.0 avg=39.0 median=29.0 pct_deadline=14.0 pct_alt2=12.0 pct_alt3=14.0 page=21 table=Table 10
+  period=2020-11 facility=WSH stage=evaluation setting=inpatient signed=15.0 completed=11.0 avg=29.8 median=37.0 pct_deadline=9.0 pct_alt2=9.0 pct_alt3=9.0 page=12 table=Table 3
+  period=2020-11 facility=WSH stage=evaluation setting=jail signed=246.0 completed=257.0 avg=12.2 median=13.0 pct_deadline=79.0 pct_alt2=81.0 pct_alt3=85.0 page=11 table=Table 2
+  period=2020-11 facility=WSH stage=restoration setting=inpatient signed=67.0 completed=78.0 avg=45.3 median=32.0 pct_deadline=12.0 pct_alt2=9.0 pct_alt3=12.0 page=13 table=Table 4a
+=== Trueblood-Report-2022-01.pdf (11 rows) ===
+  period=2020-12 facility=ESH stage=evaluation setting=inpatient signed=14.0 completed=19.0 avg=49.8 median=35.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=17 table=Table 6
+  period=2020-12 facility=ESH stage=evaluation setting=jail signed=50.0 completed=62.0 avg=14.1 median=12.5 pct_deadline=58.0 pct_alt2=65.0 pct_alt3=71.0 page=16 table=Table 5
+  period=2020-12 facility=ESH stage=restoration setting=inpatient signed=11.0 completed=36.0 avg=73.4 median=81.0 pct_deadline=3.0 pct_alt2=3.0 pct_alt3=3.0 page=18 table=Table 7
+  period=2020-12 facility=OCRP stage=restoration setting=outpatient signed=3.0 completed=3.0 avg=5.7 median=5.0 pct_deadline=67.0 pct_alt2=100.0 pct_alt3=100.0 page=15 table=Table 4c
+  period=2020-12 facility=RTF stage=restoration setting=inpatient signed=47.0 completed=35.0 avg=36.3 median=34.0 pct_deadline=11.0 pct_alt2=11.0 pct_alt3=11.0 page=14 table=Table 4b
+  period=2020-12 facility=TOTAL stage=evaluation setting=inpatient signed=31.0 completed=29.0 avg=46.1 median=35.0 pct_deadline=3.0 pct_alt2=3.0 pct_alt3=3.0 page=20 table=Table 9
+  period=2020-12 facility=TOTAL stage=evaluation setting=jail signed=292.0 completed=329.0 avg=13.2 median=13.0 pct_deadline=71.0 pct_alt2=81.0 pct_alt3=83.0 page=19 table=Table 8
+  period=2020-12 facility=TOTAL stage=restoration setting=inpatient signed=117.0 completed=132.0 avg=46.8 median=43.0 pct_deadline=9.0 pct_alt2=10.0 pct_alt3=10.0 page=21 table=Table 10
+  period=2020-12 facility=WSH stage=evaluation setting=inpatient signed=17.0 completed=10.0 avg=39.0 median=47.5 pct_deadline=10.0 pct_alt2=10.0 pct_alt3=10.0 page=12 table=Table 3
+  period=2020-12 facility=WSH stage=evaluation setting=jail signed=242.0 completed=267.0 avg=13.0 median=13.0 pct_deadline=74.0 pct_alt2=84.0 pct_alt3=85.0 page=11 table=Table 2
+  period=2020-12 facility=WSH stage=restoration setting=inpatient signed=59.0 completed=61.0 avg=37.1 median=37.0 pct_deadline=11.0 pct_alt2=13.0 pct_alt3=13.0 page=13 table=Table 4a
+=== Trueblood-Report-2022-02.pdf (11 rows) ===
+  period=2021-01 facility=ESH stage=evaluation setting=inpatient signed=17.0 completed=10.0 avg=49.1 median=40.5 pct_deadline=10.0 pct_alt2=10.0 pct_alt3=20.0 page=19 table=Table 6
+  period=2021-01 facility=ESH stage=evaluation setting=jail signed=81.0 completed=76.0 avg=12.9 median=13.0 pct_deadline=70.0 pct_alt2=76.0 pct_alt3=83.0 page=18 table=Table 5
+  period=2021-01 facility=ESH stage=restoration setting=inpatient signed=19.0 completed=20.0 avg=52.0 median=73.0 pct_deadline=30.0 pct_alt2=30.0 pct_alt3=30.0 page=20 table=Table 7
+  period=2021-01 facility=OCRP stage=restoration setting=outpatient signed=0.0 completed=0.0 avg= median= pct_deadline= pct_alt2= pct_alt3= page=17 table=Table 4c
+  period=2021-01 facility=RTF stage=restoration setting=inpatient signed=35.0 completed=31.0 avg=49.1 median=41.0 pct_deadline=3.0 pct_alt2=3.0 pct_alt3=3.0 page=15 table=Table 4b
+  period=2021-01 facility=TOTAL stage=evaluation setting=inpatient signed=31.0 completed=25.0 avg=57.6 median=61.0 pct_deadline=4.0 pct_alt2=4.0 pct_alt3=8.0 page=22 table=Table 9
+  period=2021-01 facility=TOTAL stage=evaluation setting=jail signed=347.0 completed=321.0 avg=12.9 median=13.0 pct_deadline=74.0 pct_alt2=78.0 pct_alt3=81.0 page=21 table=Table 8
+  period=2021-01 facility=TOTAL stage=restoration setting=inpatient signed=108.0 completed=110.0 avg=55.8 median=54.0 pct_deadline=8.0 pct_alt2=8.0 pct_alt3=9.0 page=23 table=Table 10
+  period=2021-01 facility=WSH stage=evaluation setting=inpatient signed=14.0 completed=15.0 avg=63.3 median=70.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=13 table=Table 3
+  period=2021-01 facility=WSH stage=evaluation setting=jail signed=266.0 completed=245.0 avg=12.8 median=13.0 pct_deadline=76.0 pct_alt2=79.0 pct_alt3=80.0 page=12 table=Table 2
+  period=2021-01 facility=WSH stage=restoration setting=inpatient signed=54.0 completed=59.0 avg=60.6 median=64.0 pct_deadline=3.0 pct_alt2=3.0 pct_alt3=5.0 page=14 table=Table 4a
+=== Trueblood-Report-2022-03.pdf (19 rows) ===
+  period=2021-02 facility=ESH stage=evaluation setting=inpatient signed=14.0 completed=29.0 avg=46.0 median=45.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=17.0 page=19 table=Table 6
+  period=2021-03 facility=ESH stage=evaluation setting=inpatient signed=23.0 completed=18.0 avg=27.6 median=22.5 pct_deadline=11.0 pct_alt2=11.0 pct_alt3=17.0 page=19 table=Table 6
+  period=2021-02 facility=ESH stage=evaluation setting=jail signed=80.0 completed=72.0 avg=12.8 median=13.0 pct_deadline=65.0 pct_alt2=76.0 pct_alt3=82.0 page=18 table=Table 5
+  period=2021-02 facility=ESH stage=restoration setting=inpatient signed=15.0 completed=19.0 avg=66.5 median=81.0 pct_deadline=11.0 pct_alt2=11.0 pct_alt3=11.0 page=20 table=Table 7
+  period=2021-03 facility=ESH stage=restoration setting=inpatient signed=16.0 completed=26.0 avg=37.9 median=34.5 pct_deadline=12.0 pct_alt2=12.0 pct_alt3=12.0 page=20 table=Table 7
+  period=2021-02 facility=OCRP stage=restoration setting=outpatient signed=0.0 completed=0.0 avg= median= pct_deadline= pct_alt2= pct_alt3= page=17 table=Table 4c
+  period=2021-03 facility=OCRP stage=restoration setting=outpatient signed=0.0 completed=0.0 avg= median= pct_deadline= pct_alt2= pct_alt3= page=17 table=Table 4c
+  period=2021-02 facility=RTF stage=restoration setting=inpatient signed=30.0 completed=37.0 avg=45.5 median=37.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=15 table=Table 4b
+  period=2021-03 facility=RTF stage=restoration setting=inpatient signed=36.0 completed=47.0 avg=40.1 median=42.0 pct_deadline=6.0 pct_alt2=6.0 pct_alt3=6.0 page=15 table=Table 4b
+  period=2021-02 facility=TOTAL stage=evaluation setting=inpatient signed=22.0 completed=45.0 avg=43.1 median=41.0 pct_deadline=2.0 pct_alt2=2.0 pct_alt3=13.0 page=22 table=Table 9
+  period=2021-03 facility=TOTAL stage=evaluation setting=inpatient signed=37.0 completed=32.0 avg=43.4 median=39.0 pct_deadline=6.0 pct_alt2=6.0 pct_alt3=9.0 page=22 table=Table 9
+  period=2021-02 facility=TOTAL stage=evaluation setting=jail signed=304.0 completed=320.0 avg=12.2 median=13.0 pct_deadline=81.0 pct_alt2=86.0 pct_alt3=88.0 page=21 table=Table 8
+  period=2021-03 facility=TOTAL stage=evaluation setting=jail signed=428.0 completed=391.0 avg=11.2 median=12.0 pct_deadline=86.0 pct_alt2=90.0 pct_alt3=94.0 page=21 table=Table 8
+  period=2021-02 facility=TOTAL stage=restoration setting=inpatient signed=131.0 completed=126.0 avg=49.1 median=37.0 pct_deadline=14.0 pct_alt2=14.0 pct_alt3=14.0 page=23 table=Table 10
+  period=2021-02 facility=WSH stage=evaluation setting=inpatient signed=8.0 completed=16.0 avg=38.0 median=29.0 pct_deadline=6.0 pct_alt2=6.0 pct_alt3=6.0 page=13 table=Table 3
+  period=2021-03 facility=WSH stage=evaluation setting=inpatient signed=14.0 completed=14.0 avg=63.8 median=76.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=13 table=Table 3
+  period=2021-02 facility=WSH stage=evaluation setting=jail signed=224.0 completed=248.0 avg=12.0 median=13.0 pct_deadline=85.0 pct_alt2=89.0 pct_alt3=90.0 page=12 table=Table 2
+  period=2021-02 facility=WSH stage=restoration setting=inpatient signed=86.0 completed=70.0 avg=46.3 median=29.0 pct_deadline=23.0 pct_alt2=23.0 pct_alt3=23.0 page=14 table=Table 4a
+  period=2021-03 facility=WSH stage=restoration setting=inpatient signed=69.0 completed=103.0 avg=55.7 median=47.0 pct_deadline=9.0 pct_alt2=11.0 pct_alt3=12.0 page=14 table=Table 4a
+=== Trueblood-Report-2022-04.pdf (3 rows) ===
+  period=2021-03 facility=ESH stage=evaluation setting=jail signed=83.0 completed=81.0 avg=12.0 median=11.0 pct_deadline=68.0 pct_alt2=78.0 pct_alt3=88.0 page=18 table=Table 5
+  period=2021-03 facility=TOTAL stage=restoration setting=inpatient signed=121.0 completed=176.0 avg=48.9 median=43.0 pct_deadline=9.0 pct_alt2=10.0 pct_alt3=10.0 page=23 table=Table 10
+  period=2021-03 facility=WSH stage=evaluation setting=jail signed=345.0 completed=310.0 avg=10.9 median=12.0 pct_deadline=91.0 pct_alt2=94.0 pct_alt3=95.0 page=12 table=Table 2
+=== Trueblood-Report-2022-05.pdf (11 rows) ===
+  period=2021-04 facility=ESH stage=evaluation setting=inpatient signed=8.0 completed=22.0 avg=29.9 median=29.0 pct_deadline=5.0 pct_alt2=5.0 pct_alt3=14.0 page=19 table=Table 6
+  period=2021-04 facility=ESH stage=evaluation setting=jail signed=62.0 completed=76.0 avg=14.0 median=13.0 pct_deadline=70.0 pct_alt2=70.0 pct_alt3=80.0 page=18 table=Table 5
+  period=2021-04 facility=ESH stage=restoration setting=inpatient signed=17.0 completed=19.0 avg=34.5 median=37.0 pct_deadline=5.0 pct_alt2=5.0 pct_alt3=11.0 page=20 table=Table 7
+  period=2021-04 facility=OCRP stage=restoration setting=outpatient signed=0.0 completed=0.0 avg= median= pct_deadline= pct_alt2= pct_alt3= page=17 table=Table 4c
+  period=2021-04 facility=RTF stage=restoration setting=inpatient signed=39.0 completed=48.0 avg=24.4 median=21.0 pct_deadline=17.0 pct_alt2=17.0 pct_alt3=17.0 page=15 table=Table 4b
+  period=2021-04 facility=TOTAL stage=evaluation setting=inpatient signed=20.0 completed=40.0 avg=31.5 median=30.0 pct_deadline=3.0 pct_alt2=3.0 pct_alt3=8.0 page=22 table=Table 9
+  period=2021-04 facility=TOTAL stage=evaluation setting=jail signed=386.0 completed=409.0 avg=12.3 median=13.0 pct_deadline=81.0 pct_alt2=85.0 pct_alt3=88.0 page=21 table=Table 8
+  period=2021-04 facility=TOTAL stage=restoration setting=inpatient signed=135.0 completed=156.0 avg=34.8 median=38.0 pct_deadline=12.0 pct_alt2=13.0 pct_alt3=13.0 page=23 table=Table 10
+  period=2021-04 facility=WSH stage=evaluation setting=inpatient signed=12.0 completed=18.0 avg=33.6 median=36.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=13 table=Table 3
+  period=2021-04 facility=WSH stage=evaluation setting=jail signed=324.0 completed=333.0 avg=11.9 median=13.0 pct_deadline=83.0 pct_alt2=89.0 pct_alt3=90.0 page=12 table=Table 2
+  period=2021-04 facility=WSH stage=restoration setting=inpatient signed=79.0 completed=89.0 avg=40.5 median=47.0 pct_deadline=11.0 pct_alt2=12.0 pct_alt3=12.0 page=14 table=Table 4a
+=== Trueblood-Report-2022-06.pdf (11 rows) ===
+  period=2021-05 facility=ESH stage=evaluation setting=inpatient signed=10.0 completed=8.0 avg=19.3 median=26.0 pct_deadline=13.0 pct_alt2=13.0 pct_alt3=25.0 page=19 table=Table 6
+  period=2021-05 facility=ESH stage=evaluation setting=jail signed=86.0 completed=64.0 avg=11.8 median=12.0 pct_deadline=77.0 pct_alt2=88.0 pct_alt3=88.0 page=18 table=Table 5
+  period=2021-05 facility=ESH stage=restoration setting=inpatient signed=16.0 completed=15.0 avg=34.1 median=28.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=20 table=Table 7
+  period=2021-05 facility=OCRP stage=restoration setting=outpatient signed=0.0 completed=0.0 avg= median= pct_deadline= pct_alt2= pct_alt3= page=17 table=Table 4c
+  period=2021-05 facility=RTF stage=restoration setting=inpatient signed=26.0 completed=26.0 avg=26.5 median=25.0 pct_deadline=8.0 pct_alt2=8.0 pct_alt3=8.0 page=15 table=Table 4b
+  period=2021-05 facility=TOTAL stage=evaluation setting=inpatient signed=21.0 completed=18.0 avg=31.3 median=31.0 pct_deadline=6.0 pct_alt2=6.0 pct_alt3=11.0 page=22 table=Table 9
+  period=2021-05 facility=TOTAL stage=evaluation setting=jail signed=381.0 completed=352.0 avg=11.9 median=13.0 pct_deadline=86.0 pct_alt2=89.0 pct_alt3=91.0 page=21 table=Table 8
+  period=2021-05 facility=TOTAL stage=restoration setting=inpatient signed=115.0 completed=111.0 avg=27.5 median=28.0 pct_deadline=14.0 pct_alt2=14.0 pct_alt3=16.0 page=23 table=Table 10
+  period=2021-05 facility=WSH stage=evaluation setting=inpatient signed=9.0 completed=10.0 avg=41.0 median=38.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=13 table=Table 3
+  period=2021-05 facility=WSH stage=evaluation setting=jail signed=295.0 completed=288.0 avg=12.0 median=13.0 pct_deadline=88.0 pct_alt2=90.0 pct_alt3=92.0 page=12 table=Table 2
+  period=2021-05 facility=WSH stage=restoration setting=inpatient signed=73.0 completed=70.0 avg=26.4 median=33.5 pct_deadline=20.0 pct_alt2=20.0 pct_alt3=23.0 page=14 table=Table 4a
+=== Trueblood-Report-2022-07.pdf (11 rows) ===
+  period=2021-06 facility=ESH stage=evaluation setting=inpatient signed=8.0 completed=11.0 avg=17.8 median=24.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=36.0 page=19 table=Table 6
+  period=2021-06 facility=ESH stage=evaluation setting=jail signed=102.0 completed=99.0 avg=12.5 median=13.0 pct_deadline=63.0 pct_alt2=73.0 pct_alt3=83.0 page=18 table=Table 5
+  period=2021-06 facility=ESH stage=restoration setting=inpatient signed=22.0 completed=23.0 avg=25.8 median=29.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=0.0 page=20 table=Table 7
+  period=2021-06 facility=OCRP stage=restoration setting=outpatient signed=0.0 completed=0.0 avg= median= pct_deadline= pct_alt2= pct_alt3= page=17 table=Table 4c
+  period=2021-06 facility=RTF stage=restoration setting=inpatient signed=23.0 completed=32.0 avg=28.9 median=27.0 pct_deadline=0.0 pct_alt2=0.0 pct_alt3=3.0 page=15 table=Table 4b
+  period=2021-06 facility=TOTAL stage=evaluation setting=inpatient signed=27.0 completed=27.0 avg=20.5 median=24.0 pct_deadline=19.0 pct_alt2=19.0 pct_alt3=33.0 page=22 table=Table 9
+  period=2021-06 facility=TOTAL stage=evaluation setting=jail signed=438.0 completed=411.0 avg=12.4 median=13.0 pct_deadline=76.0 pct_alt2=81.0 pct_alt3=85.0 page=21 table=Table 8
+  period=2021-06 facility=TOTAL stage=restoration setting=inpatient signed=109.0 completed=124.0 avg=34.0 median=33.5 pct_deadline=2.0 pct_alt2=5.0 pct_alt3=6.0 page=23 table=Table 10
+  period=2021-06 facility=WSH stage=evaluation setting=inpatient signed=19.0 completed=14.0 avg=24.8 median=30.0 pct_deadline=21.0 pct_alt2=21.0 pct_alt3=21.0 page=13 table=Table 3
+  period=2021-06 facility=WSH stage=evaluation setting=jail signed=336.0 completed=312.0 avg=12.4 median=13.0 pct_deadline=80.0 pct_alt2=83.0 pct_alt3=86.0 page=12 table=Table 2
+  period=2021-06 facility=WSH stage=restoration setting=inpatient signed=64.0 completed=69.0 avg=39.1 median=42.0 pct_deadline=4.0 pct_alt2=9.0 pct_alt3=9.0 page=14 table=Table 4a
