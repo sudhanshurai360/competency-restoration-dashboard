@@ -2,8 +2,11 @@
 
 ## v1.0.2 — Five data-accuracy corrections from a full source-PDF audit (PUBLISHED, 2026-09-11)
 
-**Status:** PUBLISHED. Concept DOI `10.5281/zenodo.22652057` (unchanged); version DOI to be filled
-in once confirmed live via Zenodo's API after this release.
+**Status:** PUBLISHED. Concept DOI `10.5281/zenodo.22652057` (unchanged); version DOI
+`10.5281/zenodo.22712971`, confirmed live by direct query against Zenodo's own API. Note: a
+`.zenodo.json` version-field fix (1.0.1 → 1.0.2) landed just after this release was cut, so
+Zenodo's own metadata for this specific record still shows `version: 1.0.1` — the archived file
+contents are correctly v1.0.2; only that one label is stale by one release.
 
 A full, from-scratch audit checked every value in every dataset against the actual printed source
 PDF (not against prior code comments, metadata, or automated spot-checks) before this data was
