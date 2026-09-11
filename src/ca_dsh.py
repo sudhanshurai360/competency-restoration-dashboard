@@ -110,19 +110,70 @@ def parse_estimate(path: Path) -> list[dict]:
         pass  # report-relative ("As of the 2024-25 May Revision") — skip (no clean date)
     for m in re.finditer(r"now down to\s+([\d,]{3,5})\s+as of\s+20\d\d-\d\d\s+(?:Governor.s Budget|May Revision)",
                           flat, re.I):
-        pass  # SAME report-relative problem, different phrasing -- a second independent audit
-              # (2026-09-07) confirmed both of the two newest raw PDFs contain this sentence
-              # ("...is now down to 275 as of 2026-27 Governor's Budget", gov2026-27.pdf; "...256
-              # as of 2026-27 May Revision", may2026-27.pdf), each textually more recent than the
-              # shipped "latest reading" -- deliberately still skipped rather than guess a
-              # calendar month from a budget-cycle label (a "Governor's Budget" is typically
-              # published in January, a "May Revision" in May, of the FIRST year in the "20XX-YY"
-              # label, but that's an inference this pipeline isn't willing to assert as a sourced
-              # date). This regex exists only to make the skip explicit and grep-able, same as
-              # the one above; disclosed on california.html rather than left silent.
+        pass  # SAME report-relative problem, different phrasing -- deliberately still skipped
+              # rather than guess a calendar month from a bare budget-cycle label. This regex
+              # exists only to make the skip explicit and grep-able, same as the one above.
+    # FIXED 2026-09-11 (meta/docs/data_validation_2026-09-11/ca_pass1_findings.md,
+    # ca_pass2_findings.md, independently confirmed by direct PDF inspection): the report-relative
+    # sentence above isn't the only place these figures show up. Every "Justification" section
+    # ALSO restates the same number as "As of the <FY> Governor's Budget/May Revision, there are
+    # <N> individuals on the waitlist" or "the IST waitlist is currently at <N>." -- with a real,
+    # unambiguous numbered footnote a little further down the page ("Data as of <Month> <Day>,
+    # <Year>"). This recovers 4 genuine readings across 4 different report years (2024-01, 2025-05,
+    # 2026-01, 2026-05) that no existing pattern caught -- confirmed by direct inspection of all 4
+    # pages, not guessed.
+    #
+    # The hard part: pdfplumber renders the sentence's own footnote-marker superscript INLINE, with
+    # no separating space or character -- confirmed directly ("278" + footnote⁵ extracts as the
+    # single digit-run "2785", "501" + footnote⁹ as "5019"). A naive "last digit is the footnote"
+    # rule would misattribute this on any page with 2+ footnotes of this kind (may2025-26.pdf has
+    # both a footnote 4 AND a footnote 5 on the same page for two DIFFERENT sentences -- taking the
+    # nearest "Data as of" after the sentence, rather than the correctly-numbered one, would have
+    # silently paired "278" with footnote 4's date instead of its own footnote 5's date). Fixed by
+    # building an explicit per-PAGE footnote-number -> date map (footnote numbering restarts each
+    # page in these reports, confirmed directly -- a document-wide map would let a later page's
+    # footnote silently overwrite an earlier page's same-numbered one) and only accepting a split
+    # whose trailing 1-2 digits match a REAL footnote number defined on that same page.
+    FOOT_DEF_RE = re.compile(r'(?<!\d)(\d{1,2})\s*Data as of\s+(\w+)\s+(\d{1,2}),?\s+(\d{4})')
+    def _split_footnote_digit(raw: str, foot_dates: dict):
+        digits = raw.replace(",", "")
+        for k in (1, 2):
+            if len(digits) <= k:
+                continue
+            suffix = int(digits[-k:])
+            if suffix in foot_dates:
+                return int(digits[:-k]), *foot_dates[suffix]
+        return None
+    JUST_RE = re.compile(
+        r"(?:there are\s+(\d[\d,]{1,6})\s*individuals on the waitlist"
+        r"|IST waitlist is currently at\s+(\d[\d,]{1,6})\.)")
+    for i, (pg_start, pg_num) in enumerate(page_starts):
+        pg_end = page_starts[i + 1][0] - 1 if i + 1 < len(page_starts) else len(flat)
+        pg_text = flat[pg_start:pg_end]
+        foot_dates = {int(fm.group(1)): (fm.group(2), fm.group(4)) for fm in FOOT_DEF_RE.finditer(pg_text)}
+        if not foot_dates:
+            continue
+        for m in JUST_RE.finditer(pg_text):
+            raw = m.group(1) or m.group(2)
+            got = _split_footnote_digit(raw, foot_dates)
+            if got:
+                val, mon, yr = got
+                per = _month_period(mon, yr)
+                # Only fill a genuine gap -- these DSH budget PDFs sometimes restate the SAME
+                # current-waitlist figure in more than one "Justification" section later in the
+                # same document (confirmed directly: may2024-25.pdf states "397 individuals" on
+                # both p.14 and, again, p.72). Both mentions are equally correct, but preferring
+                # this new pattern would silently move an already-correct citation to a different
+                # (still correct) page for no real reason, tripping the changelog-sync gate over a
+                # non-change. Skip if this exact period is already covered by an EARLIER pattern
+                # within this same document -- this block only exists to fill periods nothing else
+                # found, not to compete with an existing, equally-valid citation.
+                if any(r["period"] == per for r in rows):
+                    continue
+                add(per, val, "prose_snapshot", pos=pg_start + m.start(), cite_table=False)
     # Four more prose phrasings, found by an independent audit that specifically hunted for
     # extraction-COVERAGE gaps (as opposed to wrong-value bugs): all 9 raw PDFs already sitting
-    # in data/raw/ca/ contain 8 more genuine, unambiguous, dated readings that none of
+    # in dashboard_data/raw/ca/ contain 8 more genuine, unambiguous, dated readings that none of
     # the patterns above matched -- confirmed directly against the source text, not guessed.
     # Each addition below was corpus-tested for false positives before being added (see this
     # commit's message); the "IST"/"waitlist" context guards are load-bearing, not decorative --

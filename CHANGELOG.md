@@ -1,5 +1,46 @@
 # Changelog
 
+## v1.0.2 — Five data-accuracy corrections from a full source-PDF audit (PUBLISHED, 2026-09-11)
+
+**Status:** PUBLISHED. Concept DOI `10.5281/zenodo.22652057` (unchanged); version DOI to be filled
+in once confirmed live via Zenodo's API after this release.
+
+A full, from-scratch audit checked every value in every dataset against the actual printed source
+PDF (not against prior code comments, metadata, or automated spot-checks) before this data was
+referenced with external contacts, including court officials and journalists. Found and fixed real
+defects in all five states' extractors. No fabricated numbers were found anywhere — every issue
+below is a completeness gap, a wrong-row selection, or a labeling/disclosure gap, not an invented
+value.
+
+- **Texas**: `waitlist_count` for `security_level=max` was pulled from Table 10's "Maximum
+  Security" row — the not-yet-facility-assigned subset of the waitlist, per HHSC's own footnote
+  ("people do not directly admit from the maximum security list") — instead of the Total row,
+  which is the true full MSU waitlist. Understated the count by roughly 5-19% across all 8
+  affected quarters (2023-11 through 2025-08; e.g. 2025-08: 419 shown, 484 actual).
+- **California**: the dashboard's most recent reading was ~9 months stale (277, Aug 2025) while a
+  newer figure (256, May 2026) sat unextracted in an already-downloaded PDF. Recovered 4 missing
+  readings from a "Justification"-section sentence pattern with unambiguous dated footnotes.
+- **Colorado (special master)**: roughly 28 `tier_wait_days_restoration` periods were 3-month
+  rolling averages formatted identically to true single-month readings, with no way for a reader to
+  tell which was which. Investigated changing which value ships, but the report's own prose treats
+  the rolling average as its authoritative headline figure — instead added a purely additive
+  `is_multi_month_avg` disclosure column (no value changed). One glued-dash header-parsing bug in
+  this same column (found by an adversarial review) was also fixed.
+- **Washington**: 24 rows were silently dropped whenever a table's day/percent columns were all
+  genuinely "n/a" (zero completions that month) — the pipeline required a literal "%" cell to
+  anchor column positions, so even the row's real, valid orders-signed/orders-completed counts were
+  lost. Fixed by borrowing the column layout from a sibling row in the same table. Also
+  hand-corrected 2 cells (`pct_within_alt3`, Jun-2022) where the source itself was revised between
+  report vintages in a way the pipeline's own report-redundancy self-healing couldn't reach.
+- **Oregon**: recovered one missing recent reading (Feb-2026, 16.5-day average) from the newest
+  report's narrative text. The same sentence also states an admissions count (90), but that figure
+  exists only inside a raster-image chart, not the extractable text layer — left genuinely blank
+  rather than guessed.
+
+Full per-finding detail, source-PDF verification, and independent adversarial review notes are
+preserved in the originating session's working tree (not part of this public release, which carries
+the corrected code and data, not the audit process itself).
+
 ## v1.0.1 — Colorado JBC documents added, permission confirmed (PUBLISHED, 2026-09-10)
 
 **Status:** PUBLISHED. Concept DOI `10.5281/zenodo.22652057` (unchanged, always resolves to the

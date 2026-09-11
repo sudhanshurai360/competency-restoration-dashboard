@@ -17,8 +17,8 @@ the report's own prose citation -- resolved in `build()` by preferring the unfoo
 genuine conflict. This is the BEST decree-compliance data of any state (explicit Tier-vs-deadline
 -> comparable to WA).
 
-Files: data/raw/co/sm_*.pdf. 3 files are the original 2018-21 Clearinghouse S3 vintage;
-8 more (2023-2026) were sourced directly from CourtListener's RECAP storage CDN (free, not
+Files: dashboard_data/raw/co/sm_*.pdf. 3 files are the original 2018-21 Clearinghouse S3 vintage;
+11 more (2023-2026) were sourced directly from CourtListener's RECAP storage CDN (free, not
 paywalled, just not linked from the docket's own web page). 2 files in this glob are not actually
 special-master quarterly reports (the Consent Decree filing itself, a 2019 status letter) and 1
 has a broken/cid-encoded font pdfplumber can't read -- all three produce 0 rows and print a
@@ -37,7 +37,18 @@ MONTH_TOK = re.compile(r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*
 TIER_ROW = re.compile(r'^\s*Tier\s*([12])\s+(.+)$', re.I)
 VAL = re.compile(r'(N/?A|[\d]+(?:\.\d+)?)')
 
-_MONTH_WORD = re.compile(r'^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?$', re.I)
+# Trailing [-–—]? added 2026-09-11 (adversarial review of the is_multi_month_avg disclosure fix,
+# meta/docs/data_validation_2026-09-11/): sm_2025-05-28.pdf's range-column headers glue the dash
+# directly onto the month with no space ("May–", "Aug–" -- pdfplumber extracts it as one word,
+# confirmed via char-code inspection: U+2013 EN DASH appended, no space token), unlike every other
+# range header in the corpus ("Nov 24 - Jan 25", where the dash is its own word). The un-widened
+# regex silently dropped "May–"/"Aug–" from the header band entirely, leaving only the OTHER month
+# in a 2-month range visible -- distinct_months collapsed to 1, so is_range came out False for a
+# genuine 3-month-average reading (2024-07 and 2024-10, both tiers, on that report). Confirmed via
+# a corpus-wide scan that this exact glued-dash pattern occurs on only this one page. Doesn't
+# affect the PERIOD itself (date resolution already takes the LAST month found, which was never
+# the dropped one) -- confirmed no value/period changed, only the disclosure flag for these 4 rows.
+_MONTH_WORD = re.compile(r'^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?[-–—]?$', re.I)
 _YEAR_WORD = re.compile(r'^(\d{4}|\d{2})$')
 _CELL_WORD = re.compile(r'^-?[\d.,]+\*{0,3}$|^N/?A\*{0,3}$', re.I)
 
@@ -303,14 +314,22 @@ def parse_report(path: Path) -> list[dict]:
                 continue
 
             other_tops = [a_top for a_top, _, _ in tier_anchors[page_idx] if word_top is None or abs(a_top - word_top) >= 2]
-            # is_range discarded here: this word_periods result feeds WAIT-DAY row dating below,
-            # where a multi-month range column is an expected, already-disclosed convention (its
-            # END month), not a defect -- see the count-row-only handling further down for where
-            # is_range actually matters (a count is never honestly a multi-month average).
-            word_periods, _ = (_header_periods_for_row(words, word_top, word_x1, n_expected=len(cells),
-                                                         exclude_tops=other_tops)
-                                if word_top is not None else (None, None))
-            raw.append(dict(tier=tier, metric=metric, cells=cells, periods=periods,
+            # is_range used to be fully discarded here on the reasoning that a multi-month range
+            # column is an expected, already-disclosed convention for wait-day rows (its own END
+            # month), not a defect. ADDED 2026-09-11 (meta/docs/data_validation_2026-09-11/
+            # co_pass1_findings.md): "already-disclosed" turned out not to be true -- the shipped
+            # CSV never actually said which periods are a true single month vs. a rolling average,
+            # so a reader had no way to tell. Kept (not discarded) purely to EXPOSE that fact as a
+            # new column below -- deliberately NOT used to change which value ships (see build()):
+            # a direct check of the report's own prose (sm_2024-02-28.pdf p.13: "Tier 1 ... 92 days
+            # on average between November 2023 - January 2024") confirmed the report treats the
+            # rolling average as ITS OWN authoritative headline figure, not a lesser fallback -- so
+            # preferring the single-month reading instead would have been a real, wrong value
+            # change disguised as a fix. Disclosure only.
+            word_periods, word_is_range = (_header_periods_for_row(words, word_top, word_x1, n_expected=len(cells),
+                                                                     exclude_tops=other_tops)
+                                            if word_top is not None else (None, None))
+            raw.append(dict(tier=tier, metric=metric, cells=cells, periods=periods, word_is_range=word_is_range,
                              word_periods=word_periods, page=page_idx, has_star=has_star))
 
     # Prefer the positional (word-coordinate) period axis over the text-line one, for COUNT rows,
@@ -338,7 +357,7 @@ def parse_report(path: Path) -> list[dict]:
                 count_periods[r["tier"]] = cp
 
     rows = []
-    def emit(period, tier, metric, value, has_star, pdf_page):
+    def emit(period, tier, metric, value, has_star, pdf_page, is_multi_month_avg=None):
         # pdf_page: 1-indexed PHYSICAL PDF page (jump-to-page N in any reader), not the
         # document's own printed page label -- same convention as wa_trueblood.py's pdf_page.
         # No table_ref here, unlike ca_dsh.py/tx_hhsc.py: unlike THOSE numbered tables, these
@@ -363,7 +382,7 @@ def parse_report(path: Path) -> list[dict]:
             return
         rows.append(dict(state="CO", period=period, tier=tier, metric=metric,
                          value=float(value), report=path.name, source_sha=sha, has_star=has_star,
-                         pdf_page=pdf_page))
+                         pdf_page=pdf_page, is_multi_month_avg=is_multi_month_avg))
     for r in raw:
         if r["metric"] != "tier_wait_days_restoration":
             is_range = r.get("is_range") or [False] * len(r["cells"])
@@ -377,7 +396,7 @@ def parse_report(path: Path) -> list[dict]:
                 if r["metric"] == "tier_waitlist_count" and rng:
                     continue
                 if p and not _isna(c):
-                    emit(p, r["tier"], r["metric"], c, r["has_star"], r["page"] + 1)
+                    emit(p, r["tier"], r["metric"], c, r["has_star"], r["page"] + 1, is_multi_month_avg=False)
             continue
         # Wait-day columns are sometimes single months, sometimes rolling multi-month ranges
         # (a range column dates to its own END month -- see _header_periods_for_row) -- prefer
@@ -392,18 +411,33 @@ def parse_report(path: Path) -> list[dict]:
         # for reports where this row's own header genuinely can't be resolved either way.
         data = [c for c in r["cells"] if not _isna(c)]
         wp = r.get("word_periods")
+        wir = r.get("word_is_range")
+        # is_multi_month_avg is DISCLOSURE ONLY here -- added 2026-09-11, see the word_is_range
+        # capture above for why. It never affects which value ships (build()'s own selection logic
+        # is untouched); it only tells a reader, per shipped row, whether that row's own reading
+        # is a true single month or a multi-month rolling average dated to its end month.
         if wp and len(wp) == len(r["cells"]) and all(wp):
             use = [p for p, c in zip(wp, r["cells"]) if not _isna(c)]
+            rngs = ([rng for rng, c in zip(wir, r["cells"]) if not _isna(c)]
+                    if wir and len(wir) == len(r["cells"]) else [None] * len(use))
         elif r["periods"] and len(r["periods"]) == len(r["cells"]) and all(r["periods"]):
             use = [p for p, c in zip(r["periods"], r["cells"]) if not _isna(c)]
+            # A row that reaches this branch has, by construction, one header token per cell (see
+            # the word_periods branch's own docstring for why a genuine range header can't reach
+            # here) -- so False is a real fact about this row, not a guess.
+            rngs = [False] * len(use)
         elif r["tier"] in count_periods:
             cp = count_periods[r["tier"]]
             use = cp[-len(data):] if len(cp) >= len(data) else cp
             data = data[-len(use):]
+            # This fallback borrows the count table's period LABELS and has no way to check
+            # whether its OWN wait-day cell is a true single month or a range -- None (unknown),
+            # not a guessed True/False, is the honest disclosure here.
+            rngs = [None] * len(use)
         else:
             continue
-        for p, v in zip(use, data):
-            emit(p, r["tier"], r["metric"], v, r["has_star"], r["page"] + 1)
+        for p, v, rng in zip(use, data, rngs):
+            emit(p, r["tier"], r["metric"], v, r["has_star"], r["page"] + 1, is_multi_month_avg=rng)
     return rows
 
 def build() -> pd.DataFrame:

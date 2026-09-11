@@ -55,10 +55,18 @@ is published for it in those periods; this is a disclosed source-side gap, not a
 One row per (period, metric). `metric` is `ist_pending_placement` (the only metric currently
 tracked). `kind` distinguishes `annual_fy_table` (a clean fiscal-year-end table row) from
 `prose_snapshot` (a dated reading extracted from budget narrative prose — genuinely irregular
-cadence, not a monthly series). See `README.md`'s disclosed staleness note: the extractor
-deliberately does not resolve budget-cycle-relative date phrasing ("as of the 2026-27 Governor's
-Budget") to a calendar month, so a small number of more-recent-but-undated readings in the raw
-source documents are not captured here.
+cadence, not a monthly series). The extractor still deliberately does not resolve a bare
+budget-cycle-relative phrase ("as of the 2026-27 Governor's Budget") to a calendar month on its
+own — but as of v1.0.2, it separately recovers the same figures from a distinct "Justification"
+section each report also carries, which pairs the reading with an unambiguous dated footnote
+("Data as of May 12, 2026"). This closed what was previously the dataset's largest staleness gap.
+
+`colorado_special_master.csv` also carries an `is_multi_month_avg` column (added v1.0.2), for
+`tier_wait_days_restoration` rows only (blank/NA for `tier_waitlist_count`): `True` if that reading
+is a 3-month rolling average dated to its own end month rather than a true single-month figure —
+the source reports mix both, and their own prose treats the rolling average as the headline
+compliance figure, not a lesser one. `False` means a true single month; blank means genuinely
+unconfirmed (a small number of rows whose period had to be inferred from a different table's axis).
 
 ## The re-execution gate — `src/verify.py`
 

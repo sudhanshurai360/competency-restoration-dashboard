@@ -1,11 +1,12 @@
 """OR extractor — Oregon State Hospital aid-and-assist (IST) waitlist, from the Mink-Bowman
-court-monitor / neutral-expert (Pinals) reports.
+court-monitor / neutral-expert (Pinals) reports. Dashboard tree.
 
-This project also maintains a separate, frozen academic-paper analysis of Washington/Oregon data
-(the sibling Zenodo deposit at concept DOI 10.5281/zenodo.21436450) with its own independent copy
-of this parsing logic, deliberately not shared/imported at runtime between the two. This extractor
-globs `C.RAW/"or"/*.pdf` directly — no frozen-vs-open-ended month window to worry about; pointing
-this copy's own `config.py` at `data/raw/or/` is the only thing that changes its behavior.
+DUPLICATED (2026-08-28) from code/pipeline/or_osh.py, not imported from it — the paper and
+dashboard trees are kept deliberately independent (see dashboard/code/config.py's docstring). All
+parsing logic below is identical to the paper's copy. Unlike WA, this extractor already globs
+C.RAW/"or"/*.pdf directly — no frozen-vs-open-ended month window to duplicate; pointing this
+tree's own config.py at dashboard_data/raw/or/ is the only thing that changes its behavior.
+Re-sync by hand if the paper-side parser changes (do not import across trees at runtime).
 
 Oregon = the 2nd clean FEDERAL 7-day-decree state (Disability Rights Oregon v. Mink,
 3:02-cv-00339 D.Or.): OSH must admit aid-and-assist defendants within 7 DAYS. Directly
@@ -33,7 +34,7 @@ NOTE: PLD-*.pdf are compliance ACTION PLANS (benchmark target dates, no measured
 -> skipped. Long-trend "Figure" dashboards are chart IMAGES, but every number we use here
 is also present as TEXT in Tables 1/3/4 + the narrative, so nothing is lost to OCR.
 
-Files: data/raw/or/*.pdf (oregon.gov/oha/OSH/reports/). Decree threshold = 7 days.
+Files: dashboard_data/raw/or/*.pdf (oregon.gov/oha/OSH/reports/). Decree threshold = 7 days.
 
 QUALITATIVE TRAJECTORY (directionally stable, re-derive exact figures from the parquet before
 quoting any number): an early crisis period gave way to a period of much better compliance,
@@ -42,7 +43,7 @@ sanction — i.e. this is a genuine CONTRAST/BACKSLIDING case, not a one-way imp
 the way Washington is. The redesign brief's own requirement (§2, OR): preserve this volatility on
 the dashboard chart — do not let any default view smooth it into a clean trend line.
 
-Re-run:  python src/or_osh.py   (cwd = archive root)
+Re-run:  python or_osh.py   (cwd = dashboard/code/)
 """
 from __future__ import annotations
 import re
@@ -198,6 +199,38 @@ def parse_report(path: Path) -> list[dict]:
             g1, g2 = m.group(1), m.group(2)
             month, val = (g2, g1) if re.fullmatch(r'[\d.]+', g1) else (g1, g2)
             add(_prior_period(month, ref[1], ref[2]), "avg_wait_days", val, pos=m.start(), cite_table=False)
+
+    # (A3) "...waited an average of X days as of the end of <Month>" -- FIXED 2026-09-11
+    # (meta/docs/data_validation_2026-09-11/or_pass1_findings.md): the newest report (2026.03.16)
+    # switched to this phrasing entirely -- it has no "In <Month YYYY>, OSH admitted" sentence at
+    # all, so `admit_stmts` above is empty and can't anchor the bare month name's year. The same
+    # sentence also names an admits count (90, for the "Admitted During the Month" box in Figure
+    # 1), but confirmed directly against the extracted page text that this box is a raster image,
+    # not real text -- unlike Table 1 immediately below it on the same page, which extracted
+    # cleanly. Recovering avg_wait_days (genuinely present as text) without guessing admits (not
+    # present as text, would need OCR this pipeline deliberately doesn't do) is the honest split.
+    # Year resolved from the report's OWN filename date, not a nearby admit statement, since none
+    # exists in this report -- "the end of <Month>" with no year always means the most recent such
+    # month at or before the report's own issue date.
+    #
+    # Only fill a genuine gap -- CORRECTED 2026-09-11 (adversarial review of the WA n/a-row fix
+    # surfaced the same class of issue here too): this same "Background Data" paragraph recurs
+    # near-verbatim across several reports, and an EARLIER report can already have captured this
+    # exact (period, metric) via a different pattern (e.g. Trueblood-2025.12.06's own admit-form
+    # sentence on a different page). Since this pattern is checked last, it would otherwise win
+    # ties and silently move an already-correct citation to a different, equally-correct page for
+    # no real reason -- exactly the CA duplicate-mention bug found and fixed earlier this session.
+    # Skip if this exact (period, metric) is already covered by an earlier pattern in THIS SAME
+    # report's own parse -- this block only exists to fill periods nothing else found.
+    rd = re.search(r'(20\d\d)\.(\d\d)\.(\d\d)', path.name)
+    if rd:
+        report_year, report_month = int(rd.group(1)), int(rd.group(2))
+        for m in re.finditer(r'waited an average of\s+([\d.]+)\s+days as of the end of\s+(\w+)', flat, re.I):
+            per = _prior_period(m.group(2), report_month, report_year)
+            if per and any(r["period"] == per and r["metric"] == "avg_wait_days" for r in rows):
+                continue
+            if per:
+                add(per, "avg_wait_days", m.group(1), pos=m.start(), cite_table=False)
 
     # (B) prose END-of-month waitlist stock (the original anchor metric): "of <Month YYYY>, N people ... were on the waitlist"
     for m in re.finditer(r'(?:As of|of)\s+(\w+\s+\d{4}),?\s+(\d+)\s+(?:people|individuals)'

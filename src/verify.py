@@ -143,17 +143,22 @@ def main():
         rt = tx[(tx.security_level == "max") & (tx.period == "2023-08")]
         check(len(rt) == 1 and rt.iloc[0].waitlist_count == 968 and rt.iloc[0].avg_wait_days == 659,
               f"TX max FY2023-Q4 (2023-08): count=968/days=659 (got {rt[['waitlist_count','avg_wait_days']].values.tolist() if len(rt) else 'MISSING'})")
-        # This anchor used to expect avg_wait_days=202 here -- that number was itself the bug (an
+        # This anchor used to expect avg_wait_days=202 here -- that number was itself a bug (an
         # adversarial audit + direct PDF check confirmed 202 is Table 12's "Total" of a small,
-        # already-facility-assigned population, not a wait-time measurement for the 419-person
-        # statewide "Maximum Security" queue this row's count describes; HHSC's own footnote says
-        # people "do not directly admit from the maximum security list"). The fix intentionally
-        # leaves avg_wait_days unset here rather than substituting a different wrong number --
-        # check for that gap explicitly so it can't silently regress back to the population-
-        # mismatched fallback.
+        # already-facility-assigned population, not a wait-time measurement for the statewide
+        # "Maximum Security" queue this row's count describes; HHSC's own footnote says people "do
+        # not directly admit from the maximum security list"). The fix intentionally leaves
+        # avg_wait_days unset here rather than substituting a different wrong number -- check for
+        # that gap explicitly so it can't silently regress back to the population-mismatched
+        # fallback.
+        # UPDATED 2026-09-11: count also used to expect 419 here -- that was a SEPARATE, real bug,
+        # independently confirmed by direct PDF inspection: 419 was Table 10's "Maximum Security"
+        # bucket row (the not-yet-facility-assigned subset), not the "Total" row (484) that
+        # actually represents the full MSU waitlist. tx_hhsc.py's msu_ct extraction now grabs the
+        # Total row; this anchor is updated to match. See CHANGELOG.md for the full disclosure.
         rt25 = tx[(tx.security_level == "max") & (tx.period == "2025-08")]
-        check(len(rt25) == 1 and rt25.iloc[0].waitlist_count == 419 and pd.isna(rt25.iloc[0].avg_wait_days),
-              f"TX max FY2025-Q4 (2025-08): count=419/days=<disclosed gap, not a population mismatch> "
+        check(len(rt25) == 1 and rt25.iloc[0].waitlist_count == 484 and pd.isna(rt25.iloc[0].avg_wait_days),
+              f"TX max FY2025-Q4 (2025-08): count=484/days=<disclosed gap, not a population mismatch> "
               f"(got {rt25[['waitlist_count','avg_wait_days']].values.tolist() if len(rt25) else 'MISSING'})")
         # non_max had ZERO gate coverage until now -- exactly the blind spot that let two real bugs
         # through undetected (an all-caps "TOTAL" row label the old exact-case regex never matched,

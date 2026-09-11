@@ -1,4 +1,4 @@
-"""TX HHSC forensic-waitlist extractor (Competency Restoration Dashboard Data).
+"""TX HHSC forensic-waitlist extractor (Competency Restoration Observatory — second state).
 
 Source A: HHSC "Reporting of Waiting Lists for Mental Health Services" (Rider 45/50),
 filed ~May 1 & Nov 1. Each report's Tables 5 (Non-Max) & 6 (Max Security Forensic
@@ -132,11 +132,20 @@ def _parse_new(text, name, sha, page_at=None, table_at=None):
     # exact-case "Total" never matched, silently dropping that report's entire non_max series
     # (FY24 Q1-Q4) even though the row was right there in the table.
     SW_LBL = r'(?i:Statewide|Total)\d{0,2}'
-    # MSU (maximum security) — the acute, single-row series. valid=_not_all_zero closes the
-    # same TOC-false-positive edge as the non-MSU grabs below (untriggered so far in any real
-    # document checked, but there's no structural reason a future report vintage couldn't put
-    # an all-zero "Maximum Security" match earlier in the doc, same as happened for "Total").
-    msu_ct, msu_ct_pos = grab("Table 10", "Table 11", MSU_LBL + NUM4, valid=_not_all_zero)
+    # MSU (maximum security) waitlist COUNT — use Table 10's "Total" row, not the "Maximum
+    # Security" bucket row. FIXED 2026-09-11: an independent multi-pass data audit (see
+    # meta/docs/data_validation_2026-09-11/tx_pass1_findings.md) found the previous version
+    # pulled MSU_LBL here, which is only the not-yet-facility-assigned subset of the true MSU
+    # waitlist (Kerrville/Rusk/Vernon/Wichita Falls facility-assigned people, who are still
+    # waiting, were excluded) -- understated the true count by 5-16% across every 2024+ report
+    # (e.g. 419 vs. the real 484 for nov-2025.pdf FY25 Q4, confirmed directly against the PDF).
+    # Table 10's "Total" row is the genuine full MSU waitlist -- unassigned bucket + facility-
+    # assigned-but-still-waiting -- and is what `waitlist_count` for security_level="max" is
+    # actually supposed to represent. valid=_not_all_zero closes the same TOC-false-positive
+    # edge as the non-MSU grabs below (untriggered so far in any real document checked, but
+    # there's no structural reason a future report vintage couldn't put an all-zero "Total"
+    # match earlier in the doc).
+    msu_ct, msu_ct_pos = grab("Table 10", "Table 11", SW_LBL + NUM4, valid=_not_all_zero)
     # Table 12's own "Maximum Security" row is EITHER absent entirely (nov-2024.pdf) or present
     # and explicitly all-zero, footnoted "Maximum Security is not a physical location... people
     # do not directly admit from the maximum security list" (nov-2025.pdf, footnote 18) --

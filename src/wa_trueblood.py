@@ -1,11 +1,12 @@
-"""WA Trueblood monthly-report extractor.
+"""WA Trueblood monthly-report extractor — dashboard tree.
 
-This project also maintains a separate, frozen academic-paper analysis of Washington/Oregon data
-(the sibling Zenodo deposit at concept DOI 10.5281/zenodo.21436450) with its own independent copy
-of this parsing logic (column-anchoring by the compliance-% cell, the "Court Orders Completed"
-column detection, table classification, dedup rule) — deliberately not shared/imported at
-runtime between the two, so neither can break the other. This copy's job is different from that
-one: an OPEN-ENDED living panel over data/raw/wa/, not a frozen, gated, paper-scoped window.
+DUPLICATED (2026-08-28) from code/pipeline/wa_trueblood.py, not imported from it — the paper and
+dashboard trees are kept deliberately independent (see dashboard/code/config.py's docstring). All
+parsing logic below (column-anchoring by the compliance-% cell, the "Court Orders Completed"
+column detection, table classification, dedup rule) is identical to the paper's copy; only the
+month-range function and the __main__ block differ, because this tree's job is different: an
+OPEN-ENDED living panel over dashboard_data/raw/wa/, not a frozen, gated, paper-scoped window.
+Re-sync by hand if the paper-side parser changes (do not import across trees at runtime).
 
 Proves the load-bearing assumption: a clean longitudinal competency-services time-series can be
 parsed from WA DSHS's monthly court-monitor PDFs (2018+ format). Each monthly report carries a
@@ -85,7 +86,7 @@ def download_report(year: int, month: int, force=False, verbose=True) -> Path | 
     for url in C.wa_report_urls(year, month):
         # 1) urllib with a real CA bundle — the primary, portable path
         try:
-            req = U.Request(url, headers={"User-Agent": "Mozilla/5.0 (Competency Restoration Dashboard Data research; +https://github.com/sudhanshurai360/competency-restoration-dashboard)"})
+            req = U.Request(url, headers={"User-Agent": "Mozilla/5.0 (Competency Restoration Observatory research)"})
             data = U.urlopen(req, timeout=60, context=ctx).read()
             if data[:4] == b"%PDF":
                 out.write_bytes(data); return out
@@ -172,20 +173,43 @@ def _parse_grid(data, fac, stage, setting, name, sha, url, pdf_page, table_ref):
     citation unit, one level more specific than the page."""
     out = []
     has_completed = _has_completed_col(data)     # old-format tables lack the count column
+    # A row with zero completions that month legitimately prints "n/a" for every day/percent
+    # column (undefined, not just missing) -- FIXED 2026-09-11 (meta/docs/data_validation_
+    # 2026-09-11/wa_batch2_findings.md, Trueblood-Report-2026-06.pdf Table 5c/OCRP, 2025-06:
+    # signed=3, completed=0, everything else genuinely n/a). Column-anchoring below is keyed on
+    # the first "%" cell in the ROW -- an all-"n/a" row has none, so it was silently dropped
+    # entirely, losing even its perfectly real signed/completed counts. Recover the column
+    # layout from the first SIBLING row in this same table that does have a "%" anchor (same
+    # table = same columns every month), reused ONLY when the row lengths match exactly, so a
+    # differently-shaped row can't be misaligned by this fallback.
+    ref_p0 = None
+    for r in data:
+        if not r: continue
+        idx = [i for i, c in enumerate(r) if c and "%" in c]
+        if idx:
+            ref_p0, ref_len = idx[0], len(r)
+            break
     for r in data:
         if not r: continue
         period = _period(r[0])
         if not period: continue
         pct_idx = [i for i, c in enumerate(r) if c and "%" in c]
-        if not pct_idx: continue
-        p0 = pct_idx[0]
+        if pct_idx:
+            p0 = pct_idx[0]
+        elif ref_p0 is not None and len(r) == ref_len:
+            p0 = ref_p0            # this row itself has no "%" cell; borrow a verified sibling's layout
+        else:
+            continue
         med = _num(r[p0 - 1]) if p0 - 1 >= 0 else None
         avg = _num(r[p0 - 2]) if p0 - 2 >= 0 else None
         # only read the count when the table actually has the column; else NULL (never grab
         # the adjacent incomplete-referrals median that sits at p0-3 in the old format).
         completed = (_num(r[p0 - 3]) if (has_completed and p0 - 3 >= 0) else None)
-        if avg is None and med is None: continue
         signed = _num(r[1]) if len(r) > 1 else None                 # demand = orders signed (col 1)
+        # Skip only if this row is truly empty of any usable data -- a legitimate zero-
+        # completions row (avg/med genuinely n/a) still has real signed/completed counts and
+        # must still ship; only a row with NOTHING at all is a non-data line.
+        if avg is None and med is None and completed is None and signed is None: continue
         pct2 = _num(r[pct_idx[1]]) if len(pct_idx) >= 2 else None
         pct3 = _num(r[pct_idx[2]]) if len(pct_idx) >= 3 else None
         out.append(dict(state="WA", period=period, facility=fac, stage=stage, setting=setting,
@@ -277,7 +301,7 @@ def parse_report(path: Path) -> list[dict]:
 def build_panel(periods: list[tuple[int, int]], offline: bool = False) -> pd.DataFrame:
     """Build the panel from monthly reports.
 
-    offline=True uses ONLY the PDFs already in data/raw/wa/ and never touches the
+    offline=True uses ONLY the PDFs already in dashboard_data/raw/wa/ and never touches the
     network — the dashboard build should stay reproducible from what's already on disk, same
     discipline as the paper gate, even though this panel's own window is open-ended.
     """
@@ -301,6 +325,44 @@ def build_panel(periods: list[tuple[int, int]], offline: bool = False) -> pd.Dat
             .drop_duplicates(["state", "facility", "stage", "setting", "period"], keep="last")
             .drop(columns="rep_ym")
             .sort_values(["facility", "stage", "setting", "period"]))
+    # Two cells, hand-corrected 2026-09-11 (adversarial review of the n/a-row fix, meta/docs/
+    # data_validation_2026-09-11/): Jun-22's pct_within_alt3 for ESH/evaluation/jail and TOTAL/
+    # evaluation/jail is shipping from Trueblood-Report-2023-06.pdf (43%, 78%), but the SAME row
+    # was revised in Trueblood-Report-2023-07.pdf the following month (50%, 82%, confirmed by
+    # directly opening that PDF's p.19/p.22 -- every other field on the row is identical between
+    # both reports). Normally "keep the newest report" would pick that revision up automatically,
+    # but 2023-07.pdf is one of the reports whose own table-detection this pipeline can't
+    # currently recover (pdfplumber finds zero tables on those specific pages -- see
+    # meta/docs/data_validation_2026-09-11/wa_batch2_findings.md Part 5 for the full
+    # investigation), and Jun-22 rolls out of every later report's 13-month window, so there's no
+    # future report this can self-heal from. Two cells, both independently verified against the
+    # source PDF directly, not from the audit doc alone -- narrow enough to hand-correct rather
+    # than build a general recovery mechanism for a table-detection problem with no safe
+    # automated fix (see the same investigation for why).
+    # CORRECTED 2026-09-11 (adversarial review of THIS fix, same session): the first version of
+    # this override updated pct_within_alt3 but left report/pdf_page/source_sha still pointing at
+    # Trueblood-Report-2023-06.pdf -- which prints the OLD, pre-revision value, not the corrected
+    # one. A reader clicking that citation would land on a page contradicting the number shown.
+    # The automated PDF-citation-audit gate gave a false pass on this: "50"/"82" happen to also
+    # appear elsewhere on the (wrong) 2023-06.pdf page as substrings of unrelated cells, which a
+    # substring match can't distinguish from a real citation -- a real, if narrow, gap in that
+    # checker's coverage, worth remembering. Every field below (report/pdf_page/table_ref/
+    # source_sha) is now the actual page this value is really printed on.
+    _new_report = "Trueblood-Report-2023-07.pdf"
+    _new_sha = _util.sha12(C.RAW / "wa" / _new_report)
+    _pct3_fixes = {
+        ("ESH", "evaluation", "jail", "2022-06"): (50.0, 19, "Table 5"),
+        ("TOTAL", "evaluation", "jail", "2022-06"): (82.0, 22, "Table 8"),
+    }
+    for (fac, stage, setting, period), (val, pdf_page, table_ref) in _pct3_fixes.items():
+        mask = ((df.facility == fac) & (df.stage == stage) & (df.setting == setting)
+                & (df.period == period))
+        df.loc[mask, "pct_within_alt3"] = val
+        df.loc[mask, "report"] = _new_report
+        df.loc[mask, "source_url"] = f"(local) {_new_report}"
+        df.loc[mask, "source_sha"] = _new_sha
+        df.loc[mask, "pdf_page"] = pdf_page
+        df.loc[mask, "table_ref"] = table_ref
     return df
 
 def _months(start, end):
@@ -309,7 +371,7 @@ def _months(start, end):
 def dashboard_months():
     """Open-ended living axis: 2018-11 through next year. Unlike the paper's frozen
     canonical_months(), this is meant to grow the moment a new report lands in
-    data/raw/wa/ — there's no gate pinning this tree to a closed window."""
+    dashboard_data/raw/wa/ — there's no gate pinning this tree to a closed window."""
     from datetime import date
     today = date.today()
     return _months((2018, 11), (today.year + 1, 6))
