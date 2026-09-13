@@ -133,8 +133,15 @@ def _classify(title: str):
     if stage == "?":
         if fac == "OCRP":                                 # OCRP = Outpatient Competency RESTORATION Program
             stage = "restoration"
-        elif "inpatient competency services" in t:        # WA convention: the UNQUALIFIED inpatient table is
-            stage = "evaluation"                          # the evaluation one (restoration always says 'Restoration')
+        elif "inpatient competency services" in t or "inpatient services" in t:
+            # WA convention: the UNQUALIFIED inpatient table is the evaluation one (restoration
+            # always says 'Restoration'). "inpatient services" (without "competency") widened in
+            # 2026-09-11 -- the WSH/ESH-specific old-format titles say "...Inpatient Competency
+            # Services", but the TOTALS old-format title drops "Competency": "...(Totals) -
+            # Inpatient Services" (Trueblood-Report-2018-11.pdf p.12 et al, confirmed directly).
+            # Both mean the same unqualified-inpatient=evaluation table; only reached here (this
+            # branch) once "restoration"/"evaluation" are both already confirmed absent from t.
+            stage = "evaluation"
     setting = ("outpatient" if "outpatient" in t or "ocrp" in t
                else "jail" if "jail" in t
                else "inpatient" if "inpatient" in t else "all")
@@ -221,6 +228,103 @@ def _parse_grid(data, fac, stage, setting, name, sha, url, pdf_page, table_ref):
                         table_ref=table_ref))
     return out
 
+def _broken_font_fallback(pg):
+    """Recover a Class-Member-Status page whose embedded font defeats pdfplumber's default word-
+    boundary detection badly enough that find_tables() finds no usable month-grid table at all --
+    ADDED 2026-09-11 (re-audit finding, meta/docs/data_validation_2026-09-11_relens/
+    wa_lensB_completeness_findings.md): Trueblood-Report-2018-11/12.pdf and -2019-01.pdf's
+    INPATIENT-table pages (WSH/ESH/TOTALS) have a font whose character-width metrics are wide
+    enough that pdfplumber's default extract_words() (x_tolerance=3) reads every character (or
+    near enough) as its own separate word -- e.g. "Oct-17" comes back as ['O','ct-1','7']. This
+    is the sole cause of a 40-row-month gap (Oct 2017-Aug 2018 across 9 streams) with no future
+    report able to self-heal it (unlike every other table-detection failure in this corpus,
+    which the 13-month rolling window and report redundancy already recover). Confirmed directly
+    (word-coordinate inspection): x_tolerance=7 correctly re-merges every split token corpus-wide
+    on these pages (including the one abbreviation, "Mar-18", that x_tolerance=5 still splits as
+    'M'+'ar-18') without over-merging any two genuinely distinct values -- tested stable through
+    x_tolerance=20. This is a font-metrics quirk specific to these three files' inpatient-table
+    pages, not a genuine ambiguity in the underlying PDF, so a fixed override is safe here.
+
+    A page's title line (e.g. "TABLE 1b. Class Member Status Western State Hospital - Inpatient
+    Competency Services") is NOT affected by this font issue -- confirmed directly, it reads
+    clean even at the default tolerance -- so it's read via the existing `_page_lines()` (not
+    re-derived here), unlike the DATA rows below it.
+
+    An inpatient-table page can carry TWO sub-tables (evaluation then restoration) under one
+    title. A bare rotated side-label reading "Restoration" does appear somewhere on such pages
+    (gluing a footnote-marker digit in three different ways across the corpus: "Restoration",
+    "Restoration4", and "Restoration"+"4" as two separate tokens -- matched with
+    `restoration\\d*`, not an exact string) -- but its Y-position CANNOT be used as the segment
+    boundary: confirmed directly (Trueblood-Report-2018-11.pdf p.8) that the label sits at the
+    vertical CENTER of its own sub-table's height, not its top, so several of the restoration
+    sub-table's own rows (its earliest months) print ABOVE the label and would be wrongly folded
+    into the evaluation segment by a position-based split -- a real bug caught only by checking
+    the recovered rows' values against the audit's own per-stream period ranges, not by the
+    parse succeeding without error. The reliable, page-layout-independent signal is a PERIOD
+    REPEATING: this corpus's two sub-tables always cover the identical month range in the same
+    order, so the row immediately after the first table's last month is always the second
+    table's first month, of a period already seen in the current segment -- split there instead.
+    The "Restoration" label is used only to confirm a second segment, once found, actually IS the
+    restoration table (checked once per page, not per row). Jail-based and TOTALS
+    jail/inpatient-evaluation-only pages never repeat a period and correctly return a single
+    segment. Row scanning stops at the "Data Notes:" line so a later footnote sentence that
+    happens to mention "restoration" in prose (confirmed real case: "...inpatient restoration
+    data for WSH includes...") can never be mistaken for a restoration-table confirmation.
+
+    Returns (title_line, segments) where segments is a list of (stage_override, data) tuples --
+    stage_override is None (classify from title_line alone) or "restoration" (append to the
+    title before classifying). `data` is a list of token-lists in the exact shape `_parse_grid`
+    already expects (one list per row, first token expected to parse as a period) -- never
+    guesses a row that doesn't start with a real month abbreviation."""
+    lines = _page_lines(pg)
+    # LAST matching line, not first: page 7 of these reports carries a generic section-intro
+    # line ("CLASS MEMBER STATUS DATA TABLES (See APPENDICES...)") directly above the real
+    # per-table title ("TABLE 1a. Class Member Status Western State Hospital..."), and the
+    # generic line has none of the facility/stage/setting keywords _classify() needs -- same
+    # "last, not first" bug class already documented and fixed for the main find_tables() path
+    # just above this function (see parse_report's own "LAST matching line, not first" comment).
+    title_line = next((txt for _, txt in reversed(lines) if re.search(r'class member status', txt, re.I)), "")
+    words = pg.extract_words(x_tolerance=7)
+    by_row = {}
+    for w in words:
+        by_row.setdefault(round(w["top"] / 3.0), []).append(w)
+    rows = []
+    for ws in by_row.values():
+        ws = sorted(ws, key=lambda w: w["x0"])
+        rows.append((min(w["top"] for w in ws), [w["text"] for w in ws]))
+    rows.sort(key=lambda r: r[0])
+
+    saw_restoration_label = False
+    segments_raw = []      # [[row, row, ...], [row, ...]] -- split on period-repeat only
+    current = []
+    seen_periods = set()
+    for _, toks in rows:
+        if toks and toks[0].lower() == "data" and any("notes" in t.lower() for t in toks[1:2]):
+            break
+        per = _period(toks[0] if toks else "")
+        if per:
+            if per in seen_periods:
+                segments_raw.append(current)
+                current, seen_periods = [], set()
+            current.append(toks)
+            seen_periods.add(per)
+            continue
+        if any(re.fullmatch(r'restoration\d*', t, re.I) for t in toks):
+            saw_restoration_label = True
+    if current:
+        segments_raw.append(current)
+
+    if len(segments_raw) > 2:
+        return title_line, []      # never seen on this corpus -- don't guess an unverified shape
+    if len(segments_raw) == 2 and not saw_restoration_label:
+        # Two repeating blocks but no confirming label anywhere on the page -- never guess which
+        # (if either) is really "restoration"; ship neither rather than risk a wrong classification.
+        return title_line, []
+    segments = [(None, segments_raw[0])] if segments_raw else []
+    if len(segments_raw) == 2:
+        segments.append(("restoration", segments_raw[1]))
+    return title_line, segments
+
 def parse_report(path: Path) -> list[dict]:
     # Header-attribution bug (found by an independent audit, confirmed against
     # Trueblood-Report-2019-10/11/12.pdf p.10): the old fixed "-70px above this table" band
@@ -251,6 +355,30 @@ def parse_report(path: Path) -> list[dict]:
                 continue
             lines = _page_lines(pg)
             tables = sorted(pg.find_tables(), key=lambda ft: ft.bbox[1])
+            usable = any(any(_period((r or [""])[0]) for r in ft.extract() if r) for ft in tables)
+            # Gated on the exact 3 files this fallback was built for and individually verified
+            # against (2026-09-11 re-audit) -- CONFIRMED NEEDED via `git log`-independent testing
+            # against a 4th candidate, Trueblood-Report-2019-04.pdf, whose own page 8 ALSO clears
+            # this same "no usable table" trigger but carries a genuinely different table
+            # ("Table 1c", a WSH+RTF-COMBINED table whose title wraps across two physical lines
+            # and whose data rows carry an extra, unexplained numeric token this fallback's
+            # column-anchoring was never designed to handle) -- confirmed that page's own data is
+            # fully redundant with periods already correctly captured elsewhere (via properly-
+            # detected tables in later reports), so gating narrowly here costs nothing real and
+            # avoids shipping an unverified, structurally-different table through a fallback
+            # that was only ever checked against these three.
+            if not usable and path.name in (
+                "Trueblood-Report-2018-11.pdf", "Trueblood-Report-2018-12.pdf",
+                "Trueblood-Report-2019-01.pdf"):
+                title_line, segments = _broken_font_fallback(pg)
+                for override, data in segments:
+                    header = title_line + (" Restoration" if override == "restoration" else "")
+                    fac, stage, setting = _classify(header)
+                    tm = TABLE_REF_RE.search(title_line)
+                    table_ref = f"Table {tm.group(1)}" if tm else None
+                    rows += _parse_grid(data, fac, stage, setting, path.name, sha, url,
+                                         pg.page_number, table_ref)
+                continue
             prev_bottom = 0.0
             prev_classification = None
             for ft in tables:

@@ -4,11 +4,14 @@ OR,2024-04,admits,96.0,Oregon_Mink-Bowman_9th_Neutral_Expert_Pinals_Report.pdf,6
 OR,2025-04,admits,128.0,Oregon_Mink-Bowman_11th_Neutral_Expert_Pinals_Report.pdf,bc5eb1b045db,16,
 OR,2025-08,admits,107.0,2025.09.05-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,41bc87a152be,7,
 OR,2025-11,admits,69.0,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,14,
+OR,2023-06,avg_wait_days,18.3,Oregon_Mink-Bowman_6th_Neutral_Expert_Pinals_Report.pdf,a2734d9ada88,7,
+OR,2024-10,avg_wait_days,26.9,Oregon_Mink-Bowman_10th_Neutral_Expert_Pinals_Report.pdf,afd7d720e8e4,8,
 OR,2025-03,avg_wait_days,25.4,Oregon_Mink-Bowman_11th_Neutral_Expert_Pinals_Report.pdf,bc5eb1b045db,16,
 OR,2025-04,avg_wait_days,20.7,Oregon_Mink-Bowman_11th_Neutral_Expert_Pinals_Report.pdf,bc5eb1b045db,16,
 OR,2025-07,avg_wait_days,9.7,2025.09.05-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,41bc87a152be,7,
 OR,2025-08,avg_wait_days,10.2,2025.09.05-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,41bc87a152be,7,
 OR,2025-11,avg_wait_days,19.1,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,14,
+OR,2025-12,avg_wait_days,22.7,2025.12.06-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,e1e414ae8b85,8,
 OR,2026-02,avg_wait_days,16.5,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,8,
 OR,2022-01,beds_active,706.0,Oregon_Mink-Bowman_1st_Neutral_Expert_Pinals_Report.pdf,97eb8e2eb8ea,7,Table 2
 OR,2022-05,beds_active,706.0,Oregon_Mink-Bowman_2nd_Neutral_Expert_Pinals_Report.pdf,48483a4066dc,10,Table 2
@@ -145,6 +148,7 @@ OR,2026-02,orders_received,106.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Rep
 OR,2023-11,pct_within_7day,93.5,Oregon_Mink-Bowman_8th_Neutral_Expert_Pinals_Report.pdf,c6d07b7b8b85,10,
 OR,2024-04,pct_within_7day,90.6,Oregon_Mink-Bowman_9th_Neutral_Expert_Pinals_Report.pdf,644f4c528285,8,
 OR,2025-08,pct_within_7day,7.5,2025.09.05-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,41bc87a152be,7,
+OR,2025-04,waitlist_count,46.0,Oregon_Mink-Bowman_11th_Neutral_Expert_Pinals_Report.pdf,bc5eb1b045db,11,
 OR,2025-08,waitlist_count,34.0,2025.09.05-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,41bc87a152be,7,
 OR,2022-01,waitlist_stock,93.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,9,Table 1
 OR,2022-05,waitlist_stock,67.0,2026.03.16-Oregon-Mink-Bowman-Court-Monitor-Report.pdf,f2fef3af0f37,9,Table 1

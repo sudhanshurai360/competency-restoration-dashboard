@@ -4,7 +4,26 @@ CO data is born-digital TEXT but PROSE (dated figures embedded in narrative), no
 tables. So we mine reliable dated patterns: waitlist count "as of <date>", average wait days,
 and consent-decree fines by fiscal year. Sparse but real + validated. The RICH monthly
 Tier-1/Tier-2 series lives in the special-master reports (Layer 2 = `co_special_master.py`, a
-semi-structured stitch — files already downloaded to data/raw/co/sm_*.pdf, format confirmed).
+semi-structured stitch — files already downloaded to dashboard_data/raw/co/sm_*.pdf, format confirmed).
+
+KNOWN, DISCLOSED GAP -- CORRECTED 2026-09-11 (re-audit, meta/docs/data_validation_2026-09-11_
+relens/co_lensB_adversarial_findings.md): the claim above ("not repeating tables") is not quite
+true of every JBC brief. `fy2025-26_humbrf1.5.pdf` pp.56-57 (PDF-internal pp.55-56; a prior audit
+mis-cited this as p.44) carries a genuine repeating monthly table with FOUR sub-tables (12 months
+each, FY23-24): Competency Evaluation Orders (by inpatient/jail/outpatient/total), Competency
+Evaluation Wait Times (average AND maximum, by setting), Competency Restoration Waitlist
+(individuals/average wait/MAXIMUM wait), and Competency Restoration BEDS (capacity by facility:
+jail-based/private hospitals/Fort Logan/Pueblo/total). Only the "Individuals on Waitlist" row is
+genuinely redundant with `colorado_special_master.csv`'s own `tier_waitlist_count` series (both
+sourced from the same underlying Department report, for the same months) -- a prior audit's
+dismissal of this WHOLE table as "expected... covered elsewhere" was only correct for that one
+row. The bed-capacity table, the evaluation-orders-by-type breakdown, and every Maximum-Wait-Time
+column have no counterpart anywhere else in this dataset and are NOT currently extracted --
+genuinely new data, not a redundant restatement. Confirmed this table exists only in this one
+brief (checked `fy2024-25_humbrf2.5.pdf`, the other JBC brief in the corpus: no equivalent table).
+Left as a disclosed backlog item rather than built here -- it's a new table FORMAT (not this
+module's existing dated-prose pattern) carrying several genuinely new metrics with no current
+schema columns, not a small extension of what's already extracted.
 
 CO decree thresholds: Tier-1 inpatient restoration <=7 days,
 Tier-2 <=28 days (later 49/42 in monitor reports); inpatient eval <=14 days, jail eval <=21.

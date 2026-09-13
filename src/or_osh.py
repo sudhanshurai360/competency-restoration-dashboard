@@ -44,6 +44,22 @@ the way Washington is. The redesign brief's own requirement (§2, OR): preserve 
 the dashboard chart — do not let any default view smooth it into a clean trend line.
 
 Re-run:  python or_osh.py   (cwd = dashboard/code/)
+
+KNOWN, DISCLOSED GAPS (found by the 2026-09-11 re-audit, meta/docs/data_validation_
+2026-09-11_relens/or_lensB_completeness_findings.md; deliberately NOT auto-extracted, to avoid a
+bespoke one-off pattern per single-source datapoint or a same-period-two-readings collision --
+see that file's items 2/3/6 for full detail):
+  - An entire "average wait for those STILL on the waitlist" metric (distinct from both
+    avg_wait_days and waitlist_stock_avg_days) is printed twice (2025-04=9.6d, 2025-08=7.8d) but
+    has no column in this schema -- would need a genuinely new metric, not a missing pattern.
+  - The 2nd report's 5/23/22 census snapshot (Aid&Assist 401/PSRB 265/Civil 16/Other 1/Total
+    683) puts its as-of date only in the table CAPTION, not per-row -- the one report in the
+    corpus with this layout, orphaned (no later report repeats this exact date).
+  - The 8th report's "as of July 20, 2023" stock snapshot (24 people/6.2 days) is a genuinely
+    different, later-in-month reading than the grid's own 2023-07 column (42 people/9.3 days,
+    "as of 7/1/23") -- same "two snapshots, one period bucket" ambiguity as Finding A (2022-01),
+    just a second, undocumented instance; adding it would need a real period-collision decision,
+    not just a regex.
 """
 from __future__ import annotations
 import re
@@ -232,6 +248,103 @@ def parse_report(path: Path) -> list[dict]:
             if per:
                 add(per, "avg_wait_days", m.group(1), pos=m.start(), cite_table=False)
 
+    # (A4) "...on M/D/YY, the average time people are waiting was at X days" -- FIXED
+    # 2026-09-11 (public-repo audit, meta/docs/data_validation_2026-09-11/or_pass1_findings.md,
+    # Finding C). This is the SAME flow metric as (A3), not the snapshot-average stock metric --
+    # confirmed directly against the full sentence, which explicitly distinguishes the two right
+    # next to each other: "...for individuals who were admitted the month prior (which is
+    # different from the snapshot average), defendants waited an average of 19.1 days as of the
+    # end of November. This number continues to increase and on 12/3/25, the average time people
+    # are waiting was at 22.7 days." Both numbers describe the same admitted-cohort wait time the
+    # report is tracking; this is simply a second, more recent reading than the just-completed
+    # month's own "as of the end of <Month>" figure, given by exact date rather than month-end.
+    # Dated to the numeric date's own month (2025-12 for "12/3/25") -- CAVEAT, disclosed here since
+    # the schema has no separate column for it: unlike every other avg_wait_days row, which the
+    # report frames as a completed calendar month's average, this one is a snapshot only 3 days
+    # into its month, so it may not be directly comparable to a full-month figure the way Nov/Feb
+    # are to each other. The report itself never resolves this ambiguity, and neither does this
+    # extractor -- shipped as the real printed number, not smoothed into a false equivalence.
+    for m in re.finditer(r'on\s+(\d{1,2})/(\d{1,2})/(\d{2}),\s+the average time people are waiting was at\s+([\d.]+)\s+days', flat, re.I):
+        yr = 2000 + int(m.group(3))
+        per = _period_md(int(m.group(1)), yr)
+        if any(r["period"] == per and r["metric"] == "avg_wait_days" for r in rows):
+            continue
+        add(per, "avg_wait_days", m.group(4), pos=m.start(), cite_table=False)
+
+    # (A5) "As of M/D/YY, ... the average days a person waited prior to admission was X days" --
+    # FIXED 2026-09-11 (re-audit, meta/docs/data_validation_2026-09-11_relens/
+    # or_lensB_completeness_findings.md, item 5). Confirmed this is the FLOW metric (admitted-
+    # cohort wait time, i.e. avg_wait_days), not the stock snapshot -- the same sentence gives
+    # BOTH figures side by side and explicitly distinguishes them: "...the average numbers of
+    # days people ordered for restoration were waiting for admission was 12.6 days [stock,
+    # already captured as the Table-1 snapshot for this same date], and the average days a
+    # person waited prior to admission was 26.9 days [flow, this pattern]." Dated to the "as of"
+    # date's own month (2024-10 for "10/31/24") since the sentence frames it as a completed
+    # month's figure ("prior to admission" = for people already admitted), not a partial-month
+    # snapshot the way (A4) is.
+    for m in re.finditer(r'[Aa]s of\s+(\d{1,2})/(\d{1,2})/(\d{2}),.*?average days a person waited prior to admission was\s+([\d.]+)\s+days', flat):
+        yr = 2000 + int(m.group(3))
+        per = _period_md(int(m.group(1)), yr)
+        if any(r["period"] == per and r["metric"] == "avg_wait_days" for r in rows):
+            continue
+        add(per, "avg_wait_days", m.group(4), pos=m.start(), cite_table=False)
+
+    # (A6) "...up to N days on M/D/YY... For those admitted during the prior month of <Month>,
+    # the average wait time was X days" -- FIXED 2026-09-11 (re-audit, item 4), then CORRECTED
+    # 2026-09-12 (3rd re-audit pass, meta/docs/data_validation_2026-09-12_pass3/
+    # or_lensB_date_arithmetic.md). A single, narrowly-targeted one-off pattern (confirmed via
+    # full-corpus grep this exact phrasing occurs nowhere else) -- the bare month name "<Month>"
+    # (no year) is resolved from a nearby M/D/YY date, since this report (the 6th) never uses the
+    # "OSH admitted <Month> <YYYY>" phrasing (A2)'s admit_stmts anchor depends on.
+    #
+    # The original version matched the date and the "For those admitted..." clause in ONE regex
+    # with `[^.]*?` between them -- this claimed to anchor to the NEAREST preceding date, but
+    # `re.finditer` actually anchors to the LEFTMOST one: the real 6th-report sentence has TWO
+    # dates before the clause ("...on 4/1/23, and ... on 7/1/23 (see also Figure 3 for trends).
+    # For those admitted..."), and the old regex silently used 4/1/23 (farther), not 7/1/23
+    # (nearer) -- harmless only because both share a year. Fixed by matching the (unambiguous)
+    # clause FIRST, then independently scanning a bounded window immediately before it for every
+    # M/D/YY date and taking the LAST one found (nearest to the clause), rather than letting
+    # regex backtracking silently decide. Also fixed a second bug the naive "reuse the nearest
+    # date's own year" approach would have introduced: the target bare month can be chronologically
+    # AFTER the reference date's month (e.g. a "prior month of December" referenced from a
+    # January date), which needs the PRIOR calendar year, not the reference date's own year --
+    # reuses the same `_prior_period` helper A2/A2b already rely on for exactly this, rather than
+    # a second, subtly-different year computation.
+    for cm in re.finditer(r'For those admitted during the prior month of\s+(\w+),\s*the average wait time was\s+([\d.]+)\s+days', flat, re.I):
+        mon = cm.group(1).lower()
+        if mon not in MON:
+            continue
+        window = flat[max(0, cm.start() - 300):cm.start()]
+        dates = list(re.finditer(r'(\d{1,2})/(\d{1,2})/(\d{2})', window))
+        if not dates:
+            continue
+        d = dates[-1]
+        per = _prior_period(mon, int(d.group(1)), 2000 + int(d.group(3)))
+        if not per:
+            continue
+        if any(r["period"] == per and r["metric"] == "avg_wait_days" for r in rows):
+            continue
+        add(per, "avg_wait_days", cm.group(2), pos=cm.start(), cite_table=False)
+
+    # (B2) "As of the end of <Month>, N people were on the waitlist" -- bare month, no year --
+    # FIXED 2026-09-11 (re-audit, item 1). Same bare-month gap class already fixed for
+    # avg_wait_days by (A3)/(A4); (B) itself was never given the analogous fix. Year resolved
+    # from the nearest "OSH admitted <Month> <YYYY>" statement (A2's own admit_stmts anchor),
+    # since this report (the 11th) reports the SAME reporting month via that phrasing elsewhere
+    # on a different page.
+    for m in re.finditer(r'[Aa]s of the end of\s+(\w+),\s+(\d+)\s+people were on the waitlist', flat):
+        mon = m.group(1).lower()
+        if mon not in MON:
+            continue
+        ref = _nearest_ref(m.start())
+        if not ref:
+            continue
+        per = _period_md(MON[mon], ref[2])
+        if any(r["period"] == per and r["metric"] == "waitlist_count" for r in rows):
+            continue
+        add(per, "waitlist_count", m.group(2), pos=m.start(), cite_table=False)
+
     # (B) prose END-of-month waitlist stock (the original anchor metric): "of <Month YYYY>, N people ... were on the waitlist"
     for m in re.finditer(r'(?:As of|of)\s+(\w+\s+\d{4}),?\s+(\d+)\s+(?:people|individuals)'
                          r'[^.]{0,60}?were on the waitlist', flat, re.I):
@@ -358,14 +471,26 @@ def parse_report(path: Path) -> list[dict]:
 
 def _report_rank(name):
     """Recency rank for date-aware dedup: dated court-monitor reports are the most recent /
-    authoritative consolidated source; among neutral-expert reports, higher ordinal = more recent."""
+    authoritative consolidated source; among neutral-expert reports, higher ordinal = more recent.
+
+    3rd element added 2026-09-12 (3rd re-audit pass, meta/docs/data_validation_2026-09-12_pass3/
+    or_lensB_date_arithmetic.md): a report and its own "_supplement.pdf" (e.g. the 11th report,
+    2025-05-05, and Oregon_Mink-Bowman_11th_..._Report_supplement.pdf, 2025-06-04, a month later)
+    both match the SAME ordinal regex, giving them an IDENTICAL rank -- previously broken only by
+    `sorted(glob(...))`'s alphabetical fallback happening to also put the supplement last, which
+    is real chronology for this one pair but not a guarantee (glob/insertion order is not a date).
+    Confirmed inert today (the supplement contributes 0 rows, so there's never an actual
+    same-period tie to resolve), but a future data-carrying supplement would silently depend on
+    that alphabetical coincidence. A supplement is, by definition, never earlier than the report
+    it supplements, so tagging it explicitly later within the same ordinal is a real fix, not a
+    guess -- confirmed correct for the one supplement that exists (2025-06-04 > 2025-05-05)."""
     md = re.search(r'(20\d\d)\.(\d\d)\.(\d\d)', name)
     if md:
-        return (2, int(md.group(1) + md.group(2) + md.group(3)))
+        return (2, int(md.group(1) + md.group(2) + md.group(3)), 0)
     mo = re.search(r'_(\d+)(?:st|nd|rd|th)_Neutral', name, re.I)
     if mo:
-        return (1, int(mo.group(1)))
-    return (0, 0)
+        return (1, int(mo.group(1)), 1 if "supplement" in name.lower() else 0)
+    return (0, 0, 0)
 
 def build() -> pd.DataFrame:
     rows, prov = [], {}

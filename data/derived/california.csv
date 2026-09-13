@@ -1,6 +1,8 @@
 state,period,metric,value,kind,report,source_sha,pdf_page,table_ref
 CA,2019-06,ist_pending_placement,849.0,annual_fy_table,may2024-25.pdf,654f3ec78ae2,125,Table 2
 CA,2020-02,ist_pending_placement,850.0,prose_snapshot,may2025-26.pdf,e1d747e0e150,66,
+CA,2020-03,ist_pending_placement,869.0,prose_snapshot,gov2023-24.pdf,22a233b5a56b,15,
+CA,2020-05,ist_pending_placement,1144.0,prose_snapshot,gov2023-24.pdf,22a233b5a56b,15,
 CA,2020-06,ist_pending_placement,1212.0,annual_fy_table,may2025-26.pdf,e1d747e0e150,127,Table 2
 CA,2021-06,ist_pending_placement,1454.0,annual_fy_table,may2026-27.pdf,f4933cdccac3,125,Table 2
 CA,2022-01,ist_pending_placement,1953.0,prose_snapshot,may2026-27.pdf,f4933cdccac3,15,

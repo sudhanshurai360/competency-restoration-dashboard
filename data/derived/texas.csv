@@ -1,25 +1,25 @@
-state,period,security_level,waitlist_count,avg_wait_days,report,source,source_sha,pdf_page,table_ref,pdf_page_days,table_ref_days
-TX,2022-11,max,883,519.0,mhs-waiting-lists-may-2023.pdf,wayback:hhs.texas.gov,a61be388385e,12,Table 6,12.0,Table 6
-TX,2023-02,max,991,617.0,mhs-waiting-lists-may-2023.pdf,wayback:hhs.texas.gov,a61be388385e,12,Table 6,12.0,Table 6
-TX,2023-05,max,1053,690.0,mhs-waiting-lists-nov-2023.pdf,wayback:hhs.texas.gov,cde9e1595b0d,12,Table 6,12.0,Table 6
-TX,2023-08,max,968,659.0,mhs-waiting-lists-nov-2023.pdf,wayback:hhs.texas.gov,cde9e1595b0d,12,Table 6,12.0,Table 6
-TX,2023-11,max,857,,mhs-waiting-lists-nov-2024.pdf,wayback:hhs.texas.gov,d67b989ad3bf,14,Table 10,,
-TX,2024-02,max,720,,mhs-waiting-lists-nov-2024.pdf,wayback:hhs.texas.gov,d67b989ad3bf,14,Table 10,,
-TX,2024-05,max,693,,mhs-waiting-lists-nov-2024.pdf,wayback:hhs.texas.gov,d67b989ad3bf,14,Table 10,,
-TX,2024-08,max,582,,mhs-waiting-lists-nov-2024.pdf,wayback:hhs.texas.gov,d67b989ad3bf,14,Table 10,,
-TX,2024-11,max,518,,mhs-waiting-lists-nov-2025.pdf,wayback:hhs.texas.gov,00529cb0ab8b,16,Table 10,,
-TX,2025-02,max,505,,mhs-waiting-lists-nov-2025.pdf,wayback:hhs.texas.gov,00529cb0ab8b,16,Table 10,,
-TX,2025-05,max,482,,mhs-waiting-lists-nov-2025.pdf,wayback:hhs.texas.gov,00529cb0ab8b,16,Table 10,,
-TX,2025-08,max,484,,mhs-waiting-lists-nov-2025.pdf,wayback:hhs.texas.gov,00529cb0ab8b,16,Table 10,,
-TX,2022-11,non_max,1481,252.0,mhs-waiting-lists-may-2023.pdf,wayback:hhs.texas.gov,a61be388385e,12,Table 5,12.0,Table 5
-TX,2023-02,non_max,1526,264.0,mhs-waiting-lists-may-2023.pdf,wayback:hhs.texas.gov,a61be388385e,12,Table 5,12.0,Table 5
-TX,2023-05,non_max,1345,288.0,mhs-waiting-lists-nov-2023.pdf,wayback:hhs.texas.gov,cde9e1595b0d,12,Table 5,12.0,Table 5
-TX,2023-08,non_max,1200,233.0,mhs-waiting-lists-nov-2023.pdf,wayback:hhs.texas.gov,cde9e1595b0d,12,Table 5,12.0,Table 5
-TX,2023-11,non_max,1178,239.3,mhs-waiting-lists-nov-2024.pdf,wayback:hhs.texas.gov,d67b989ad3bf,13,Table 7,14.0,Table 9
-TX,2024-02,non_max,1249,200.6,mhs-waiting-lists-nov-2024.pdf,wayback:hhs.texas.gov,d67b989ad3bf,13,Table 7,14.0,Table 9
-TX,2024-05,non_max,1159,223.9,mhs-waiting-lists-nov-2024.pdf,wayback:hhs.texas.gov,d67b989ad3bf,13,Table 7,14.0,Table 9
-TX,2024-08,non_max,1208,185.1,mhs-waiting-lists-nov-2024.pdf,wayback:hhs.texas.gov,d67b989ad3bf,13,Table 7,14.0,Table 9
-TX,2024-11,non_max,1247,198.0,mhs-waiting-lists-nov-2025.pdf,wayback:hhs.texas.gov,00529cb0ab8b,14,Table 7,16.0,Table 9
-TX,2025-02,non_max,1195,198.0,mhs-waiting-lists-nov-2025.pdf,wayback:hhs.texas.gov,00529cb0ab8b,14,Table 7,16.0,Table 9
-TX,2025-05,non_max,1205,190.0,mhs-waiting-lists-nov-2025.pdf,wayback:hhs.texas.gov,00529cb0ab8b,14,Table 7,16.0,Table 9
-TX,2025-08,non_max,1285,178.0,mhs-waiting-lists-nov-2025.pdf,wayback:hhs.texas.gov,00529cb0ab8b,14,Table 7,16.0,Table 9
+state,period,security_level,waitlist_count,avg_wait_days,removed_count,report,source,source_sha,pdf_page,table_ref,pdf_page_days,table_ref_days,pdf_page_removed,table_ref_removed
+TX,2022-11,max,883,519.0,141,mhs-waiting-lists-may-2023.pdf,wayback:hhs.texas.gov,a61be388385e,12,Table 6,12.0,Table 6,12,Table 6
+TX,2023-02,max,991,617.0,79,mhs-waiting-lists-may-2023.pdf,wayback:hhs.texas.gov,a61be388385e,12,Table 6,12.0,Table 6,12,Table 6
+TX,2023-05,max,1053,690.0,184,mhs-waiting-lists-nov-2023.pdf,wayback:hhs.texas.gov,cde9e1595b0d,12,Table 6,12.0,Table 6,12,Table 6
+TX,2023-08,max,968,659.0,154,mhs-waiting-lists-nov-2023.pdf,wayback:hhs.texas.gov,cde9e1595b0d,12,Table 6,12.0,Table 6,12,Table 6
+TX,2023-11,max,857,,289,mhs-waiting-lists-nov-2024.pdf,wayback:hhs.texas.gov,d67b989ad3bf,14,Table 10,,,14,Table 11
+TX,2024-02,max,720,,253,mhs-waiting-lists-nov-2024.pdf,wayback:hhs.texas.gov,d67b989ad3bf,14,Table 10,,,14,Table 11
+TX,2024-05,max,693,,209,mhs-waiting-lists-nov-2024.pdf,wayback:hhs.texas.gov,d67b989ad3bf,14,Table 10,,,14,Table 11
+TX,2024-08,max,582,,248,mhs-waiting-lists-nov-2024.pdf,wayback:hhs.texas.gov,d67b989ad3bf,14,Table 10,,,14,Table 11
+TX,2024-11,max,518,,256,mhs-waiting-lists-nov-2025.pdf,wayback:hhs.texas.gov,00529cb0ab8b,16,Table 10,,,16,Table 11
+TX,2025-02,max,505,,234,mhs-waiting-lists-nov-2025.pdf,wayback:hhs.texas.gov,00529cb0ab8b,16,Table 10,,,16,Table 11
+TX,2025-05,max,482,,292,mhs-waiting-lists-nov-2025.pdf,wayback:hhs.texas.gov,00529cb0ab8b,16,Table 10,,,16,Table 11
+TX,2025-08,max,484,,230,mhs-waiting-lists-nov-2025.pdf,wayback:hhs.texas.gov,00529cb0ab8b,16,Table 10,,,16,Table 11
+TX,2022-11,non_max,1481,252.0,571,mhs-waiting-lists-may-2023.pdf,wayback:hhs.texas.gov,a61be388385e,12,Table 5,12.0,Table 5,12,Table 5
+TX,2023-02,non_max,1526,264.0,523,mhs-waiting-lists-may-2023.pdf,wayback:hhs.texas.gov,a61be388385e,12,Table 5,12.0,Table 5,12,Table 5
+TX,2023-05,non_max,1345,288.0,709,mhs-waiting-lists-nov-2023.pdf,wayback:hhs.texas.gov,cde9e1595b0d,12,Table 5,12.0,Table 5,12,Table 5
+TX,2023-08,non_max,1200,233.0,621,mhs-waiting-lists-nov-2023.pdf,wayback:hhs.texas.gov,cde9e1595b0d,12,Table 5,12.0,Table 5,12,Table 5
+TX,2023-11,non_max,1178,239.3,659,mhs-waiting-lists-nov-2024.pdf,wayback:hhs.texas.gov,d67b989ad3bf,13,Table 7,14.0,Table 9,13,Table 8
+TX,2024-02,non_max,1249,200.6,599,mhs-waiting-lists-nov-2024.pdf,wayback:hhs.texas.gov,d67b989ad3bf,13,Table 7,14.0,Table 9,13,Table 8
+TX,2024-05,non_max,1159,223.9,788,mhs-waiting-lists-nov-2024.pdf,wayback:hhs.texas.gov,d67b989ad3bf,13,Table 7,14.0,Table 9,13,Table 8
+TX,2024-08,non_max,1208,185.1,640,mhs-waiting-lists-nov-2024.pdf,wayback:hhs.texas.gov,d67b989ad3bf,13,Table 7,14.0,Table 9,13,Table 8
+TX,2024-11,non_max,1247,198.0,684,mhs-waiting-lists-nov-2025.pdf,wayback:hhs.texas.gov,00529cb0ab8b,14,Table 7,16.0,Table 9,15,Table 8
+TX,2025-02,non_max,1195,198.0,670,mhs-waiting-lists-nov-2025.pdf,wayback:hhs.texas.gov,00529cb0ab8b,14,Table 7,16.0,Table 9,15,Table 8
+TX,2025-05,non_max,1205,190.0,714,mhs-waiting-lists-nov-2025.pdf,wayback:hhs.texas.gov,00529cb0ab8b,14,Table 7,16.0,Table 9,15,Table 8
+TX,2025-08,non_max,1285,178.0,725,mhs-waiting-lists-nov-2025.pdf,wayback:hhs.texas.gov,00529cb0ab8b,14,Table 7,16.0,Table 9,15,Table 8

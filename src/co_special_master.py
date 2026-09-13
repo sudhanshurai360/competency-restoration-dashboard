@@ -18,11 +18,12 @@ genuine conflict. This is the BEST decree-compliance data of any state (explicit
 -> comparable to WA).
 
 Files: dashboard_data/raw/co/sm_*.pdf. 3 files are the original 2018-21 Clearinghouse S3 vintage;
-11 more (2023-2026) were sourced directly from CourtListener's RECAP storage CDN (free, not
+8 more (2023-2026) were sourced directly from CourtListener's RECAP storage CDN (free, not
 paywalled, just not linked from the docket's own web page). 2 files in this glob are not actually
-special-master quarterly reports (the Consent Decree filing itself, a 2019 status letter) and 1
-has a broken/cid-encoded font pdfplumber can't read -- all three produce 0 rows and print a
-[WARN] naming which, rather than silently vanishing (see `build()`).
+special-master quarterly reports (the Consent Decree filing itself, a 2019 status letter) and
+produce 0 rows, printing a [WARN] naming which, rather than silently vanishing (see `build()`); a
+3rd file has a broken/cid-encoded font pdfplumber can't read directly, but is OCR-recovered
+instead of vanishing (see `_ocr_recover_sm_2024_11_28`).
 """
 from __future__ import annotations
 import re
@@ -36,6 +37,13 @@ MON = {m[:3]: i + 1 for i, m in enumerate(
 MONTH_TOK = re.compile(r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s*(\d{4})?', re.I)
 TIER_ROW = re.compile(r'^\s*Tier\s*([12])\s+(.+)$', re.I)
 VAL = re.compile(r'(N/?A|[\d]+(?:\.\d+)?)')
+# "Recent Wait Times for Inpatient Restoration" table row, e.g. "Jul 2024 26 76 63.5 110.4
+# 25** 68**" -- month-per-ROW, Tier1/Tier2-per-COLUMN, the opposite orientation of every other
+# table this file parses (see parse_report's own comment where this is first used). Module-level
+# so both the plain-text path (parse_report) and the OCR path (_ocr_recover_sm_2024_11_28, for
+# the one report whose page carrying this table is cid-encoded) share one definition.
+RECENT_WAIT_RE = re.compile(
+    r'^([A-Za-z]+)\s+(\d{4})\s+(\d+)\s+(\d+)\s+([\d.]+)\s+([\d.]+)\s+(\d+)\*{0,3}\s+(\d+)\*{0,3}\s*$')
 
 # Trailing [-–—]? added 2026-09-11 (adversarial review of the is_multi_month_avg disclosure fix,
 # meta/docs/data_validation_2026-09-11/): sm_2025-05-28.pdf's range-column headers glue the dash
@@ -49,7 +57,16 @@ VAL = re.compile(r'(N/?A|[\d]+(?:\.\d+)?)')
 # affect the PERIOD itself (date resolution already takes the LAST month found, which was never
 # the dropped one) -- confirmed no value/period changed, only the disclosure flag for these 4 rows.
 _MONTH_WORD = re.compile(r'^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?[-–—]?$', re.I)
-_YEAR_WORD = re.compile(r'^(\d{4}|\d{2})$')
+# "(?:/\d{2})?" added 2026-09-11 (public-repo audit, meta/docs/data_validation_2026-09-11/
+# co_pass1_findings.md): sm_109331.pdf's "Nov – Jan 2019/20" range header prints its completing
+# year as a single glued "2019/20" token, not the "2020"-only form every other range header in the
+# corpus uses -- confirmed via direct word-coordinate dump (one token, text="2019/20", no space).
+# The un-widened regex didn't match it at all (not even partially), so `years` came back empty for
+# this column and _header_periods_for_row silently gave up on it (`not years: periods.append(None)`)
+# -- this is a strict widening (new alternative branch only), the two pre-existing year forms are
+# unchanged, so no other column in the corpus is affected (confirmed via the sm_109331.pdf-only
+# corpus-wide extraction diff below).
+_YEAR_WORD = re.compile(r'^(\d{4}(?:/\d{2})?|\d{2})$')
 _CELL_WORD = re.compile(r'^-?[\d.,]+\*{0,3}$|^N/?A\*{0,3}$', re.I)
 
 def _header_periods_for_row(words, anchor_top, anchor_end_x, n_expected=None, exclude_tops=()):
@@ -101,8 +118,26 @@ def _header_periods_for_row(words, anchor_top, anchor_end_x, n_expected=None, ex
             and not any(abs(w2['top'] - t) < 2 for t in exclude_tops)]
     periods = []
     is_range = []
-    for c in cells:
-        near = sorted((w2 for w2 in band if abs(w2['x0'] - c['x0']) < 45), key=lambda w2: (w2['top'], w2['x0']))
+    # Assign each header word to its NEAREST cell (by x0), not to every cell within 45px --
+    # ADDED 2026-09-11 (public-repo audit, meta/docs/data_validation_2026-09-11/co_pass1_findings.md,
+    # caught during the is_multi_month_avg flag fix, not in the audit itself). sm_109331.pdf's
+    # columns sit only ~50px apart (narrower than the rest of the corpus, where 68-75px spacing
+    # meant a 45px both-sides radius never bridged two columns) -- the old "within 45px of MY OWN
+    # x0" test let a single header word (e.g. "Mar") satisfy the radius test for BOTH the Feb
+    # column (44.7px away) and the Mar column (0.5px away) at once, so the Feb cell picked up
+    # "Mar" as its own last/bottom-most month and got mislabeled 2020-03 with a spurious is_range.
+    # Nearest-cell assignment can't double-count a word this way regardless of absolute column
+    # spacing, and still keeps a genuine two-word range header (e.g. "May 2023" / "Jul 2023"
+    # wrapped across two lines) on ONE cell, since both words sit far closer to their own range
+    # column's x0 than to either neighbour's.
+    cell_x0s = [c['x0'] for c in cells]
+    assigned = [[] for _ in cells]
+    for w2 in band:
+        idx = min(range(len(cell_x0s)), key=lambda i: abs(cell_x0s[i] - w2['x0']))
+        if abs(cell_x0s[idx] - w2['x0']) < 45:
+            assigned[idx].append(w2)
+    for c, near_words in zip(cells, assigned):
+        near = sorted(near_words, key=lambda w2: (w2['top'], w2['x0']))
         months = [w2['text'] for w2 in near if _MONTH_WORD.match(w2['text'])]
         years = [w2['text'] for w2 in near if _YEAR_WORD.match(w2['text'])]
         if not months or not years:
@@ -111,7 +146,25 @@ def _header_periods_for_row(words, anchor_top, anchor_end_x, n_expected=None, ex
             continue
         mon = months[-1][:3].lower()
         y = years[-1]
-        yr = int(y) if len(y) == 4 else 2000 + int(y)
+        if '/' in y:
+            # "2019/20" = a range crossing a calendar-year boundary (e.g. "Nov - Jan 2019/20" =
+            # Nov 2019 through Jan 2020) -- but only when the range genuinely straddles Dec/Jan.
+            # HARDENED 2026-09-12 (3rd re-audit pass, meta/docs/data_validation_2026-09-12_pass3/
+            # co_lensB_date_arithmetic.md): the previous version unconditionally took the SECOND
+            # year half, correct for this corpus's only instance (Nov-Jan, a real rollover) but a
+            # latent landmine -- a hypothetical same-year range like "Aug - Oct 2019/20" (both
+            # months in the FIRST year) would have silently misdated as 2020-08/2020-10 instead
+            # of 2019-08/2019-10. Now checks whether the range's own first month is numerically
+            # AFTER its last month (the only shape a genuine rollover can take) before trusting
+            # the second half; a single-month match (no second month to compare) keeps the
+            # already-proven-correct second-half behavior as a documented fallback.
+            first_mon = MON[months[0][:3].lower()] if len(months) > 1 else None
+            if first_mon is not None and first_mon <= MON[mon]:
+                yr = int(y.split('/')[0])          # same-year range, e.g. "Aug - Oct 2019/20"
+            else:
+                yr = 2000 + int(y.split('/')[1])   # genuine Dec/Jan-style rollover
+        else:
+            yr = int(y) if len(y) == 4 else 2000 + int(y)
         periods.append(f"{yr:04d}-{MON[mon]:02d}")
         # A column header naming TWO DISTINCT months (e.g. "Nov 24 - Jan 25") is a multi-month
         # combined/rolling-average column, not a single calendar month -- taking the LAST month
@@ -175,29 +228,29 @@ def _tier_word_anchors(words):
     return anchors
 
 def _parse_period_header(line: str):
-    """Return ordered list of 'YYYY-MM' for the data columns; infer year from any year in the header.
+    """Return ordered list of 'YYYY-MM' for the data columns -- each token must carry its OWN
+    explicit 4-digit year; a year is never propagated from a neighboring token. FIXED 2026-09-12
+    (3rd re-audit pass, meta/docs/data_validation_2026-09-12_pass3/co_lensB_date_arithmetic.md):
+    the previous version forward/back-filled a missing year from the nearest explicit year found
+    ANYWHERE in the header, with no notion of month order or which columns are actually related --
+    reproduced directly with two verbatim headers from this corpus, both silently producing a
+    plausible but WRONG year (a stray "March 2019" baseline column's year leaking forward onto a
+    genuinely ~2023/2024 range column dozens of characters later; and the reverse, a later token's
+    year propagating backward onto an earlier one 6 years off). Confirmed empirically (by
+    instrumenting parse_report and logging which branch every row in every corpus file actually
+    took) that this fallback is currently dead code for anything that ships today -- the
+    positional word-coordinate axis and sibling-tier borrowing always supersede it first -- but
+    its safety was incidental (coverage by other mechanisms), not structural, so this closes the
+    silent-wrong-answer trap outright rather than leaving it in place. A token with no year of its
+    own now correctly returns None (an honest "can't resolve this one," matching this file's
+    existing "never guess a partial axis" convention) instead of a confident-looking wrong period.
     Stops before deadline columns (those carry an explicit year but are handled by the caller via 'days')."""
     toks = MONTH_TOK.findall(line)
     if not toks:
         return []
-    # default year = the last explicit year seen, else None; back-fill forward
-    years = [int(y) if y else None for (_, y) in toks]
-    # forward-fill then back-fill the year
-    last = next((y for y in years if y), None)
-    out = []
-    for (mon, y), yi in zip(toks, years):
-        yr = int(y) if y else last
-        last = yr or last
-        out.append((mon, yr))
-    # second pass back-fill leading Nones
-    firstyr = next((yr for _, yr in out if yr), None)
     periods = []
-    for mon, yr in out:
-        yr = yr or firstyr
-        if yr:
-            periods.append(f"{yr:04d}-{MON[mon[:3].lower()]:02d}")
-        else:
-            periods.append(None)
+    for mon, y in toks:
+        periods.append(f"{int(y):04d}-{MON[mon[:3].lower()]:02d}" if y else None)
     return periods
 
 def _isna(c): return c.upper().replace("/", "") == "NA"
@@ -356,6 +409,26 @@ def parse_report(path: Path) -> list[dict]:
             if cp:
                 count_periods[r["tier"]] = cp
 
+    # Sibling-tier word_periods borrowing -- ADDED 2026-09-11 (public-repo audit,
+    # meta/docs/data_validation_2026-09-11/co_pass1_findings.md): confirmed root cause of a
+    # "Tier-2 blank instead of False/True" is_multi_month_avg bug in 3 files (6 rows). A
+    # range-header column that wraps its completing month onto a SECOND physical text line
+    # (e.g. sm_2023-11-28.pdf p.13's "May 2023 -" / "Jul 2023") sits far enough above a
+    # TIER-2 row that the existing 60px header search band -- deliberately kept narrow after
+    # an earlier widening (60->75px) caused a real regression on unrelated count-table rows,
+    # reverted the same session -- doesn't reach it, while the closer TIER-1 row's own band
+    # does. Rather than widen the band again, borrow the already-correctly-resolved word-axis
+    # from the sibling tier row in the SAME table (same page, same footnote grouping, same
+    # cell count -- these three together are the same signal `_header_periods_for_row` itself
+    # relies on to mean "same table"): same fix pattern as wa_trueblood.py's _parse_grid
+    # borrowing a sibling row's column layout for an all-n/a row.
+    sibling_wp = {}
+    for r in raw:
+        if r["metric"] == "tier_wait_days_restoration":
+            wp, wir = r.get("word_periods"), r.get("word_is_range")
+            if wp and len(wp) == len(r["cells"]) and all(wp):
+                sibling_wp[(r["page"], r["has_star"], len(r["cells"]))] = (wp, wir)
+
     rows = []
     def emit(period, tier, metric, value, has_star, pdf_page, is_multi_month_avg=None):
         # pdf_page: 1-indexed PHYSICAL PDF page (jump-to-page N in any reader), not the
@@ -426,6 +499,16 @@ def parse_report(path: Path) -> list[dict]:
             # the word_periods branch's own docstring for why a genuine range header can't reach
             # here) -- so False is a real fact about this row, not a guess.
             rngs = [False] * len(use)
+        elif (r["page"], r["has_star"], len(r["cells"])) in sibling_wp:
+            # This row's OWN header axis (word-based and text-line) both failed to resolve, but
+            # the opposite-tier row in the SAME table (same page/footnote-grouping/cell-count)
+            # already resolved cleanly -- borrow its axis. See sibling_wp's own comment above for
+            # why this is needed (band-width asymmetry between tier rows) and why it's safe (the
+            # sibling's periods are read from the identical shared column headers, not guessed).
+            wp2, wir2 = sibling_wp[(r["page"], r["has_star"], len(r["cells"]))]
+            use = [p for p, c in zip(wp2, r["cells"]) if not _isna(c)]
+            rngs = ([rng for rng, c in zip(wir2, r["cells"]) if not _isna(c)]
+                    if wir2 and len(wir2) == len(r["cells"]) else [None] * len(use))
         elif r["tier"] in count_periods:
             cp = count_periods[r["tier"]]
             use = cp[-len(data):] if len(cp) >= len(data) else cp
@@ -438,12 +521,118 @@ def parse_report(path: Path) -> list[dict]:
             continue
         for p, v, rng in zip(use, data, rngs):
             emit(p, r["tier"], r["metric"], v, r["has_star"], r["page"] + 1, is_multi_month_avg=rng)
+
+    # "Recent Wait Times for Inpatient Restoration" table -- FIXED 2026-09-12 (3rd re-audit
+    # pass, meta/docs/data_validation_2026-09-12_pass3/co_lensA_blind_rebuild.md). Starting with
+    # sm_2024-08-28.pdf, this report switched its "Key Metric" wait-days table from the older
+    # 4-column layout (1 composite quarter-range column + 3 single months) to a 3-row,
+    # month-per-row layout listing the 3 most recent individual months directly (no combined
+    # column at all) -- a genuinely different table ORIENTATION (month rows, Tier1/Tier2
+    # columns) than every other table this file parses (which is always Tier-N-per-ROW, matched
+    # by TIER_ROW above). These lines don't start with "Tier", so the main loop never reaches
+    # them -- 10 genuine single-month tier_wait_days_restoration readings were silently never
+    # captured at all (confirmed: 2024-05/06/08/09/11/12, 2025-02/03, 2026-02/03).
+    #
+    # The NEWEST of the 3 listed months is always the report's own current quarter's END month --
+    # confirmed directly (sm_2024-08-28.pdf p.12: "Tier 1 detainees ... 69 days on average
+    # between May - July 2024" -- the report's OWN prose treats the 3-month rolling composite,
+    # not this table's own single-month Jul-2024 reading of 63.5, as its authoritative headline
+    # figure for that quarter-end month -- the SAME established convention already confirmed for
+    # the older 4-column format's own quarter-range column). So this block only fills a
+    # period+tier not already emitted above -- it never overrides the quarter-end row the main
+    # wait-days path already produced from the separate rolling-average table, preserving that
+    # convention rather than re-litigating it (see this file's own composite-vs-single-month
+    # revert history for why guessing wrong here is a real, not hypothetical, risk).
+    covered = {(r["period"], r["tier"]) for r in rows if r["metric"] == "tier_wait_days_restoration"}
+    for page_idx, (text, words) in enumerate(pages):
+        for ln in text.split("\n"):
+            m = RECENT_WAIT_RE.match(ln.strip())
+            if not m:
+                continue
+            mon = m.group(1)[:3].lower()
+            if mon not in MON:
+                continue
+            period = f"{int(m.group(2)):04d}-{MON[mon]:02d}"
+            for tier, days in ((1, m.group(5)), (2, m.group(6))):
+                if (period, tier) in covered:
+                    continue
+                emit(period, tier, "tier_wait_days_restoration", days, False, page_idx + 1,
+                     is_multi_month_avg=False)
+                covered.add((period, tier))
     return rows
+
+def _ocr_recover_sm_2024_11_28(path: Path, sha: str) -> list[dict]:
+    """OCR-based recovery, ONLY for sm_2024-11-28.pdf's page-14 waitlist table -- ADDED
+    2026-09-11 (public-repo audit, meta/docs/data_validation_2026-09-11/co_pass1_findings.md).
+    This file's page 14 embeds a subsetted font with no usable ToUnicode CMap -- pdfplumber's
+    text layer returns raw (cid:N) glyph codes for every character on the page (confirmed
+    directly: the page renders correctly as an image, it's vector text with a broken text
+    layer, not a scan, which is why OCR on a high-resolution render works reliably here).
+    Cross-validated independently by the audit itself: the average of the 3 recovered months
+    (16.67/196.67) matches the "Aug-Oct24" 3-month-avg column printed VERBATIM in the NEXT
+    report (sm_2025-02-28.pdf, p.14) -- these are genuine, internally-consistent values, not
+    an OCR artifact.
+
+    Deliberately narrow, not a general OCR fallback: parses ONLY the one known table shape on
+    page 14 of this ONE file (gated on the exact filename below), so no other file in the
+    corpus -- even a future one with a similarly broken font -- can silently start routing
+    through here with a different, unverified table shape. If the OCR text ever stops matching
+    the expected "Tier N  N/A  <range>  <int>  <int>  <int>" shape (e.g. a re-download changes
+    the file), this returns nothing and build()'s existing [WARN] path stands unchanged --
+    never guesses a partial or malformed row.
+    """
+    import pytesseract
+    out = []
+    with pdfplumber.open(path) as pdf:
+        page = pdf.pages[13]  # printed page 14 -- confirmed via the audit's own direct read
+        text = pytesseract.image_to_string(page.to_image(resolution=400).original, config="--psm 6")
+    for tier in (1, 2):
+        m = re.search(rf'Tier\s*{tier}\s+N/?A\s+[\d.]+\s+(\d+)\s+(\d+)\s+(\d+)', text, re.I)
+        if not m:
+            continue
+        for period, val in (("2024-08", m.group(1)), ("2024-09", m.group(2)), ("2024-10", m.group(3))):
+            out.append(dict(state="CO", period=period, tier=tier, metric="tier_waitlist_count",
+                             value=float(val), report=path.name, source_sha=sha, has_star=False,
+                             pdf_page=14, is_multi_month_avg=False))
+
+    # Page 11's "Recent Wait Times" table -- ADDED 2026-09-12 (3rd re-audit pass, meta/docs/
+    # data_validation_2026-09-12_pass3/co_lensA_blind_rebuild.md). Same cid-encoded-font problem
+    # as page 14 above, same OCR fix. All 3 months (Aug/Sep/Oct 2024) are emitted here, including
+    # the quarter-boundary month (Oct) -- deliberately NOT hand-skipped the way parse_report()'s
+    # own plain-text path skips it, because that skip exists only to prevent ONE report's two
+    # OWN tables (this one and its quarterly-composite table on another page) from both
+    # contributing a same-recency row for the same period. This whole report contributes
+    # nothing else at all (both pages 11 and 14 are cid-encoded), so there's no such self-
+    # conflict here -- only a cross-report conflict with whichever LATER report's own quarterly
+    # table also covers Aug-Oct24, which build()'s existing recency-based dedup already resolves
+    # correctly (confirmed: sm_2025-05-28.pdf's 40.3/95.3 already wins for 2024-10 today).
+    with pdfplumber.open(path) as pdf:
+        page = pdf.pages[10]  # printed page 11
+        text2 = pytesseract.image_to_string(page.to_image(resolution=400).original, config="--psm 6")
+    for ln in text2.split("\n"):
+        m = RECENT_WAIT_RE.match(ln.strip())
+        if not m:
+            continue
+        mon = m.group(1)[:3].lower()
+        if mon not in MON:
+            continue
+        period = f"{int(m.group(2)):04d}-{MON[mon]:02d}"
+        for tier, days in ((1, m.group(5)), (2, m.group(6))):
+            out.append(dict(state="CO", period=period, tier=tier, metric="tier_wait_days_restoration",
+                             value=float(days), report=path.name, source_sha=sha, has_star=False,
+                             pdf_page=11, is_multi_month_avg=False))
+    return out
 
 def build() -> pd.DataFrame:
     rows = []
     for p in sorted((C.RAW / "co").glob("sm_*.pdf")):
         rr = parse_report(p)
+        if not rr and p.name == "sm_2024-11-28.pdf":
+            rr = _ocr_recover_sm_2024_11_28(p, _util.sha12(p))
+            if rr:
+                print(f"  [ocr-recovered] {p.name}: {len(rr)} Tier datapoints (page 14, cid-encoded font)")
+                rows += rr
+                continue
         if not rr:
             # A zero-row file must never vanish silently -- but the cause varies and shouldn't be
             # assumed. Confirmed two distinct causes so far: sm_2024-11-28.pdf embeds a font with
@@ -464,9 +653,7 @@ def build() -> pd.DataFrame:
         return df
     # On a genuine conflict (same period/tier/metric, different source rows -- e.g. the
     # "Key Metric" footnoted table vs. the main unfootnoted table, see the has_star comment
-    # above), prefer the unfootnoted row. Within a tie on that (both footnoted, or both not --
-    # e.g. 2024-01 Tier-1 count: 23 in sm_2024-02-28.pdf vs 31 in the later sm_2024-05-28.pdf,
-    # confirmed by hand to be a genuine revision in the later filing, not an extraction error),
+    # above), prefer the unfootnoted row. Within a tie on that (both footnoted, or both not),
     # prefer the MOST RECENT report, matching or_osh.py's own explicit "keep the value from the
     # most recent report" convention -- a later court filing revising an earlier one is presumed
     # to reflect more complete information, not the other way around. Previously this file used

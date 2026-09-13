@@ -6,7 +6,7 @@ DSH publishes the IST pending-placement waitlist (STOCK, like TX) in its semiann
 [IST System-wide Pending Placement List, as-of June 30] and (b) dated prose snapshots
 ("1,953 ... as of January 2022; down to 397 as of May 6, 2024"). Born-digital TEXT, no charts.
 Wait-days/28-day-compliance live in Stiavetti court reports (enrichment, not here).
-Files: data/raw/ca/*.pdf (DSH hub; Wayback id_ fallback for the blocked server).
+Files: dashboard_data/raw/ca/*.pdf (DSH hub; Wayback id_ fallback for the blocked server).
 """
 from __future__ import annotations
 import re
@@ -20,7 +20,19 @@ MON = {m: i + 1 for i, m in enumerate(
      "august", "september", "october", "november", "december"])}
 
 def _num(s): return int(s.replace(",", ""))
-def _month_period(mname, year): return f"{int(year):04d}-{MON[mname.lower()]:02d}"
+# .get(), not bare indexing -- HARDENED 2026-09-12 (3rd re-audit pass, meta/docs/
+# data_validation_2026-09-12_pass3/ca_lensB_date_arithmetic.md): every regex feeding a month name
+# into this function currently only ever matches a real month word in this corpus (confirmed
+# corpus-wide, zero unmapped tokens reach here today), but several of those regexes capture via a
+# bare `(\w+)` with no month-name validation of their own -- a future document whose prose happens
+# to fit the surrounding pattern with a non-month word here would previously raise an unhandled
+# KeyError. Returns None instead, which every caller already treats as "skip this match" via the
+# existing `if period and value is not None` guard in `add()` -- a graceful miss, not a crash, for
+# a case that's never actually occurred.
+def _month_period(mname, year):
+    mon = MON.get(mname.lower())
+    return f"{int(year):04d}-{mon:02d}" if mon else None
+def _numeric_date_period(m, d, y): return f"{int(y):04d}-{int(m):02d}"
 def _fy_to_period(fy):  # "2018-19" -> as-of June 30 of the end year -> 2019-06
     end = int(fy[:2] + fy[-2:])
     return f"{end:04d}-06"
@@ -187,9 +199,47 @@ def parse_estimate(path: Path) -> list[dict]:
         add(_month_period(m.group(2), m.group(3)), _num(m.group(1)), "prose_snapshot", pos=m.start(), cite_table=False)
     for m in re.finditer(r'in\s+(\w+)\s+(\d{4}),\s+DSH had\s+([\d,]{3,5})\s+individuals\s+pending placement', flat, re.I):
         add(_month_period(m.group(1), m.group(2)), _num(m.group(3)), "prose_snapshot", pos=m.start(), cite_table=False)
+    # pos=m.start(N), not m.start(): this pattern's own trigger word "IST" sits far enough before
+    # the actual numbers that, when a page break with no sentence-ending period falls in between
+    # (confirmed real case: gov2024-25.pdf p.124's "Chart 1: IST Systemwide Referrals and
+    # Admissions..." caption has no period before the page break, and the `[^.]*?` gap can walk
+    # straight across it to reach the real sentence on p.125), `m.start()` cites the PAGE OF THE
+    # TRIGGER WORD, not the page the matched numbers actually sit on -- FIXED 2026-09-11 (public-
+    # repo re-audit, meta/docs/data_validation_2026-09-11_relens/ca_lensB_completeness_findings.md).
+    # Anchoring each add() to its own captured number's own start position is correct even when a
+    # match spans a page break, since `_page_at()` only cares about where pos itself falls, not
+    # the whole match's span. Currently latent (masked by cross-document dedup always preferring
+    # the newer report, whose own copy of this sentence happens not to span a break) -- this fixes
+    # the citation for good rather than relying on that to keep holding.
     for m in re.finditer(r'IST[^.]*?from\s+([\d,]{3,5})\s+patients\s+in\s+(\w+)\s+(\d{4})\s+to\s+([\d,]{3,5})\s+patients\s+in\s+(\w+)\s+(\d{4})', flat, re.I):
-        add(_month_period(m.group(2), m.group(3)), _num(m.group(1)), "prose_snapshot", pos=m.start(), cite_table=False)
-        add(_month_period(m.group(5), m.group(6)), _num(m.group(4)), "prose_snapshot", pos=m.start(), cite_table=False)
+        add(_month_period(m.group(2), m.group(3)), _num(m.group(1)), "prose_snapshot", pos=m.start(1), cite_table=False)
+        add(_month_period(m.group(5), m.group(6)), _num(m.group(4)), "prose_snapshot", pos=m.start(4), cite_table=False)
+
+    # "Table 1: Pre and Post SIP Order Waitlist" -- FIXED 2026-09-11 (10-agent public-repo audit,
+    # meta/docs/data_validation_2026-09-11/ca_pass1_findings.md): this fixed reference table (two
+    # historical COVID-era anchor dates, plus the report's own "current" reading), with IST as
+    # its own labeled column, appears in 2 of the 9 corpus PDFs (gov2023-24.pdf, may2022-23.pdf)
+    # -- CORRECTED 2026-09-12 (3rd re-audit pass, meta/docs/data_validation_2026-09-12_pass3/
+    # ca_lensA_blind_rebuild.md; this comment previously overstated it as present in every DSH
+    # budget PDF, a claim independently checked and found false, though harmless -- the regex
+    # itself simply doesn't match where the table is absent, no data impact). Confirmed directly,
+    # not guessed (opened both
+    # gov2023-24.pdf p.15 and may2022-23.pdf p.16 as rendered images; column header reads "IST |
+    # LPS | OMD 2962 | OMD 2972 | NGI | SVP | Coleman", IST is genuinely the first data column).
+    # Never previously extracted -- recovers 2 fixed historical readings (2020-03=869,
+    # 2020-05=1144) present verbatim in every report carrying this table. The report-specific
+    # "Current Waitlist" row is also captured for completeness -- same risk as the CO/OR duplicate-
+    # mention fixes earlier this session (a citation could silently move to this new page for a
+    # period an earlier pattern already captured correctly), closed the same way: skip if this
+    # exact period is already covered earlier in THIS document's own parse.
+    _period_seen = {r["period"] for r in rows}
+    for label in ("Pre-SIP Waitlist", "Post-SIP Waitlist", "Current Waitlist"):
+        for m in re.finditer(rf'{label}:\s*([\d,]{{2,5}}).*?(\d{{1,2}})/+(\d{{1,2}})/+(\d{{4}})', flat):
+            per = _numeric_date_period(m.group(2), m.group(3), m.group(4))
+            if per in _period_seen:
+                continue
+            add(per, _num(m.group(1)), "prose_snapshot", pos=m.start(), cite_table=False)
+            _period_seen.add(per)
     return rows
 
 def _report_chrono_key(name):

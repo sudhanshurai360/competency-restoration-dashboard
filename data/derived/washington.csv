@@ -1,4 +1,7 @@
 state,period,facility,stage,setting,orders_signed,orders_completed,avg_days_to_completion,median_days_to_completion,pct_within_deadline,pct_within_alt2,pct_within_alt3,report,source_url,source_sha,pdf_page,table_ref
+WA,2017-10,ESH,evaluation,inpatient,9.0,,13.8,13.0,0.0,0.0,0.0,Trueblood-Report-2018-11.pdf,(local) Trueblood-Report-2018-11.pdf,e43a0be7d79c,10,Table 2b
+WA,2017-11,ESH,evaluation,inpatient,5.0,,11.7,8.0,20.0,20.0,20.0,Trueblood-Report-2018-12.pdf,(local) Trueblood-Report-2018-12.pdf,06516f1429cd,10,Table 2b
+WA,2017-12,ESH,evaluation,inpatient,12.0,,6.5,8.0,42.0,50.0,50.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,10,Table 2b
 WA,2018-01,ESH,evaluation,inpatient,8.0,,5.9,5.5,70.0,70.0,70.0,Trueblood-Report-2019-02.pdf,(local) Trueblood-Report-2019-02.pdf,29f42cc9a6bb,11,Table 2b
 WA,2018-02,ESH,evaluation,inpatient,5.0,,8.0,8.0,14.0,14.0,14.0,Trueblood-Report-2019-02.pdf,(local) Trueblood-Report-2019-02.pdf,29f42cc9a6bb,11,Table 2b
 WA,2018-03,ESH,evaluation,inpatient,13.0,,14.9,15.0,6.0,6.0,6.0,Trueblood-Report-2019-02.pdf,(local) Trueblood-Report-2019-02.pdf,29f42cc9a6bb,11,Table 2b
@@ -100,6 +103,9 @@ WA,2026-02,ESH,evaluation,inpatient,4.0,3.0,3.7,4.0,100.0,100.0,100.0,Trueblood-
 WA,2026-03,ESH,evaluation,inpatient,10.0,9.0,3.8,4.0,100.0,100.0,100.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,29,Table 7
 WA,2026-04,ESH,evaluation,inpatient,9.0,10.0,4.2,3.5,90.0,100.0,100.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,29,Table 7
 WA,2026-05,ESH,evaluation,inpatient,8.0,8.0,7.5,3.5,75.0,88.0,88.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,29,Table 7
+WA,2017-10,ESH,evaluation,jail,62.0,,11.1,10.0,60.0,61.0,61.0,Trueblood-Report-2018-11.pdf,(local) Trueblood-Report-2018-11.pdf,e43a0be7d79c,9,Table 2a
+WA,2017-11,ESH,evaluation,jail,64.0,,11.8,11.0,58.0,59.0,59.0,Trueblood-Report-2018-12.pdf,(local) Trueblood-Report-2018-12.pdf,06516f1429cd,9,Table 2a
+WA,2017-12,ESH,evaluation,jail,52.0,,13.5,10.0,65.0,66.0,70.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,9,Table 2a
 WA,2018-01,ESH,evaluation,jail,73.0,,12.7,13.0,61.0,64.0,64.0,Trueblood-Report-2019-02.pdf,(local) Trueblood-Report-2019-02.pdf,29f42cc9a6bb,10,Table 2a
 WA,2018-02,ESH,evaluation,jail,65.0,,10.9,11.0,59.0,61.0,61.0,Trueblood-Report-2019-03.pdf,(local) Trueblood-Report-2019-03.pdf,59180600b458,10,Table 2a
 WA,2018-03,ESH,evaluation,jail,75.0,,11.9,12.5,55.0,59.0,59.0,Trueblood-Report-2019-03.pdf,(local) Trueblood-Report-2019-03.pdf,59180600b458,10,Table 2a
@@ -201,6 +207,9 @@ WA,2026-02,ESH,evaluation,jail,90.0,95.0,11.5,13.0,92.0,99.0,100.0,Trueblood-Rep
 WA,2026-03,ESH,evaluation,jail,105.0,102.0,11.4,13.0,79.0,96.0,100.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,27,Table 6
 WA,2026-04,ESH,evaluation,jail,86.0,96.0,11.8,14.0,88.0,95.0,100.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,27,Table 6
 WA,2026-05,ESH,evaluation,jail,93.0,76.0,11.4,13.0,88.0,97.0,99.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,27,Table 6
+WA,2017-10,ESH,restoration,inpatient,11.0,,15.9,15.5,13.0,13.0,13.0,Trueblood-Report-2018-11.pdf,(local) Trueblood-Report-2018-11.pdf,e43a0be7d79c,10,Table 2b
+WA,2017-11,ESH,restoration,inpatient,12.0,,5.9,6.5,44.0,44.0,44.0,Trueblood-Report-2018-12.pdf,(local) Trueblood-Report-2018-12.pdf,06516f1429cd,10,Table 2b
+WA,2017-12,ESH,restoration,inpatient,20.0,,9.2,9.0,25.0,29.0,29.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,10,Table 2b
 WA,2018-01,ESH,restoration,inpatient,16.0,,5.3,6.0,63.0,63.0,63.0,Trueblood-Report-2019-02.pdf,(local) Trueblood-Report-2019-02.pdf,29f42cc9a6bb,12,Table 2c
 WA,2018-02,ESH,restoration,inpatient,20.0,,9.4,9.5,20.0,20.0,20.0,Trueblood-Report-2019-02.pdf,(local) Trueblood-Report-2019-02.pdf,29f42cc9a6bb,12,Table 2c
 WA,2018-03,ESH,restoration,inpatient,19.0,,14.4,15.5,8.0,12.0,12.0,Trueblood-Report-2019-02.pdf,(local) Trueblood-Report-2019-02.pdf,29f42cc9a6bb,12,Table 2c
@@ -467,6 +476,12 @@ WA,2026-02,RTF,restoration,inpatient,12.0,13.0,5.9,6.0,85.0,85.0,92.0,Trueblood-
 WA,2026-03,RTF,restoration,inpatient,12.0,10.0,5.6,6.0,80.0,90.0,100.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,22,Table 5b
 WA,2026-04,RTF,restoration,inpatient,11.0,10.0,5.3,6.5,80.0,90.0,100.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,22,Table 5b
 WA,2026-05,RTF,restoration,inpatient,6.0,9.0,7.0,7.0,67.0,100.0,100.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,22,Table 5b
+WA,2017-10,TOTAL,evaluation,inpatient,25.0,,30.5,23.0,8.0,8.0,8.0,Trueblood-Report-2018-11.pdf,(local) Trueblood-Report-2018-11.pdf,e43a0be7d79c,12,Table 3b
+WA,2017-11,TOTAL,evaluation,inpatient,20.0,,45.2,44.5,2.0,2.0,2.0,Trueblood-Report-2018-12.pdf,(local) Trueblood-Report-2018-12.pdf,06516f1429cd,12,Table 3b
+WA,2017-12,TOTAL,evaluation,inpatient,28.0,,28.7,11.0,16.0,19.0,19.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,12,Table 3b
+WA,2018-01,TOTAL,evaluation,inpatient,24.0,,33.0,24.5,19.0,19.0,19.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,12,Table 3b
+WA,2018-02,TOTAL,evaluation,inpatient,11.0,,44.1,44.0,8.0,8.0,8.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,12,Table 3b
+WA,2018-03,TOTAL,evaluation,inpatient,25.0,,35.2,22.0,13.0,13.0,13.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,12,Table 3b
 WA,2018-04,TOTAL,evaluation,inpatient,17.0,21.0,34.9,23.0,0.0,0.0,0.0,Trueblood-Report-2019-05.pdf,(local) Trueblood-Report-2019-05.pdf,48ba75917cc4,14,Table 3b
 WA,2018-05,TOTAL,evaluation,inpatient,22.0,15.0,34.1,38.0,5.0,5.0,5.0,Trueblood-Report-2019-05.pdf,(local) Trueblood-Report-2019-05.pdf,48ba75917cc4,14,Table 3b
 WA,2018-06,TOTAL,evaluation,inpatient,19.0,17.0,30.2,31.5,3.0,3.0,3.0,Trueblood-Report-2019-07.pdf,(local) Trueblood-Report-2019-07.pdf,a2b6ac7e38ef,14,Table 3b
@@ -565,6 +580,10 @@ WA,2026-02,TOTAL,evaluation,inpatient,31.0,30.0,4.2,4.0,90.0,97.0,93.0,Trueblood
 WA,2026-03,TOTAL,evaluation,inpatient,43.0,40.0,4.5,4.0,93.0,95.0,95.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,35,Table 10
 WA,2026-04,TOTAL,evaluation,inpatient,30.0,37.0,4.4,4.0,95.0,97.0,97.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,35,Table 10
 WA,2026-05,TOTAL,evaluation,inpatient,44.0,38.0,5.4,4.0,84.0,92.0,92.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,35,Table 10
+WA,2017-10,TOTAL,evaluation,jail,318.0,,12.3,11.0,54.0,54.0,55.0,Trueblood-Report-2018-11.pdf,(local) Trueblood-Report-2018-11.pdf,e43a0be7d79c,11,Table 3a
+WA,2017-11,TOTAL,evaluation,jail,326.0,,10.9,10.0,67.0,67.0,68.0,Trueblood-Report-2018-12.pdf,(local) Trueblood-Report-2018-12.pdf,06516f1429cd,11,Table 3a
+WA,2017-12,TOTAL,evaluation,jail,232.0,,10.6,10.0,68.0,69.0,71.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,11,Table 3a
+WA,2018-01,TOTAL,evaluation,jail,300.0,,9.9,9.0,67.0,68.0,68.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,11,Table 3a
 WA,2018-02,TOTAL,evaluation,jail,300.0,,9.3,9.0,72.0,72.0,73.0,Trueblood-Report-2019-03.pdf,(local) Trueblood-Report-2019-03.pdf,59180600b458,13,Table 3a
 WA,2018-03,TOTAL,evaluation,jail,345.0,335.0,9.7,9.0,71.0,72.0,72.0,Trueblood-Report-2019-04.pdf,(local) Trueblood-Report-2019-04.pdf,3982102aaf56,13,Table 3a
 WA,2018-04,TOTAL,evaluation,jail,316.0,332.0,10.6,10.0,71.0,72.0,72.0,Trueblood-Report-2019-05.pdf,(local) Trueblood-Report-2019-05.pdf,48ba75917cc4,13,Table 3a
@@ -665,6 +684,10 @@ WA,2026-02,TOTAL,evaluation,jail,504.0,526.0,11.9,13.0,86.0,93.0,94.0,Trueblood-
 WA,2026-03,TOTAL,evaluation,jail,572.0,580.0,11.6,13.0,88.0,95.0,96.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,33,Table 9
 WA,2026-04,TOTAL,evaluation,jail,566.0,549.0,11.4,13.0,89.0,95.0,96.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,33,Table 9
 WA,2026-05,TOTAL,evaluation,jail,573.0,532.0,11.7,12.0,90.0,94.0,94.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,33,Table 9
+WA,2017-10,TOTAL,restoration,inpatient,118.0,,29.4,18.0,13.0,13.0,13.0,Trueblood-Report-2018-11.pdf,(local) Trueblood-Report-2018-11.pdf,e43a0be7d79c,12,Table 3b
+WA,2017-11,TOTAL,restoration,inpatient,104.0,,35.1,30.5,15.0,15.0,15.0,Trueblood-Report-2018-12.pdf,(local) Trueblood-Report-2018-12.pdf,06516f1429cd,12,Table 3b
+WA,2017-12,TOTAL,restoration,inpatient,104.0,,31.4,12.0,13.0,13.0,13.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,12,Table 3b
+WA,2018-01,TOTAL,restoration,inpatient,94.0,,46.7,39.5,9.0,10.0,10.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,12,Table 3b
 WA,2018-02,TOTAL,restoration,inpatient,115.0,,41.2,25.0,9.0,9.0,9.0,Trueblood-Report-2019-03.pdf,(local) Trueblood-Report-2019-03.pdf,59180600b458,15,Table 3c
 WA,2018-03,TOTAL,restoration,inpatient,115.0,,41.8,23.5,9.0,10.0,10.0,Trueblood-Report-2019-03.pdf,(local) Trueblood-Report-2019-03.pdf,59180600b458,15,Table 3c
 WA,2018-04,TOTAL,restoration,inpatient,138.0,116.0,42.0,27.0,8.0,9.0,9.0,Trueblood-Report-2019-05.pdf,(local) Trueblood-Report-2019-05.pdf,48ba75917cc4,15,Table 3c
@@ -765,6 +788,9 @@ WA,2026-02,TOTAL,restoration,inpatient,160.0,165.0,5.5,5.0,93.0,94.0,97.0,Truebl
 WA,2026-03,TOTAL,restoration,inpatient,180.0,181.0,5.0,5.0,91.0,93.0,98.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,37,Table 11
 WA,2026-04,TOTAL,restoration,inpatient,154.0,155.0,4.3,4.0,93.0,95.0,98.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,37,Table 11
 WA,2026-05,TOTAL,restoration,inpatient,147.0,144.0,4.7,5.0,95.0,99.0,100.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,37,Table 11
+WA,2017-10,WSH,evaluation,inpatient,16.0,,38.4,49.0,10.0,10.0,10.0,Trueblood-Report-2018-11.pdf,(local) Trueblood-Report-2018-11.pdf,e43a0be7d79c,8,Table 1b
+WA,2017-11,WSH,evaluation,inpatient,15.0,,50.5,48.0,0.0,0.0,0.0,Trueblood-Report-2018-12.pdf,(local) Trueblood-Report-2018-12.pdf,06516f1429cd,8,Table 1b
+WA,2017-12,WSH,evaluation,inpatient,16.0,,43.5,50.0,8.0,8.0,8.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,8,Table 1b
 WA,2018-01,WSH,evaluation,inpatient,16.0,,48.4,60.5,5.0,5.0,5.0,Trueblood-Report-2019-02.pdf,(local) Trueblood-Report-2019-02.pdf,29f42cc9a6bb,8,Table 1b
 WA,2018-02,WSH,evaluation,inpatient,6.0,,55.2,62.0,7.0,7.0,7.0,Trueblood-Report-2019-02.pdf,(local) Trueblood-Report-2019-02.pdf,29f42cc9a6bb,8,Table 1b
 WA,2018-03,WSH,evaluation,inpatient,12.0,,44.1,61.5,17.0,17.0,17.0,Trueblood-Report-2019-02.pdf,(local) Trueblood-Report-2019-02.pdf,29f42cc9a6bb,8,Table 1b
@@ -866,6 +892,17 @@ WA,2026-02,WSH,evaluation,inpatient,27.0,27.0,4.3,4.0,89.0,96.0,93.0,Trueblood-R
 WA,2026-03,WSH,evaluation,inpatient,33.0,31.0,4.7,4.0,90.0,94.0,94.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,18,Table 4
 WA,2026-04,WSH,evaluation,inpatient,21.0,27.0,4.5,4.0,96.0,96.0,96.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,18,Table 4
 WA,2026-05,WSH,evaluation,inpatient,36.0,30.0,4.9,4.5,87.0,93.0,93.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,18,Table 4
+WA,2017-10,WSH,evaluation,jail,256.0,,12.6,11.0,52.0,53.0,53.0,Trueblood-Report-2018-11.pdf,(local) Trueblood-Report-2018-11.pdf,e43a0be7d79c,7,Table 1a
+WA,2017-11,WSH,evaluation,jail,262.0,,10.6,10.0,69.0,69.0,70.0,Trueblood-Report-2018-12.pdf,(local) Trueblood-Report-2018-12.pdf,06516f1429cd,7,Table 1a
+WA,2017-12,WSH,evaluation,jail,180.0,,9.7,9.0,70.0,70.0,71.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,7,Table 1a
+WA,2018-01,WSH,evaluation,jail,227.0,,9.0,8.5,69.0,69.0,69.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,7,Table 1a
+WA,2018-02,WSH,evaluation,jail,235.0,,8.9,9.0,75.0,75.0,76.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,7,Table 1a
+WA,2018-03,WSH,evaluation,jail,270.0,,9.0,9.0,76.0,76.0,76.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,7,Table 1a
+WA,2018-04,WSH,evaluation,jail,265.0,,9.9,10.0,75.0,76.0,76.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,7,Table 1a
+WA,2018-05,WSH,evaluation,jail,304.0,,9.3,9.0,74.0,75.0,75.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,7,Table 1a
+WA,2018-06,WSH,evaluation,jail,284.0,,9.7,9.0,72.0,72.0,73.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,7,Table 1a
+WA,2018-07,WSH,evaluation,jail,306.0,,10.2,10.0,74.0,74.0,74.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,7,Table 1a
+WA,2018-08,WSH,evaluation,jail,312.0,,14.3,10.0,71.0,71.0,71.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,7,Table 1a
 WA,2018-09,WSH,evaluation,jail,238.0,243.0,10.3,10.0,92.0,94.0,94.0,Trueblood-Report-2019-10.pdf,(local) Trueblood-Report-2019-10.pdf,68a64fa8c402,8,Table 2
 WA,2018-10,WSH,evaluation,jail,305.0,290.0,11.1,11.0,89.0,93.0,93.0,Trueblood-Report-2019-11.pdf,(local) Trueblood-Report-2019-11.pdf,6ba93df67949,8,Table 2
 WA,2018-11,WSH,evaluation,jail,250.0,274.0,12.7,13.0,75.0,78.0,80.0,Trueblood-Report-2019-12.pdf,(local) Trueblood-Report-2019-12.pdf,ff3749aafc99,8,Table 2
@@ -959,6 +996,9 @@ WA,2026-02,WSH,evaluation,jail,414.0,431.0,12.0,13.0,85.0,92.0,92.0,Trueblood-Re
 WA,2026-03,WSH,evaluation,jail,467.0,478.0,11.6,13.0,90.0,95.0,95.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,16,Table 3
 WA,2026-04,WSH,evaluation,jail,480.0,453.0,11.3,12.0,90.0,95.0,95.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,16,Table 3
 WA,2026-05,WSH,evaluation,jail,480.0,456.0,11.7,12.0,90.0,93.0,93.0,Trueblood-Report-2026-06.pdf,(local) Trueblood-Report-2026-06.pdf,1f7fce53996c,16,Table 3
+WA,2017-10,WSH,restoration,inpatient,107.0,,32.2,24.0,13.0,13.0,13.0,Trueblood-Report-2018-11.pdf,(local) Trueblood-Report-2018-11.pdf,e43a0be7d79c,8,Table 1b
+WA,2017-11,WSH,restoration,inpatient,92.0,,38.8,39.0,13.0,13.0,13.0,Trueblood-Report-2018-12.pdf,(local) Trueblood-Report-2018-12.pdf,06516f1429cd,8,Table 1b
+WA,2017-12,WSH,restoration,inpatient,84.0,,37.7,35.0,12.0,12.0,12.0,Trueblood-Report-2019-01.pdf,(local) Trueblood-Report-2019-01.pdf,0d1930c27939,8,Table 1b
 WA,2018-01,WSH,restoration,inpatient,78.0,,52.2,44.0,5.0,6.0,6.0,Trueblood-Report-2019-02.pdf,(local) Trueblood-Report-2019-02.pdf,29f42cc9a6bb,9,Table 1c
 WA,2018-02,WSH,restoration,inpatient,95.0,,47.3,34.0,7.0,8.0,8.0,Trueblood-Report-2019-02.pdf,(local) Trueblood-Report-2019-02.pdf,29f42cc9a6bb,9,Table 1c
 WA,2018-03,WSH,restoration,inpatient,96.0,,45.8,27.5,9.0,10.0,10.0,Trueblood-Report-2019-02.pdf,(local) Trueblood-Report-2019-02.pdf,29f42cc9a6bb,9,Table 1c

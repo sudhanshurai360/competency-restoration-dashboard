@@ -50,6 +50,9 @@ figure) — Texas's own source tables split these across separate tables. `avg_w
 sometimes empty for `max` in recent periods — Texas's own source explicitly states the
 maximum-security queue is not a physical location people admit directly from, so no wait-day figure
 is published for it in those periods; this is a disclosed source-side gap, not a pipeline defect.
+`removed_count` (added v1.0.3) is the number of people removed from that security level's waitlist
+that quarter (its own `pdf_page_removed`/`table_ref_removed` citation columns, since HHSC's newer
+report format also tables this separately) — a flow figure, not a restatement of `waitlist_count`.
 
 ## `california.csv`
 One row per (period, metric). `metric` is `ist_pending_placement` (the only metric currently
@@ -65,8 +68,10 @@ section each report also carries, which pairs the reading with an unambiguous da
 `tier_wait_days_restoration` rows only (blank/NA for `tier_waitlist_count`): `True` if that reading
 is a 3-month rolling average dated to its own end month rather than a true single-month figure —
 the source reports mix both, and their own prose treats the rolling average as the headline
-compliance figure, not a lesser one. `False` means a true single month; blank means genuinely
-unconfirmed (a small number of rows whose period had to be inferred from a different table's axis).
+compliance figure, not a lesser one. `False` means a true single month. As of v1.0.3, every row
+resolves to `True` or `False` — the handful that shipped blank in v1.0.2 (period couldn't be
+determined from that row's own header) were traced to 2 header-parsing bugs and fixed; no
+underlying `value` changed, only the flag.
 
 ## The re-execution gate — `src/verify.py`
 

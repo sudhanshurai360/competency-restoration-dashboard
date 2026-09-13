@@ -74,6 +74,12 @@ pip install -r requirements.txt
 python src/verify.py
 ```
 
+One source document (`data/raw/co/sm_2024-11-28.pdf`) embeds a broken/cid-encoded font on 2 pages
+that `pdfplumber`'s normal text layer can't read; `src/co_special_master.py` recovers it via OCR
+(`pytesseract`, in `requirements.txt`), which also needs the `tesseract` system binary installed
+separately (`brew install tesseract` on macOS, `apt install tesseract-ocr` on Debian/Ubuntu) — not
+installable via pip alone. No other source document or extractor needs this.
+
 ## Reproducibility
 
 Every value traces to a specific source document, page, and (where applicable) table. To

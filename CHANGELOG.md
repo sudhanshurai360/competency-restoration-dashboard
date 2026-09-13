@@ -1,5 +1,71 @@
 # Changelog
 
+## v1.0.3 — Three further independent audit rounds; new Texas attrition metric (PUBLISHED, 2026-09-12)
+
+**Status:** PUBLISHED. Concept DOI `10.5281/zenodo.22652057` (unchanged); version DOI TBD, to be
+confirmed live via Zenodo's own API and recorded in a follow-up commit, per this project's usual
+practice.
+
+After v1.0.2, three further rounds of independent, differently-lensed review were run against the
+private working tree (10 reviewers each, two per state): a numeric-fidelity/completeness pass, a
+blind independent-rebuild/date-arithmetic pass, and a final site-integrity/fresh-reverification
+pass. The last of these found zero new data-correctness issues — every fix from the prior two
+rounds independently re-checked clean against the raw source PDFs. This release ports the real,
+confirmed findings from all three rounds into this public archive.
+
+- **Washington**: recovered 40 previously-missing facility/stage/setting-months (Oct 2017–Aug
+  2018) that fell entirely outside every later report's own redundancy window — a font-metrics
+  quirk specific to 3 report vintages (`Trueblood-Report-2018-11.pdf`, `-2018-12.pdf`,
+  `-2019-01.pdf`) defeated `pdfplumber`'s default word-boundary detection for these tables'
+  inpatient rows. Fixed via a dedicated extraction fallback gated on exactly those 3 files.
+- **Colorado (special master)**: recovered 20 previously-missing `tier_wait_days_restoration` rows
+  (10 months × 2 tiers) from a table format the extractor didn't yet parse (month-per-row rather
+  than the corpus's usual tier-per-row layout), plus OCR-recovered 6 more `tier_waitlist_count`
+  rows from a second cid-encoded page in `sm_2024-11-28.pdf`. Also resolved the 14 rows whose
+  `is_multi_month_avg` flag (added v1.0.2) shipped blank — traced to 2 header-parsing bugs (a
+  glued fiscal-year token format, and a 45px-radius header-word assignment that could satisfy two
+  adjacent narrow columns at once); every row now resolves to `True` or `False`, no underlying
+  `value` changed.
+- **Texas**: added `removed_count` — a new metric, the number of people removed from each
+  security level's waitlist per quarter (a flow figure, not previously in the dataset), with its
+  own `pdf_page_removed`/`table_ref_removed` citation columns. Also hardened era-detection (the
+  extractor now checks for `Table 10`'s presence rather than a hardcoded fiscal-quarter string,
+  closing a break risk for the next report vintage) and table-lookup (skips sub-numbered
+  cross-reference decoys like "Table 7.2." that share a match prefix with the real table).
+- **Oregon**: recovered 3 more missing readings (`waitlist_count` 2025-04; `avg_wait_days` for
+  2 additional periods) from narrative-text patterns not previously matched, and fixed a
+  date-resolution bug where a bare month reference in a two-date sentence was resolved to the
+  nearer-but-wrong of the two dates rather than the correct one.
+- **California**: recovered 2 more historical Pre/Post-SIP-order waitlist readings (2020-03=869,
+  2020-05=1144) from a fixed reference table not previously parsed, and fixed a latent citation
+  bug where a value matched across a PDF page break could cite the wrong page (no shipped value
+  was affected).
+- **Colorado (JBC)**: corrected a docstring claim about the source reports' table structure;
+  disclosed (not yet built) a larger monthly time series present in one report that this pipeline
+  doesn't currently extract.
+
+Also hardened several extractors against edge cases confirmed to affect no currently-shipped
+value: Colorado's year-arithmetic for a glued fiscal-year header token, and removal of a
+cross-token year-propagation fallback confirmed to be dead code against the current corpus (a
+token now resolves a year only from its own text, never a neighboring column's).
+
+Separately, this release corrects 9 stale or incorrect comments found by a pre-publication
+comment audit — mostly comments still saying `data/raw/<state>/` (this archive's own convention)
+that had been copied from the private working tree's `dashboard_data/raw/<state>/` wording, plus
+one outdated file count and one already-fixed "produces 0 rows" claim for `sm_2024-11-28.pdf`
+(now OCR-recovered, not blank). No functional code changed as part of that pass.
+
+**Fixed a reproducibility gap**: `co_special_master.py`'s OCR recovery path for `sm_2024-11-28.pdf`
+(added in v1.0.2, now extended to a second page of that file) depends on `pytesseract` and the
+separate `tesseract` system binary — neither was declared in `requirements.txt` or `README.md`,
+so a clean `pip install -r requirements.txt && python src/verify.py` following v1.0.2's own
+instructions would have crashed on this one file for anyone without `tesseract` already installed.
+Both are now documented; see `README.md`'s Setup section.
+
+Full per-finding detail and independent adversarial review notes are preserved in the originating
+session's working tree (not part of this public release, which carries the corrected code and
+data, not the audit process itself).
+
 ## v1.0.2 — Five data-accuracy corrections from a full source-PDF audit (PUBLISHED, 2026-09-11)
 
 **Status:** PUBLISHED. Concept DOI `10.5281/zenodo.22652057` (unchanged); version DOI
