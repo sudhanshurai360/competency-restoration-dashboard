@@ -43,5 +43,5 @@ identifiers:
     value: "10.5281/zenodo.22712971"   # version DOI for v1.0.2, minted 2026-09-11
     description: "Version DOI for v1.0.2 (superseded by v1.0.3 below). Note: Zenodo's OWN metadata for this record shows version=1.0.1, not 1.0.2 -- .zenodo.json (the actual source of Zenodo's metadata, not CITATION.cff) was fixed after this release, too late for this specific already-minted record. Content is correctly v1.0.2; only Zenodo's version LABEL for this record is stale by one number."
   - type: doi
-    value: "PENDING"   # version DOI for v1.0.3, to be filled in once confirmed live via Zenodo's API
-    description: "Version DOI for this specific release (v1.0.3)."
+    value: "10.5281/zenodo.22731268"   # version DOI for v1.0.3, minted 2026-09-12
+    description: "Version DOI for this specific release (v1.0.3), confirmed live by direct query against Zenodo's own API."

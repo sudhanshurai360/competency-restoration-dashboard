@@ -2,9 +2,10 @@
 
 ## v1.0.3 — Three further independent audit rounds; new Texas attrition metric (PUBLISHED, 2026-09-12)
 
-**Status:** PUBLISHED. Concept DOI `10.5281/zenodo.22652057` (unchanged); version DOI TBD, to be
-confirmed live via Zenodo's own API and recorded in a follow-up commit, per this project's usual
-practice.
+**Status:** PUBLISHED. Concept DOI `10.5281/zenodo.22652057` (unchanged); version DOI
+`10.5281/zenodo.22731268`, confirmed live by direct query against Zenodo's own API. Zenodo's own
+metadata for this record correctly shows `version: 1.0.3` (no repeat of the v1.0.2 off-by-one
+label issue).
 
 After v1.0.2, three further rounds of independent, differently-lensed review were run against the
 private working tree (10 reviewers each, two per state): a numeric-fidelity/completeness pass, a
