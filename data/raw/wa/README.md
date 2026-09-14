@@ -1,6 +1,6 @@
 # Washington — source documents
 
-**91 files.** Monthly compliance reports filed by the court monitor in *Trueblood v. DSHS*, No.
+**93 files.** Monthly compliance reports filed by the court monitor in *Trueblood v. DSHS*, No.
 2:14-cv-01178 (W.D. Wash.) — a federal consent decree requiring admission for competency
 restoration within 7 days. Published by the Washington State Department of Social and Health
 Services (DSHS).
@@ -9,19 +9,23 @@ Services (DSHS).
 
 Every file's exact source URL, byte size, and SHA-256 hash is recorded in `SOURCES.csv` at the
 archive root (filter `state == wa`). DSHS hosts these at a stable, predictable path — but under
-**two different subdomains**, not one: 85 files (through the 2025-12 report) resolve at
+**two different subdomains**, not one: 87 files (through 2025-12, plus 2026-07 and 2026-08) resolve
+at
 
 ```
 https://www.dshs.wa.gov/sites/default/files/BHSIA/FMHS/Trueblood/{year}Trueblood/Trueblood-Report-{year}-{month}.pdf
 ```
 
-while the 6 most recent (2026-01 through 2026-06) migrated to a different DSHS subdomain —
+while 6 (2026-01 through 2026-06) resolve instead at a different DSHS subdomain —
 
 ```
 https://manuals.dshs.wa.gov/sites/default/files/BHSIA/FMHS/Trueblood/{year}Trueblood/Trueblood-Report-{year}-{month}.pdf
 ```
 
-— confirmed exactly in `SOURCES.csv`'s own per-file URLs, not glossed over as "one pattern." Every
+— confirmed directly: both 2026-07 and 2026-08 (added 2026-09-13) resolve on EITHER subdomain (200
+on both), so this isn't a hard migration cutover, just DSHS mirroring the same files across two
+hosts inconsistently over time. `SOURCES.csv` records whichever URL this archive's own pipeline
+actually fetched from, not just "a" URL that happens to work. Every
 file in this folder was downloaded from its own listed URL and hash-verified against the copy
 actually used by the extraction pipeline (`../../../src/wa_trueblood.py`) — the fair-use rationale
 below applies identically regardless of which DSHS subdomain hosts a given file.
@@ -147,3 +151,5 @@ difference.
 - `Trueblood-Report-2026-04.pdf` — [source](https://manuals.dshs.wa.gov/sites/default/files/BHSIA/FMHS/Trueblood/2026Trueblood/Trueblood-Report-2026-04.pdf)
 - `Trueblood-Report-2026-05.pdf` — [source](https://manuals.dshs.wa.gov/sites/default/files/BHSIA/FMHS/Trueblood/2026Trueblood/Trueblood-Report-2026-05.pdf)
 - `Trueblood-Report-2026-06.pdf` — [source](https://manuals.dshs.wa.gov/sites/default/files/BHSIA/FMHS/Trueblood/2026Trueblood/Trueblood-Report-2026-06.pdf)
+- `Trueblood-Report-2026-07.pdf` — [source](https://www.dshs.wa.gov/sites/default/files/BHSIA/FMHS/Trueblood/2026Trueblood/Trueblood-Report-2026-07.pdf)
+- `Trueblood-Report-2026-08.pdf` — [source](https://www.dshs.wa.gov/sites/default/files/BHSIA/FMHS/Trueblood/2026Trueblood/Trueblood-Report-2026-08.pdf)

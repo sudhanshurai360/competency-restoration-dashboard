@@ -29,19 +29,22 @@ keywords:
   - reproducibility
 url: "https://competencyrestoration.org"
 repository-code: "https://github.com/sudhanshurai360/competency-restoration-dashboard"
-version: "1.0.3"
-date-released: "2026-09-12"
+version: "1.0.4"
+date-released: "2026-09-13"
 doi: "10.5281/zenodo.22652057"   # concept DOI — always resolves to the latest version
 identifiers:
   - type: doi
     value: "10.5281/zenodo.22652058"   # version DOI for v1.0.0, minted 2026-09-08
-    description: "Version DOI for v1.0.0 (superseded by v1.0.3 below)."
+    description: "Version DOI for v1.0.0 (superseded by v1.0.4 below)."
   - type: doi
     value: "10.5281/zenodo.22697301"   # version DOI for v1.0.1, minted 2026-09-10
-    description: "Version DOI for v1.0.1 (superseded by v1.0.3 below)."
+    description: "Version DOI for v1.0.1 (superseded by v1.0.4 below)."
   - type: doi
     value: "10.5281/zenodo.22712971"   # version DOI for v1.0.2, minted 2026-09-11
-    description: "Version DOI for v1.0.2 (superseded by v1.0.3 below). Note: Zenodo's OWN metadata for this record shows version=1.0.1, not 1.0.2 -- .zenodo.json (the actual source of Zenodo's metadata, not CITATION.cff) was fixed after this release, too late for this specific already-minted record. Content is correctly v1.0.2; only Zenodo's version LABEL for this record is stale by one number."
+    description: "Version DOI for v1.0.2 (superseded by v1.0.4 below). Note: Zenodo's OWN metadata for this record shows version=1.0.1, not 1.0.2 -- .zenodo.json (the actual source of Zenodo's metadata, not CITATION.cff) was fixed after this release, too late for this specific already-minted record. Content is correctly v1.0.2; only Zenodo's version LABEL for this record is stale by one number."
   - type: doi
     value: "10.5281/zenodo.22731268"   # version DOI for v1.0.3, minted 2026-09-12
-    description: "Version DOI for this specific release (v1.0.3), confirmed live by direct query against Zenodo's own API."
+    description: "Version DOI for v1.0.3 (superseded by v1.0.4 below), confirmed live by direct query against Zenodo's own API."
+  - type: doi
+    value: "PENDING"   # version DOI for v1.0.4, to be filled in once confirmed live via Zenodo's API
+    description: "Version DOI for this specific release (v1.0.4)."

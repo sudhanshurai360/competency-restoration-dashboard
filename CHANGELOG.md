@@ -1,5 +1,41 @@
 # Changelog
 
+## v1.0.4 — New Washington and Colorado reports ingested (PUBLISHED, 2026-09-13)
+
+**Status:** PUBLISHED. Concept DOI `10.5281/zenodo.22652057` (unchanged); version DOI TBD, to be
+confirmed live via Zenodo's own API and recorded in a follow-up commit, per this project's usual
+practice.
+
+Two new source reports landed since v1.0.3 and are now reflected in the dataset:
+
+- **Washington**: `Trueblood-Report-2026-07.pdf` and `Trueblood-Report-2026-08.pdf` — both dropped
+  into `data/raw/wa/` and picked up automatically by the existing extractor (`dashboard_months()`
+  is an open-ended axis; no code change needed). Adds periods 2026-06 and 2026-07 (22 new rows: 11
+  facility/stage/setting combinations × 2 months). Every new row was hand-verified directly against
+  the source PDF tables before this release. Per this project's report-redundancy convention, 12
+  already-published periods (2025-06 through 2026-05) had their citation move to the newer,
+  now-authoritative report; 6 of those (all period 2026-05) also had their underlying value shift
+  by ±1 — a source-side revision Washington's own reports explicitly disclose ("data highlighted in
+  lavender indicate a data value that has matured and has been updated during the most recent
+  reporting period"), not a pipeline defect.
+- **Colorado (JBC)**: `fy2026-27_humbrf1.5b.pdf`, a newer Office of Civil and Forensic Mental
+  Health staff budget briefing (December 2025), uses different prose phrasing than every existing
+  pattern in `src/co_jbc.py` — it contributed 0 rows on the first run, confirming this needed a
+  real code change, not just a new file. Added 3 new regex patterns matching the same existing
+  metrics under their new wording, each verified directly against the source page. Recovers a much
+  fresher restoration-waitlist reading (354 as of 2025-12-01, superseding the prior 391 from
+  2024-01) and updated consent-decree fines figures ($12.5M FY2025-26 cap, $32.1M FY2024-25
+  uncapped estimate).
+
+Both ingestions verified via a clean `src/verify.py` run: **PASSED — 0 failure(s)**, including the
+full per-row citation audit, in an isolated venv with only the pinned `requirements.txt` installed.
+
+`SOURCES.csv` and both states' `README.md` updated with the 3 new files' provenance (URL, byte
+size, SHA-256); `SAFETY_REVIEW.md` extended to cover their PII/sealing clearance. Washington's
+raw-file count is now 93 (was 91); Colorado's is now 15 (was 14) — see each state's `README.md` for
+the two are-they-the-same-thing-as-before details (Washington's DSHS subdomain mirroring; Colorado
+JBC's blanket "all our documents are public" permission covering this newer document too).
+
 ## v1.0.3 — Three further independent audit rounds; new Texas attrition metric (PUBLISHED, 2026-09-12)
 
 **Status:** PUBLISHED. Concept DOI `10.5281/zenodo.22652057` (unchanged); version DOI

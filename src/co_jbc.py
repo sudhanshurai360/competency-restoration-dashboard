@@ -82,6 +82,19 @@ def parse_jbc(path: Path) -> list[dict]:
                          as_of=f"{m.group(2)} {m.group(3)}, {m.group(4)}",
                          source=path.name, source_sha=sha, pdf_page=_page_at(m.start())))
 
+    # (1b) NEW phrasing, ADDED 2026-09-13 (fy2026-27_humbrf1.5b.pdf, the first "Office of Civil
+    # and Forensic Mental Health" briefing seen with this wording): "OCFMH indicated that the
+    # waitlist was <N> on <Month DD, YYYY>" -- confirmed directly against the source page, not
+    # guessed. Same metric/schema as pattern (1), just a different sentence the author used this
+    # cycle instead of "<N> individuals are on the waitlist ... as of <date>".
+    for m in re.finditer(r'OCFMH indicated that the waitlist was\s+(\d{2,4})\s+on\s+'
+                         r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),?\s+(\d{4})',
+                         flat, re.I):
+        rows.append(dict(state="CO", period=_date_to_period(m.group(2), m.group(3), m.group(4)),
+                         metric="restoration_waitlist_count", value=float(m.group(1)),
+                         as_of=f"{m.group(2)} {m.group(3)}, {m.group(4)}",
+                         source=path.name, source_sha=sha, pdf_page=_page_at(m.start())))
+
     # (2) average time on waitlist: "Average time on the waitlist is <lo>-<hi> days"
     for m in re.finditer(r'average time on the waitlist is\s+(\d+)\s*-\s*(\d+)\s+days', flat, re.I):
         rows.append(dict(state="CO", period=None, metric="avg_wait_days_restoration",
@@ -98,6 +111,27 @@ def parse_jbc(path: Path) -> list[dict]:
     for m in re.finditer(r'would have totaled \$?([\d.]+)\s*million[^.]*?FY\s*(\d{4}-\d{2})', flat, re.I):
         rows.append(dict(state="CO", period=m.group(2), metric="decree_fines_uncapped_est_$M",
                          value=float(m.group(1)), as_of=f"FY{m.group(2)}", source=path.name, source_sha=sha,
+                         pdf_page=_page_at(m.start())))
+
+    # (3b) NEW phrasing, ADDED 2026-09-13 (fy2026-27_humbrf1.5b.pdf): "The General Fund
+    # appropriation for consent decree fines is $<X> million in FY <YYYY-YY>" -- the appropriation
+    # figure IS the annual cap (same paragraph: "the total amount the Department actually pays in
+    # fines is capped to an annual amount... The General Fund appropriation... is $X million"),
+    # confirmed directly against the source page. Different wording, same metric as pattern (3).
+    for m in re.finditer(r'appropriation for consent decree fines is \$?([\d.]+)\s*million[^.]*?FY\s*(\d{4}-\d{2})',
+                          flat, re.I):
+        rows.append(dict(state="CO", period=m.group(2), metric="decree_fines_capped_$M",
+                         value=float(m.group(1)), as_of=f"FY{m.group(2)}", source=path.name, source_sha=sha,
+                         pdf_page=_page_at(m.start())))
+
+    # (4b) NEW phrasing, ADDED 2026-09-13 (fy2026-27_humbrf1.5b.pdf): "the fines cap was reached
+    # by <Month> in FY <YYYY-YY>, and payments would have been $<X> million in absence of the
+    # cap" -- same uncapped-estimate metric as pattern (4), different wording, confirmed directly
+    # against the source page.
+    for m in re.finditer(r'reached by \w+ in FY\s*(\d{4}-\d{2})[^.]*?would have been\s*\$?([\d.]+)'
+                          r'\s*million[^.]*?absence of the cap', flat, re.I):
+        rows.append(dict(state="CO", period=m.group(1), metric="decree_fines_uncapped_est_$M",
+                         value=float(m.group(2)), as_of=f"FY{m.group(1)}", source=path.name, source_sha=sha,
                          pdf_page=_page_at(m.start())))
     return rows
 

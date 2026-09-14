@@ -1,9 +1,10 @@
 # Pre-publication safety review — source documents
 
-**Scope:** all 138 source PDFs this project has provenance for (91 Washington + 18 Oregon, reviewed
+**Scope:** all 141 source PDFs this project has provenance for (91 Washington + 18 Oregon, reviewed
 2026-07-12 for this project's earlier two-state release, + 14 Colorado + 6 Texas + 9 California,
-reviewed 2026-09-07 for this 5-state release) — **all 138 are bundled** as PDF files in
-`data/raw/`. Colorado's 3 JBC budget memos were held back from the initial bundle pending a
+reviewed 2026-09-07 for this 5-state release, + 2 more Washington and 1 more Colorado, reviewed
+2026-09-13 — see "2026-09-13 addition" below) — **all 141 are bundled** as PDF files in
+`data/raw/`. Colorado's JBC budget memos were held back from the initial bundle pending a
 separate confirmation request, unrelated to this safety review (see `data/raw/co/README.md`) —
 they passed this same PII/sealing review before that withholding decision was made, and were added
 to the bundle once JBC staff confirmed no objection (2026-09-10). See `SOURCES.csv` for the full
@@ -134,10 +135,24 @@ Disclosed here plainly:
 - Per the standing policy in `data/raw/NOTICE` and every state README, `me@sudhanshurai.org` is
   the contact for any correction or removal request from a rights holder or affected party.
 
+## 2026-09-13 addition — 2 more Washington + 1 more Colorado
+
+`Trueblood-Report-2026-07.pdf`, `Trueblood-Report-2026-08.pdf` (Washington), and
+`fy2026-27_humbrf1.5b.pdf` (Colorado, JBC) were added to the archive on 2026-09-13 as new monthly/
+periodic reports from the same two recurring publication series already fully reviewed above — not
+a new document type. Reviewed by direct inspection (not just format-consistency inference): the 2
+Washington reports' data tables (the only sections this project's own extractor reads from) contain
+purely aggregate monthly counts, no individual names or case identifiers, matching every one of the
+91 already-cleared Washington reports exactly in structure. The Colorado JBC document was read in
+full during extraction-code development (its "waitlist," "consent decree fines," and RFI-response
+sections) — aggregate figures and one named JBC staff author (a public official acting in an
+official capacity, already the norm for this document type, e.g. `jbc_memo.pdf`'s own named
+author), no individual-level PII. All 3 cleared on the same basis as the rest of this review.
+
 ## Combined verdict
 
-All 138 reviewed source documents (91 WA + 18 OR + 14 CO + 6 TX + 9 CA) are cleared on PII/sealing
-grounds, and all 138 are actually bundled in `data/raw/` as of this version — Colorado's 3 JBC
+All 141 reviewed source documents (93 WA + 18 OR + 15 CO + 6 TX + 9 CA) are cleared on PII/sealing
+grounds, and all 141 are actually bundled in `data/raw/` as of this version — Colorado's JBC
 memos were held back from the initial bundle for the separate, unrelated reason described above
 (not a PII concern) and added once JBC staff confirmed no objection (2026-09-10); the two items
 above are disclosed rather than silently carried forward regardless of bundling status.
