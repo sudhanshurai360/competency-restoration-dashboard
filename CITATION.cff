@@ -46,5 +46,5 @@ identifiers:
     value: "10.5281/zenodo.22731268"   # version DOI for v1.0.3, minted 2026-09-12
     description: "Version DOI for v1.0.3 (superseded by v1.0.4 below), confirmed live by direct query against Zenodo's own API."
   - type: doi
-    value: "PENDING"   # version DOI for v1.0.4, to be filled in once confirmed live via Zenodo's API
-    description: "Version DOI for this specific release (v1.0.4)."
+    value: "10.5281/zenodo.22740722"   # version DOI for v1.0.4, minted 2026-09-13
+    description: "Version DOI for this specific release (v1.0.4), confirmed live by direct query against Zenodo's own API."

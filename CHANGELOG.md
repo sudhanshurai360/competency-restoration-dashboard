@@ -2,9 +2,9 @@
 
 ## v1.0.4 — New Washington and Colorado reports ingested (PUBLISHED, 2026-09-13)
 
-**Status:** PUBLISHED. Concept DOI `10.5281/zenodo.22652057` (unchanged); version DOI TBD, to be
-confirmed live via Zenodo's own API and recorded in a follow-up commit, per this project's usual
-practice.
+**Status:** PUBLISHED. Concept DOI `10.5281/zenodo.22652057` (unchanged); version DOI
+`10.5281/zenodo.22740722`, confirmed live by direct query against Zenodo's own API (correctly
+labeled `version: 1.0.4` in Zenodo's own metadata).
 
 Two new source reports landed since v1.0.3 and are now reflected in the dataset:
 
